@@ -27,6 +27,7 @@ We will initally use the readme for brainsorming
 
 # Random ideas
 * From main page we can select a staff member (each member is specialised in a different event). From main page we navigate to contact page passing that selection on the URL. On contact we recover that selection and use it to feed the CSS variable. That way every member will have a slightily different design contact form.
+* Form will open a modal window where we create our own Captcha. Modal window is a great way to show info or functionality that will be used only once and, this way, keep the page cleaner.
 * add smt
 
 
