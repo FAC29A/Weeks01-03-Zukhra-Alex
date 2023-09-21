@@ -1,0 +1,10 @@
+.team-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: space-between;
+}
+.team-member-card {
+    border: solid 1px;
+}
