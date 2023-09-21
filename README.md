@@ -30,19 +30,22 @@ We will initally use the readme for brainsorming
 * Form will open a modal window where we create our own Captcha. Modal window is a great way to show info or functionality that will be used only once and, this way, keep the page cleaner.
 
 # First steps
-## Stage 01 - Static solution
+## Stage 01 - Static solution - 3 
 * Create buttons on Main and add fucntionality of building the URL with parameters.
+* Populate Expert
 * Populate Main
 * Navbar
 * Create static CSS
-* Populate Expert
 * Create form on Expert (No modal)Style
+* Populate images folder with sotck
 
-## Stage 02 - Go Dynamic
+## Stage 02 - Go Dynamic - 5
 * Make expert Dynamic
 * Dynamic CSS
+* Create images (Midjourney / DallE3)
+* Specifically adaptative
 
-## Stage 03 - Get crazy
+## Stage 03 - Get crazy - 4
 * Add modal Captcha
 * Create form on Expert
 * Could Expert be Modal?
