@@ -33,10 +33,10 @@ We will initally use the readme for brainsorming
 ## Stage 01 - Static solution
 * Create buttons on Main and add fucntionality of building the URL with parameters.
 * Populate Main
-* Navar
+* Navbar
 * Create static CSS
 * Populate Expert
-* Create form on Expert (No modal)
+* Create form on Expert (No modal)Style
 
 ## Stage 02 - Go Dynamic
 * Make expert Dynamic
