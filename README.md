@@ -31,23 +31,23 @@ We will initally use the readme for brainsorming
 
 # First steps
 ## Stage 01 - Static solution - 3 
-* Create buttons on Main and add fucntionality of building the URL with parameters.
-* Populate Expert
-* Create page layout(main - fill with dummy text/images)
-* Populate Main (- fill with real text)
-* Navbar
-* Create static CSS
-* Create form on Expert (No modal)Style
-* Populate images folder with sotck
+- [x] Create buttons on Main and add fucntionality of building the URL with parameters.
+- [x] Populate Expert
+- [x] Create page layout(main - fill with dummy text/images)
+- [ ] Populate Main (- fill with real text)
+- [ ] Navbar
+- [ ] Create static CSS
+- [ ] Create form on Expert (No modal)Style
+- [x] Populate images folder with stock
 
 ## Stage 02 - Go Dynamic - 5
-* Make expert Dynamic
-* Dynamic CSS
-* Create images (Midjourney / DallE3)
-* Specifically adaptative
+- [ ] Make expert Dynamic
+- [ ] Dynamic CSS
+- [ ] Create images (Midjourney / DallE3)
+- [ ] Specifically adaptative
 
 ## Stage 03 - Get crazy - 4
-* Add modal Captcha
-* Create form on Expert
-* Could Expert be Modal?
-* Refactor and debug
+- [ ] Add modal Captcha
+- [ ] Create form on Expert
+- [ ] Could Expert be Modal?
+- [ ] Refactor and debug
