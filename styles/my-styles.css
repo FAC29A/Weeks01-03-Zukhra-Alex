@@ -1,10 +1,91 @@
+/* Font Awesome Icons  */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
 .team-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     align-content: space-between;
+    max-width: 900px;
+    margin: auto;
 }
 .team-member-card {
     border: solid 1px;
+}
+
+.background-image {
+    position: relative;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bi-1 {
+    background-image: url('https://picsum.photos/id/923/1200/400');
+}
+
+.bi-2 {
+    background-image: url('https://picsum.photos/id/606/1200/400');
+}
+
+.bi-3 {
+    background-image: url('https://picsum.photos/id/866/1200/400');
+}
+
+
+.headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #121111;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 20px;
+    align-items: center;
+}
+/* Create two equal columns that floats next to each other (about section)*/
+.column {
+    width: 47%;
+}
+
+.column-1 {
+    width: calc(43% - 20px);
+}
+
+.column-2 {
+    width: calc(55% - 20px);
+    background-color: #f7f7f7;
+}
+
+#seo-img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-position: top;
+}
+
+.img-service {
+    width: calc(100% - 40px); /* Account for 10px border on both sides */
+    height: calc(100% - 40px); /* Account for 10px border on both top and bottom */
+    object-position: center center;
+    /* Solid border with 10px width */
+    /* Border color */
+    padding: 20px;
+   /* border: 20px solid #f7f7f7;*/
+}
+
+h2 {
+    text-align: center;
 }
