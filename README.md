@@ -33,7 +33,8 @@ We will initally use the readme for brainsorming
 ## Stage 01 - Static solution - 3 
 * Create buttons on Main and add fucntionality of building the URL with parameters.
 * Populate Expert
-* Populate Main
+* Create page layout(main - fill with dummy text/images)
+* Populate Main (- fill with real text)
 * Navbar
 * Create static CSS
 * Create form on Expert (No modal)Style
