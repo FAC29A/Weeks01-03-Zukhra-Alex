@@ -19,9 +19,11 @@
         </header>
 
         <main>
+
+            
             <section class="expert-section">
                 <div class="expert-image">
-                    <img src="expert-image.jpg" alt="Expert's Image">
+                    <img alt="Expert's Image">
                 </div>
                 <div class="expert-bio">
                     <h2>Expert's Name</h2>
@@ -83,8 +85,9 @@
         </main>
 
         <!-- Using the next script I add a timestamp, this way it will reload the JS when I reload the page, otherwise it was keeping the old JS after an update -->
-        <script>      
-            document.write('<script src="scripts/index_scripts.js?cache_bust=' + new Date().getTime() + '"><\/script>');
+        <script>
+
+            document.write('<script src="expert_JS.js?cache_bust=' + new Date().getTime() + '"><\/script>');
         </script>
     </body>
 </html>
