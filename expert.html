@@ -13,10 +13,74 @@
         <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">    
     </head>
  
-    <body>      
-        <h1>Expert</h1>
+    <body>
+        <header>      
+            <h1>Expert</h1>
+        </header>
 
-        
+        <main>
+            <section class="expert-section">
+                <div class="expert-image">
+                    <img src="expert-image.jpg" alt="Expert's Image">
+                </div>
+                <div class="expert-bio">
+                    <h2>Expert's Name</h2>
+                    <p>
+                        Expert's biography goes here...
+                    </p>
+                </div>
+            </section>
+    
+            <section class="contact-form">
+                <h2>Contact this Expert</h2>
+                
+                <form
+                id="form"
+                action="https://learn-forms.netlify.com/submit/part3"
+                method="GET"
+              >
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" />
+          
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" />
+          
+                <label for="tel">Telephone</label>
+                <input id="tel" name="tel" type="tel" />
+          
+                <fieldset>
+                  <legend>Preferred contact method</legend>
+          
+                  <input
+                    id="contact-email"
+                    type="radio"
+                    name="contact"
+                    value="email"
+                    checked
+                  />
+                  <label for="contact-email" class="radio">Email</label>
+          
+                  <input id="contact-tel" type="radio" name="contact" value="telephone" />
+                  <label for="contact-tel" class="radio">Telephone</label>
+          
+                  <input id="contact-post" type="radio" name="contact" value="post" />
+                  <label for="contact-post" class="radio">Post</label>
+                </fieldset>
+          
+                <label for="message">Message</label>
+                <textarea name="message"></textarea>
+          
+                <input id="marketingConsent" name="marketingConsent" type="checkbox" />
+                <label for="marketingConsent" class="checkbox">Just wreck my inbox</label>
+          
+                <button type="submit">Submit</button>
+              </form>
+
+
+
+
+            </section>
+        </main>
 
         <!-- Using the next script I add a timestamp, this way it will reload the JS when I reload the page, otherwise it was keeping the old JS after an update -->
         <script>      
