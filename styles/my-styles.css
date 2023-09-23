@@ -98,7 +98,63 @@
 h2 {
     text-align: center;
 }
+/* styles for testimonial section (start)*/
+.container {
+    text-align: center;
+}
 
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-review-container {
+    display: flex;
+    overflow: hidden;
+    width: calc(100% - 40px);
+    height: 400px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.card-review {
+    flex: 0 0 calc(100% / 3 - 40px);
+    /* Display three cards at a time */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: aqua;
+    transition: transform 0.3s ease-in-out;
+    height: 200px;
+}
+
+.zoom-card {
+    transform: scale(1.2);
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+#prevBtn, #nextBtn {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: fit-content;
+    display: inline-block;
+    text-align: center;
+}
+
+#prevBtn:hover {
+    background-color: #0056b3;
+}
+/* styles for testimonial section (end)*/
 footer {
     display: flex;
     flex-direction: row;
@@ -110,13 +166,13 @@ footer {
     height: 300px;
 }
 
-/* Footer information*/
+/* Footer information */
 .contact-info {
     margin: 10px 0;
     text-align: left;
 }
 
-/* Footer icons are not links*/
+/* Footer icons (they are not links) */
 .social-icons i {
     margin-right: 10px;
 }
