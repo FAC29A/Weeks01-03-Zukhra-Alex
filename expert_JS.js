@@ -1,7 +1,3 @@
-/* This will be our JS file for expert*/
-
-
-
 // Get the current URL
 var url = new URL(window.location.href);
 // Get the search parameters from the URL
@@ -19,13 +15,17 @@ if (expert) {
     var expertImage = document.querySelector('.expert-image img');
     var expertName = document.querySelector('.expert-bio h2');
     var expertBio = document.querySelector('.expert-bio p');
+    var contactForm = document.querySelector('.contact-form');
 
     expertImage.src = expert.imgBig;
     expertName.textContent = expert.name;
     expertBio.textContent = expert.bio;
+
+    contactForm.style.backgroundImage = 'url("' + expert.Label + '")';
+    console.log('Expert Label:', expert.Label);
+
+
 } else {
     // Handle the case where the expert with the specified 'id' is not found
     console.log('Expert not found');
 }
-
-

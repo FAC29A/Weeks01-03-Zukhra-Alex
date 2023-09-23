@@ -221,6 +221,12 @@ form{
     margin: auto;
 }
 
+.contact-form{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(100, 100, 100, 0.1);
+}
+
 label,
 input,
 button,
