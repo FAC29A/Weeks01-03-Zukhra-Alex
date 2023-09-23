@@ -176,16 +176,26 @@
             <p>Read some of our customers success stories below ....</p>
         </section>
     </main>
-    <footer style="background-color: bisque; height: 200px;">
-        <div> company name </div>
-        <!-- Using the next script I add a timestamp, this way it will reload the JS when I reload the page, otherwise it was keeping the old JS after an update -->
+    <footer style="background-color: bisque; height: 300px;">
         <div>
+            <p style="font-size: 30px"> <strong> COMPANY_NAME </strong> </p>
+            <p> &copy; <span id="currentYear"></span> </p>
             <script>
-                date = new Date().toLocaleDateString();
-                document.write(date);
+                const currentYear = new Date().getFullYear();
+                document.getElementById("currentYear").textContent = currentYear;
             </script>
         </div>
-        <p> contact info : adress, sm, phone (make proper footer)</p>
+
+        <div class="contact-info">
+            <p>email@example.com</p>
+            <p>123-456-7890</p>
+            <p class="social-icons">
+                <i class="fa fa-facebook-square fa-3x"></i>
+                <i class="fa fa-twitter fa-3x"></i>
+                <i class="fa fa-instagram fa-3x"></i>
+            </p>
+        </div>
+
     </footer>
 
     <script>

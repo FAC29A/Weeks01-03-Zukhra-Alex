@@ -99,6 +99,29 @@ h2 {
     text-align: center;
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 100px 0 100px;
+    font-size: small;
+    align-items: center;
+    background-color: bisque;
+    height: 300px;
+}
+
+/* Footer information*/
+.contact-info {
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Footer icons are not links*/
+.social-icons i {
+    margin-right: 10px;
+}
+
+
 
 /*Style for Experts page*/
 /* CSS for the expert-section */
