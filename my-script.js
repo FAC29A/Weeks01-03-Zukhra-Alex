@@ -91,3 +91,54 @@ function createTeamMembersCards() {
 document.addEventListener('DOMContentLoaded', function () {
     createTeamMembersCards();
 });
+
+// Testimonial section code (start)
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const cardContainer = document.querySelector('.cards-review-container');
+const cards = document.querySelectorAll('.card-review');
+const cardsPerPage = 3; // Display three cards at a time
+let currentIndex = 0;
+
+function updateVisibility() {
+    cards.forEach((card, index) => {
+        if (index >= currentIndex && index < currentIndex + cardsPerPage) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+
+        // Add the zoom class to the middle card
+        if (index === currentIndex + Math.floor(cardsPerPage / 2)) {
+            card.classList.add('zoom-card');
+        } else {
+            card.classList.remove('zoom-card');
+        }
+    });
+}
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex -= 1;
+        updateVisibility();
+    } else {
+        // If at the beginning, loop to the end
+        currentIndex = cards.length - cardsPerPage;
+        updateVisibility();
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if (currentIndex + cardsPerPage < cards.length) {
+        currentIndex += 1;
+        updateVisibility();
+    } else {
+        // If at the end, loop to the beginning
+        currentIndex = 0;
+        updateVisibility();
+    }
+});
+
+updateVisibility();
+
+// Testimonial section code (start)
