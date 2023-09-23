@@ -10,19 +10,28 @@
     max-width: 900px;
     margin: auto;
 }
+
 .team-member-card {
     border: solid 1px;
+}
+
+/* To make a background image take up the whole screen width */
+.margin-0 {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 .background-image {
     position: relative;
     min-height: 400px;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .bi-1 {
-    background-image: url('https://picsum.photos/id/923/1200/400');
+    background-image: url('../images/bi1.jpg');
+    height: 600px;
 }
 
 .bi-2 {
