@@ -14,7 +14,7 @@ if (expert) {
     // Populate the Expert-section with the expert's information
     var expertImage = document.querySelector('.expert-image img');
     var expertName = document.querySelector('.expert-bio h2');
-    var expertBio = document.querySelector('.expert-bio p');
+    var expertBio = document.querySelector('.expert-bio article');
     var contactForm = document.querySelector('.contact-form');
 
     expertImage.src = expert.imgBig;
