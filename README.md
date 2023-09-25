@@ -1,14 +1,6 @@
 # Weeks01-03-Zukhra-Alex
 We will initally use the readme for brainsorming
 
-# Possible themes
-* Wine recommendation Agency
-* Improve you dating profiles
-* Space Tourism
-* Time Travel Agnecy
-* Fantasy creature adoption Agency
-* Robot renting
-
 # FAC Requirements
 - [x] Staff info (About US)
 - [ ] Adapt to devices
