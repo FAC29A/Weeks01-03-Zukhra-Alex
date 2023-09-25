@@ -10,18 +10,18 @@ We will initally use the readme for brainsorming
 * Robot renting
 
 # FAC Requirements
-- [ ] Staff info (About US)
+- [x] Staff info (About US)
 - [ ] Adapt to devices
 - [ ] Navigation
-- [ ] Contact form (Mandatory fields. Send Button)
-- [ ] Deployed on GitHub Pages?
+- [x] Contact form (Mandatory fields. Send Button)
+- [x] Deployed on GitHub Pages?
 - [ ] Full Navigation using keyboard ()
 - [ ] Adapted to Screen Reader
 - [ ] Use built-in automations
 
 # Our Requirements
 - [ ] All images needs Alt (Including Captcha)
-- [ ] Different pages
+- [x] Different pages
 - [ ] Stack and variables on CSS
 - [ ] Custom Captcha. If wine agency: who is drunk?
 
@@ -39,15 +39,15 @@ We will initally use the readme for brainsorming
 - [ ] Create static CSS
 - [ ] Create form on Expert (No modal)Style
 - [x] Populate images folder with stock
+- [ ] Agree on fonts, gaps, backgrounds, photos
 
 ## Stage 02 - Go Dynamic - 5
 - [ ] Make expert Dynamic
 - [ ] Dynamic CSS
-- [ ] Create images (Midjourney / DallE3)
+- [x] Create images (Midjourney / DallE3)
 - [ ] Specifically adaptative
 
 ## Stage 03 - Get crazy - 4
 - [ ] Add modal Captcha
-- [ ] Create form on Expert
 - [ ] Could Expert be Modal?
 - [ ] Refactor and debug
