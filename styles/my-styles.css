@@ -134,63 +134,120 @@
 h2 {
     text-align: center;
 }
-/* styles for testimonial section (start)*/
-.container {
+
+/* CSS services section(start) */
+.grid-container-services {
+    display: grid;
+    max-width: 85%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    /* Define 4 rows with equal height */
+    grid-gap: 20px;
+    row-gap: 60px;
+}
+
+.grid-item-service {
+    background-color: #e0e0e0;
+    padding: 1.25rem;
+    border: 1px solid #ccc;
     text-align: center;
+    font-size: 1rem;
+    min-height: 250px;
 }
 
-.carousel {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
+/* Define the grid cell areas */
+.img-cell1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.cards-review-container {
-    display: flex;
-    overflow: hidden;
-    width: calc(100% - 40px);
-    height: 400px;
-    align-items: center;
-    justify-content: space-between;
-
+.img-cell2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url('../images/test2.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.card-review {
-    flex: 0 0 calc(100% / 3 - 40px);
-    /* Display three cards at a time */
-    padding: 20px;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: aqua;
-    transition: transform 0.3s ease-in-out;
-    height: 200px;
+.img-cell3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-image: url('../images/test2.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.zoom-card {
-    transform: scale(1.2);
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
+.img-cell4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background-image: url('../images/test2.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.controls {
-    margin-top: 20px;
+.tall-row {
+    grid-row: span 4;
+    /* This row spans 2 rows */
 }
 
-#prevBtn, #nextBtn {
-    background-color: #0074d9;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    width: fit-content;
-    display: inline-block;
-    text-align: center;
-}
+/* Media query for .... Change later */
+@media (max-width: 800px) {
+    .grid-container-services {
+        grid-template-columns: 1fr;
+        /* 1 column for phones */
+        grid-template-rows: repeat(12, 1fr);
+        /* Adjust the number of rows */
+    }
+    .img-cell1,
+    .img-cell2,
+    .img-cell3,
+    .img-cell4 {
+        grid-column: auto;
+        /* Reset column placement for smaller screens */
+        grid-row: auto;
+        /* Reset row placement for smaller screens */
+    }
 
-#prevBtn:hover {
-    background-color: #0056b3;
+    .order3 {
+        order: 3;
+    }
+
+    .order4 {
+        order: 4;
+    }
+
+    .order5 {
+        order: 5;
+    }
+
+    .order6 {
+        order: 6;
+    }
+
+    .order7 {
+        order: 7;
+    }
+
+    .order8 {
+        order: 8;
+    }
+
 }
-/* styles for testimonial section (end)*/
+/* CSS services section(end) */
+
 footer {
     display: flex;
     flex-direction: row;
