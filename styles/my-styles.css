@@ -135,16 +135,6 @@
     background-position: top;
 }
 
-.img-service {
-    width: calc(100% - 40px); /* Account for 10px border on both sides */
-    height: calc(100% - 40px); /* Account for 10px border on both top and bottom */
-    object-position: center center;
-    /* Solid border with 10px width */
-    /* Border color */
-    padding: 20px;
-   /* border: 20px solid #f7f7f7;*/
-}
-
 h2 {
     text-align: center;
 }
@@ -157,15 +147,15 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     /* Define 4 rows with equal height */
-    grid-gap: 20px;
-    row-gap: 60px;
+    grid-gap: 1.25rem;
+    row-gap: 3.75rem;
 }
 
 .grid-item-service {
-    background-color: #e0e0e0;
     padding: 1.25rem;
     border: 1px solid #ccc;
-    text-align: center;
+    line-height: 1.5;
+    text-align: justify;;
     font-size: 1rem;
     min-height: 250px;
 }
