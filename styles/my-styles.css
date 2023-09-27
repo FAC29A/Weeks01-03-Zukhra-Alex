@@ -71,9 +71,11 @@
 }
 
 .bi-1 {
-    background-image: url('../images/bi1.jpg');
+    background-image: url('../images/MainLabel/mainLabel.png');
     height: 600px;
 }
+
+
 
 .bi-2 {
     background-image: url('https://picsum.photos/id/606/1200/400');
@@ -85,11 +87,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    vertical-align: top;
     color: #121111;
     font-size: 24px;
-    font-weight: bold;
     padding: 30px;
+    color:rgb(87,10,10,0.85);
+    font-family: "WindSong", cursive;
 }
+
+.labelTitle{
+    font-weight: 550;
+    font-size: 11rem;
+}
+
+.sinceClass{
+    font-size: 4rem;
+}
+
 
 .row {
     display: flex;
