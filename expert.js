@@ -29,6 +29,8 @@ if (expert) {
  // Apply the background image to html
  document.documentElement.style.backgroundImage = 'url(./images/MainLabel/labelBackground.png)';
  document.documentElement.style.backgroundSize = 'cover';
+ document.documentElement.style.backgroundRepeat = 'no-repeat';
+ document.documentElement.style.backgroundColor = 'black';
  
 
 } else {
