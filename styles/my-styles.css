@@ -104,11 +104,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    vertical-align: top;
+    width: 100%;
     color: #121111;
-    padding: 30px;
     color:rgb(87,10,10,0.85);
     font-family: "WindSong", cursive;
+    font-size: 8rem;
+    background-color: rgba(190, 190, 190, 0.35);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
 }
 
 .labelTitle{
@@ -164,6 +166,7 @@
 
 h2 {
     text-align: center;
+    margin: 0;
 }
 
 /* CSS services section(start) */
