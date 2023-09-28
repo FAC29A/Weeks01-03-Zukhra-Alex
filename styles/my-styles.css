@@ -376,11 +376,14 @@ form{
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    padding: 2rem;
 }
 
 .formExpertName{
     font-family: 'Palatino', sans-serif;
     font-size: 2rem;
+    margin: 0;
+
 }
 
 
@@ -396,9 +399,10 @@ textarea {
 
 input,
 textarea,
-fieldset,
-button {
+fieldset {
   width: 100%;
+  opacity: 0.7;
+  border: none;
 }
 
 textarea {
@@ -416,9 +420,14 @@ textarea {
 }
 
 button {
-  padding: 0.75rem 0.5rem;
+  padding: .75rem 2.5rem;
   background-color: hsl(220, 20%, 96%);
   transition: background-color 0.2s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button:hover {
