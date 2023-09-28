@@ -108,6 +108,16 @@
     background-image: url('../images/tableCloth.png');
 }
 
+.bi-5 {
+    background-image: url('../images/cellar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    height: 100%; 
+    width: 100vh;
+}
+
 
 .headline {
     position: absolute;
@@ -127,32 +137,28 @@
 
 .labelTitle{
     font-weight: 550;
-    font-size: 11rem;
+    font-size: 12vw;
     position: absolute;
-    top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 20%;
+    transform: translate(-50%, -40%);
     text-align: center;
-    vertical-align: top;
-    color: #121111;
-    padding: 30px;
+    margin: 0;
     color:rgb(87,10,10,0.85);
     font-family: "WindSong", cursive;
 }
 
 .sinceClass{
     font-weight: 550;
-    font-size: 4rem;
+    font-size: 6vw;
     position: absolute;
-    bottom: 0%;
+    bottom: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%);
     text-align: center;
-    vertical-align: top;
-    color: #121111;
-    padding: 30px;
     color:rgb(87,10,10,0.85);
     font-family: "WindSong", cursive;
+    margin: 0;
 }
 
 .row {
