@@ -1,9 +1,9 @@
 /* Font Awesome Icons  */
 
-/*Global variables*/
+/*Global variables
 :root {
 
-}
+} */
 
 
 .team-container {
@@ -76,9 +76,9 @@
 
 .bi-1 {
     background-image: url('../images/MainLabel/paperGrapes.png');
-    height: 600px;
+    height: 800px;
     position: relative;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .bi-1::before {
@@ -90,7 +90,6 @@
     background-size: 100% 100%;
     max-height: auto;
     background-repeat: no-repeat;
-    opacity: 0.8;
 }
 
 /*.bi-1::after {
