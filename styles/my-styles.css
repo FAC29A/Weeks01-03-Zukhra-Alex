@@ -68,7 +68,7 @@
 
 .background-image {
     position: relative;
-    min-height: 400px;
+    min-height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -93,9 +93,21 @@
     opacity: 0.5;
 }
 
+/* Parametrice these*/
 .bi-2 {
-    background-image: url('https://picsum.photos/id/606/1200/400');
+    background-image: url('../images/tableCloth.png');
+    background-position: top;
 }
+
+.bi-3 {
+    background-image: url('../images/tableCloth.png');
+    background-position: bottom;
+}
+
+.bi-4 {
+    background-image: url('../images/tableCloth.png');
+}
+
 
 .headline {
     position: absolute;
@@ -105,12 +117,13 @@
     text-align: center;
     width: 100%;
     color: #121111;
-    color:rgb(87,10,10,0.85);
-    font-family: "WindSong", cursive;
-    font-size: 8rem;
-    background-color: rgba(190, 190, 190, 0.35);
+    color: rgb(87, 10, 10, 0.85);
+    font-family: 'Prompt', sans-serif;
+    font-size: 4rem;
+    background-image: linear-gradient(to right, rgba(90, 90, 90, 0.6), rgba(190, 190, 190, 0.25), rgba(90, 90, 90, 0.6)); /* Horizontal gradient background */
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
 }
+
 
 .labelTitle{
     font-weight: 550;
