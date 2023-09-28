@@ -75,10 +75,24 @@
 }
 
 .bi-1 {
-    background-image: url('../images/MainLabel/mainLabel.png');
+    background-image: url('../images/MainLabel/labelBackground.png');
     height: 600px;
 }
 
+.bi-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/MainLabel/overlayLabel.png');
+    background-size: 100% 100%;
+    max-height: auto;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  
+}
 
 .bi-2 {
     background-image: url('https://picsum.photos/id/606/1200/400');
@@ -92,7 +106,6 @@
     text-align: center;
     vertical-align: top;
     color: #121111;
-    font-size: 24px;
     padding: 30px;
     color:rgb(87,10,10,0.85);
     font-family: "WindSong", cursive;
@@ -101,12 +114,32 @@
 .labelTitle{
     font-weight: 550;
     font-size: 11rem;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    vertical-align: top;
+    color: #121111;
+    padding: 30px;
+    color:rgb(87,10,10,0.85);
+    font-family: "WindSong", cursive;
 }
 
 .sinceClass{
+    font-weight: 550;
     font-size: 4rem;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    vertical-align: top;
+    color: #121111;
+    padding: 30px;
+    color:rgb(87,10,10,0.85);
+    font-family: "WindSong", cursive;
 }
-
 
 .row {
     display: flex;
