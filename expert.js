@@ -26,6 +26,11 @@ if (expert) {
 
     contactForm.style.backgroundImage = 'url("' + expert.Label + '")';
 
+ // Apply the background image to html
+ document.documentElement.style.backgroundImage = 'url(./images/MainLabel/labelBackground.png)';
+ document.documentElement.style.backgroundSize = 'cover';
+ 
+
 } else {
     // Handle the case where the expert with the specified 'id' is not found
     console.log('Expert not found');
