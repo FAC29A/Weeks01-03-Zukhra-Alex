@@ -37,3 +37,8 @@ if (expert) {
     // Handle the case where the expert with the specified 'id' is not found
     console.log('Expert not found');
 }
+
+document.getElementById("backbutton").addEventListener("click", function() {
+    console.log("pressed back");
+    window.location.href = "index.html";
+});
