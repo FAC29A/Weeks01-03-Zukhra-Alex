@@ -135,21 +135,20 @@ h2 {
     display: grid;
     max-width: 85%;
     margin: auto;
-    grid-template-columns: 40% 20% 40%; /* Set the column proportions here */
+    grid-template-columns: 45% calc(10% - 1.25rem) 45%; /* Set the columnns width; Subtract 20px from the second column */
     grid-template-rows: repeat(4, 1fr);
     /* Define 4 rows with equal height */
     grid-gap: 1.25rem;
-    row-gap: 3.75rem;
+    row-gap: 4rem;
 }
 
 .grid-item-service {
     padding: 1.25rem;
-    border: 1px solid #ccc;
     line-height: 1.5;
     text-align: justify;
     word-spacing: 2px;
     font-size: 1rem;
-    min-height: 250px;
+    min-height: 300px;
 }
 
 /* Define the grid cell areas */
@@ -186,21 +185,21 @@ h2 {
 .img-cell4 {
     grid-column-start: 2;
     grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 6;
     background-image: url('../images/serviceDate.png');
     background-size: cover;
     background-position: center;
 }
 
-.tall-row {
-    grid-row: span 4;
-    /* This row spans 2 rows */
-}
+/*.tall-row {*/
+/*    grid-row: span 4;*/
+/*    !* This row spans 2 rows *!*/
+/*}*/
 
-/* Align content vertically centered*/
+/* Align text vertically in the center of the cell*/
 .self-center {
-    align-self: center;
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    flex-wrap: wrap; /* This enables wrapping */
 }
 
 /* Media query for .... Change later */
