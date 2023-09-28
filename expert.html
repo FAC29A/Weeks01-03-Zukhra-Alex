@@ -8,71 +8,47 @@
         <link rel="stylesheet" href="styles/my-styles.css">
         <meta name="description" content="Expert page">
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=WindSong&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Palatino+Linotype:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     </head>
  
     <body>
-        <header>      
-            <h1>Expert</h1>
-        </header>
 
         <main>
-
+            <div class="grid-container-expert">
             
-            <section class="expert-section">
-                <div class="expert-image">
-                    <img alt="Expert's Image">
-                </div>
-                <div class="expert-bio">
-                    <h2></h2>
-                    <article></article>
-                </div>
-            </section>
-    
-            <section class="contact-form">
-                <h2>Contact this Expert</h2>
-                
-                <form
-                id="form"
-                action="https://learn-forms.netlify.com/submit/part3"
-                method="GET"
-                >
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" />
-          
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" />
-          
-                <fieldset>
-                  <legend>Preferred contact method</legend>
-          
-                  <input
-                    id="contact-email"
-                    type="radio"
-                    name="contact"
-                    value="email"
-                    checked
-                  />
-                  <label for="contact-email" class="radio">Email</label>
-          
-                  <input id="contact-tel" type="radio" name="contact" value="telephone" />
-                  <label for="contact-tel" class="radio">Telephone</label>
-          
-                  <input id="contact-post" type="radio" name="contact" value="post" />
-                  <label for="contact-post" class="radio">Post</label>
-                </fieldset>
-          
-                <label for="message">Message</label>
-                <textarea id="message" name="message"></textarea>
-          
-                <input id="marketingConsent" name="marketingConsent" type="checkbox" />
-                <label for="marketingConsent" class="checkbox">Just wreck my inbox</label>
-          
-                <button type="submit">Submit</button>
-              </form>
+               
 
-            </section>
+                <div class="grid-expert-item grid-expert-photo">
+                    <h2 class="bioName"></h2>
+                    <img src="" alt="Expert's Photo" tabindex="0">
+                </div>
+
+                <div class="grid-expert-item grid-expert-bio">
+                    <article class="bio-text" tabindex="1"></article>
+                </div>
+
+                <div class="grid-expert-item grid-expert-form">
+                    <section class="contact-form">
+                        <h2 class="formExpertName"></h2>
+                        
+                        <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text"  tabindex="2"/>
+                    
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email"  tabindex="3"/>
+                                    
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message"></textarea>
+                            
+                            <button type="submit"  tabindex="4">Submit</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+         
         </main>
 
         <!-- Using the next script I add a timestamp, this way it will reload the JS when I reload the page, otherwise it was keeping the old JS after an update -->
@@ -80,7 +56,7 @@
             document.write('<script src="data.js?cache_bust=' + new Date().getTime() + '"><\/script>');
         </script>
         <script>
-            document.write('<script src="expert_JS.js?cache_bust=' + new Date().getTime() + '"><\/script>');
+            document.write('<script src="expert.js?cache_bust=' + new Date().getTime() + '"><\/script>');
         </script>
     </body>
 </html>

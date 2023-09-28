@@ -12,18 +12,19 @@ var expert = teamMembers.find(function (member) {
 
 if (expert) {
     // Populate the Expert-section with the expert's information
-    var expertImage = document.querySelector('.expert-image img');
-    var expertName = document.querySelector('.expert-bio h2');
-    var expertBio = document.querySelector('.expert-bio article');
+    var expertName = document.querySelector('.grid-expert-photo h2');
+    var expertImage = document.querySelector('.grid-expert-photo img');
+    var expertBio = document.querySelector('.grid-expert-bio article');
     var contactForm = document.querySelector('.contact-form');
+    var contactFormExpertName = document.querySelector('.contact-form h2')
 
     expertImage.src = expert.imgBig;
+    expertImage.alt = expert.altText
     expertName.textContent = expert.name;
-    expertBio.textContent = expert.bio;
+    expertBio.innerHTML = expert.bio;
+    contactFormExpertName.textContent = "Contact " + expert.name;
 
     contactForm.style.backgroundImage = 'url("' + expert.Label + '")';
-    console.log('Expert Label:', expert.Label);
-
 
 } else {
     // Handle the case where the expert with the specified 'id' is not found
