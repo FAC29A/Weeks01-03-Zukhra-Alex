@@ -30,7 +30,7 @@ if (expert) {
  document.documentElement.style.backgroundImage = 'url(./images/MainLabel/labelBackground.png)';
  document.documentElement.style.backgroundSize = 'cover';
  document.documentElement.style.backgroundRepeat = 'no-repeat';
- document.documentElement.style.backgroundColor = 'black';
+ document.documentElement.style.backgroundColor = 'blackh';
  
 
 } else {
