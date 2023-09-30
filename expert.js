@@ -25,8 +25,9 @@ if (expert) {
     contactFormExpertName.textContent = "Contact " + expert.name;
 
     contactForm.style.backgroundImage = 'url("' + expert.Label + '")';
+   
 
- // Apply the background image to html
+ // Apply the background image to html. I need to do it this way to dont affect the html for the main
  document.documentElement.style.backgroundImage = 'url(./images/MainLabel/labelBackground.png)';
  document.documentElement.style.backgroundSize = 'cover';
  document.documentElement.style.backgroundRepeat = 'no-repeat';

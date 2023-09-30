@@ -67,94 +67,12 @@
     padding: 0; /* Remove default padding */
 }
 
-.background-image {
-    position: relative;
-    min-height: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.bi-1 {
-    background-image: url('../images/MainLabel/paperGrapes.png');
-    height: 800px;
-    position: relative;
-    opacity: 0.9;
-}
-
-.bi-1::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/MainLabel/onlyFrame.png');
-    background-size: 100% 100%;
-    max-height: auto;
-    background-repeat: no-repeat;
-}
-
-/*.bi-1::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/MainLabel/grapes.png');
-    background-repeat: no-repeat;
-    opacity: 0.7;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}*/
-
-
-/* Parametrice these*/
-.bi-2 {
-    background-image: url('../images/tableCloth.png');
-    background-position: top;
-}
-
-.bi-3 {
-    background-image: url('../images/tableCloth.png');
-    background-position: bottom;
-}
-
-.bi-4 {
-    background-image: url('../images/tableCloth.png');
-}
-
-.bi-5 {
-    background-image: url('../images/cellar.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
-    height: 100%; 
-    width: 100vw;
-}
-
-
-.headline {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-    color: #121111;
-    color: rgb(87, 10, 10, 0.85);
-    font-family: 'Prompt', sans-serif;
-    font-size: 4rem;
-    background-image: linear-gradient(to right, rgba(90, 90, 90, 0.6), rgba(190, 190, 190, 0.25), rgba(90, 90, 90, 0.6)); /* Horizontal gradient background */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-}
-
-
 .labelTitle{
     font-weight: 550;
     font-size: 12vw;
     position: absolute;
     left: 50%;
-    top: 20%;
+    top: 23%;
     transform: translate(-50%, -40%);
     text-align: center;
     margin: 0;
@@ -173,6 +91,71 @@
     color:rgb(87,10,10,0.85);
     font-family: "WindSong", cursive;
     margin: 0;
+}
+
+.background-image {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bi-1 {
+    background-image: url('../images/MainLabel/paperGrapes.png');
+    background-image: url('../images/MainLabel/paper05Grapes.png');
+    position: relative;
+    opacity: 0.9;
+    height: 50vw;
+}
+
+.bi-1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/MainLabel/onlyFrame.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* Parametrice these
+.bi-2 {
+    background-image: url('../images/MainLabel/');
+    background-position: top;
+}
+
+.bi-3 {
+    background-image: url('../images/tableCloth.png');
+    background-position: bottom;
+}
+
+.bi-4 {
+    background-image: url('../images/tableCloth.png');
+}
+*/
+
+.bi-5 {
+    background-image: url('../images/cellar.png'); 
+    background-color: black;
+    background-size: cover;
+    width: 100vw;
+    height: 30vw; /* Aspect ratio of picture is 3:1 So we link here height and width but that same ratio*/
+}
+
+.headline {  
+    text-align: center;
+    width: 100%;
+    color: rgb(87,10,10,0.85);
+    font-family: 'Prompt', sans-serif;
+    font-size: 7vw;
+    background-image: linear-gradient(to right, rgba(6, 6, 6, 0.35), rgba(255, 255, 255, 0.0), rgba(6,6,6,0.35)), url('../images/MainLabel/paper05.jpg'); /* Horizontal gradient background */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+.banner {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .row {
@@ -276,16 +259,10 @@ h2 {
 .grid-container-expert {
     display: grid;
     margin: 5rem;
-    grid-template-columns: auto, auto;
-    grid-template-rows: auto, auto, auto;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
     grid-row-gap: 2rem;
     grid-column-gap: 3rem;
-}
-
-.grid-expert-item {
-    line-height: 1.5;
-    text-align: justify;
-    font-size: 1rem;
 }
 
 /* Define the grid cell areas */
@@ -294,7 +271,7 @@ h2 {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
-    background-size:contain;
+    background-size:auto;
     background-repeat: no-repeat;
     background-position: center;
     position: relative; 
@@ -302,11 +279,13 @@ h2 {
 
 .expertPhoto{
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    height: auto;
+    max-width: 100%; 
 }
 
 .bioName {
     font-family: 'WindSong', sans-serif;
-    font-size: 3rem;
+    font-size: 400%;
     color: rgba(0, 0, 0, 0.85);
     margin: 0;
     padding-top: 1rem;
@@ -325,6 +304,9 @@ h2 {
     background-color: rgba(146, 146, 146, 0.45);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     padding: 2rem;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 1rem;
 }
 
 .grid-expert-form {
@@ -352,6 +334,7 @@ article p {
     text-indent: 3rem; /* Apply indentation to each paragraph */
     margin-top: 0rem;
 }
+
 
 /* Media query for .... Change later */
 @media (max-width: 1024px) {
@@ -454,6 +437,7 @@ form{
 .contact-form{
     background-size: cover;
     background-repeat: no-repeat;
+    max-width: 100%; 
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     padding: 2rem;
 }
