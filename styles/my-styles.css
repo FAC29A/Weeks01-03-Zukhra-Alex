@@ -508,32 +508,30 @@ area {
     position: fixed;
     top: 5%;
     width: 60vw;
-    max-height: 80vh;
+    max-width: 50vw;
     background-color: rgba(0, 0, 0, 0.90); /* Semi-transparent overlay */
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
     z-index: 1000; /* Ensure the modal appears on top of other content */
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
        
 }
 
 /* CSS styles for the modal flex container */
 .modal-flex-container {
     display: flex;
-    align-items: center; /* Vertical alignment */
+    align-items: flex-start; /* Vertical alignment */
 }
 
 /* CSS styles for the modal image */
 .modal-image {
-    flex: 0.5;
-    /*height: 57vw;
-    max-height: 80vh;
-    width: auto;*/
+    flex: 1;
+    width: 25vw;
     max-width: 100%;
     max-height: 100%;
-    max-height: 77vh;
     object-fit: contain;
-    margin: 1rem; 
+    margin: 2vw; 
 }
 
 /* CSS styles for the modal text */
@@ -541,8 +539,8 @@ area {
     flex: 1; /* Fill available space */
     color: #e4e4e4;
     align-self: flex-start;
-    margin: 1rem;
-    font-size: 1.8vw;
+    margin: 2vw;
+    font-size: 1.8vw;    
 }
 
 /* Close button */
@@ -550,8 +548,8 @@ area {
     color: #f4f4f4;
     position: absolute;
     top: 0rem;
-    left: 1.5rem;
-    font-size: 8vw;
+    left: 2vw;
+    font-size: 10vw;
     font-weight: bold;
     cursor: pointer;
 }
