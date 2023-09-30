@@ -6,8 +6,10 @@ function createTeamMemberCard(member) {
 
     // Create card content (img, name, position)
     card.innerHTML = `
-        <img src="${member.imgBig}" alt="${member.name}" tabindex="${member.id}">
+        <div class="team-img-container">
         <h3>${member.name}</h3>
+        <img src="${member.imgBig}" alt="${member.name}" tabindex="${member.id}">
+        </div>  
         <p>${member.position}</p>
         <button> Contact ${member.name.split(' ')[0]} </button>
     `;
