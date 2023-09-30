@@ -94,3 +94,41 @@ const teamMembers = [
         Label: "./images/L06.png"
     },
 ];
+
+
+const testimonials = [
+    {
+        id: 1,
+        text: `<article>
+                 <p>Being the wine for Alfred and July's wedding was a privilege,  moment in Amina's journey occurred when she first witnessed the mesmerizing stain of a wine drop on a paper tablecloth. To her, it was the epitome of beauty in the world of"</p>
+                 <p>I am just a poor wine, bla blab abla"</p>
+                </article>`,
+        position: 5,
+        bottleImg: "./images/Bottles/bottle01.png"
+
+    },
+    {
+        id: 2,
+        text: "TEXT Bottle02",
+        position: 15,
+        bottleImg: "./images/Bottles/bottle02.png"
+    },
+    {
+        id: 3,
+        text: "TEXT Bottle03",
+        position: 25,
+        bottleImg: "./images/Bottles/bottle03.png"
+    },
+    {
+        id: 4,
+        text: "TEXT Bottle04",
+        position: 35,
+        bottleImg: "./images/Bottles/bottle04.png"
+    },
+    {
+        id: 5,
+        text: "TEXT Bottle05",
+        position: 45,
+        bottleImg: "./images/Bottles/bottle05.png"
+    }
+];

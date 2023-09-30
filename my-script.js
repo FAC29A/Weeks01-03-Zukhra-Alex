@@ -1,4 +1,3 @@
-
 // Function to create a card for a team member
 function createTeamMemberCard(member) {
     const card = document.createElement("div");
@@ -43,8 +42,191 @@ function createTeamMembersCards() {
     });
 }
 
+// Function to open the testimonials modal
+function openTestimonialModal(testimonialId) {
+    // Find the testimonial object by its ID
+    const testimonial = testimonials.find(item => item.id === testimonialId);
+
+    if (testimonial) {
+        // Get the modal element
+        const modal = document.getElementById("testimonialsModal");
+
+         // Create a close button element
+         const closeButton = document.createElement("span");
+         closeButton.classList.add("close-modal-button");
+         closeButton.innerHTML = "&times;"; // Use the "times" symbol (X) for the close button
+ 
+         // Add a click event listener to the close button to close the modal
+         closeButton.addEventListener("click", closeTestimonialModal);
+
+        // Create a flex container for the modal content
+        const flexContainer = document.createElement("div");
+        flexContainer.classList.add("modal-flex-container");
+
+        // Append the close button to the flex container
+        flexContainer.appendChild(closeButton);
+
+        // Create an element for the image
+        const image = document.createElement("img");
+        image.src = testimonial.bottleImg;
+        image.alt = "Bottle Image";
+        image.classList.add("modal-image");
+
+        // Create an element for the text
+        const textElement = document.createElement("div");
+        textElement.classList.add("modal-text");
+        textElement.innerHTML = testimonial.text;
+
+        // Append the image and text to the flex container
+        flexContainer.appendChild(image);
+        flexContainer.appendChild(textElement);
+
+        // Clear any existing content in the modal
+        modal.innerHTML = "";
+
+        // Append the flex container to the modal
+        modal.appendChild(flexContainer);
+
+        // Calculate the left position based on the testimonial's position property
+        const leftPosition = testimonial.position + "%";
+
+        // Set the left property of the modal
+        modal.style.left = leftPosition;
+
+        // Display the modal
+        modal.style.display = "block";
+    }
+}
+
+
+
+// Function to close the testimonials modal
+function closeTestimonialModal() {
+    const modal = document.getElementById("testimonialsModal");
+    modal.style.display = "none";
+}
+
+// Add an event listener to close the modal when clicking outside of it or the close button
+document.addEventListener("click", (event) => {
+    const modal = document.getElementById("testimonialsModal");
+    if (event.target === modal || event.target.classList.contains("close-modal-button")) {
+        closeTestimonialModal();
+    }
+});
+
+// Close the modal when the "Close" button is clicked
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("close-modal-button")) {
+        closeTestimonialModal();
+    }
+});
+
+/*
+// Function to scale and update the coordinates based on screen width
+function updateAreaCoordinates() {
+
+    console.log("updateAreaCoordinates called");
+    // Get the current screen width
+    const screenWidth = window.innerWidth;
+
+    // Define the original image width and height
+    const originalImageWidth = 1596;
+    const originalImageHeight = 536;
+
+    // Calculate the scaling factor based on the screen width
+    const scaleFactor = screenWidth / originalImageWidth;
+    console.log (scaleFactor);
+
+    // Update the area coordinates
+    const areas = wineMap.getElementsByTagName("area");
+    for (let i = 0; i < areas.length; i++) {
+        const originalCoords = areas[i].getAttribute("coords").split(",");
+        const scaledCoords = originalCoords.map(coord => (parseFloat(coord) * scaleFactor) + "%");
+        areas[i].setAttribute("coords", scaledCoords.join(","));
+    }
+}
+
+function updateAreaCoordinates2(){
+    console.log("resize window");
+    updateAreaCoordinates();
+}
+
+// Get references to the image and map elements
+const wineImage = document.getElementById("wineImage");
+const wineMap = document.querySelector("map[name='wineMap']");
+
+// Call the updateAreaCoordinates function initially and whenever the window is resized
+updateAreaCoordinates();
+window.addEventListener("resize", updateAreaCoordinates2);
+*/
+
+// Initialize scaleFactor (you can set it according to your needs)
+let scaleFactor = 1;
+
+// Define the original coordinates for each bottle (replace with your actual values)
+const originalCoordinates = [
+    [240, 57, 340, 400], // Bottle 1
+    [480, 57, 580, 400], // Bottle 2
+    [750, 57, 840, 400], // Bottle 3
+    [990, 57, 1080, 400], // Bottle 4
+    [1230, 57, 1320, 400] // Bottle 5
+];
+
+// Function to scale and update the wine map
+function updateWineMap() {
+    // Get the current screen width
+    const screenWidth = window.innerWidth;
+
+    // Define the original image width and height
+    const originalImageWidth = 1596;
+    const originalImageHeight = 536;
+
+    // Calculate the new scaleFactor based on the screen width
+    scaleFactor = screenWidth / originalImageWidth;
+
+    // Get the wineMap container
+    const wineMapContainer = document.getElementById("wineMapContainer");
+
+    // Clear the wineMapContainer
+    wineMapContainer.innerHTML = "";
+
+    // Create the wineMap element
+    const wineMap = document.createElement("map");
+    wineMap.name = "wineMap";
+
+    // Create and add areas to the wineMap
+    for (let i = 1; i <= originalCoordinates.length; i++) {
+        // Create an area element
+        const area = document.createElement("area");
+
+        // Calculate and set the scaled coordinates
+        const originalCoords = originalCoordinates[i - 1];
+        const scaledCoords = originalCoords.map(coord => Math.round(coord * scaleFactor));
+
+        // Set other attributes for the area
+        area.shape = "rect";
+        area.coords = scaledCoords.join(",");
+        area.alt = "Bottle " + i;
+        area.setAttribute("data-testimonial-id", i);
+
+        // Add the click event listener
+        area.onclick = function() {
+            openTestimonialModal(i);
+        };
+
+        // Append the area to the wineMap
+        wineMap.appendChild(area);
+    }
+
+    // Append the wineMap to the wineMapContainer
+    wineMapContainer.appendChild(wineMap);
+}
+
+// Call the initial updateWineMap function and whenever the window is resized
+updateWineMap();
+window.addEventListener("resize", updateWineMap);
+
 // Add an event listener for the DOMContentLoaded event
 document.addEventListener('DOMContentLoaded', function () {
     createTeamMembersCards();
 });
-
