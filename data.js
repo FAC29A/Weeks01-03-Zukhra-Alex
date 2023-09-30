@@ -124,12 +124,12 @@ const testimonials = [
     },
     {
         id: 3,
-        name: "Brunello di Montalcino",
+        name: "Andresen",
         text: `<article>
-                BRUNELLO DI MONTALCINO
+                ANDRESEN
                 <p></p>
-                <p>Amidst the intricate negotiations between a German and a Japanese company, my presence became pivotal in bridging the cultural divide. Both cultures held a profound appreciation for detail and precision, leaving no margin for error during our pivotal dinner meetings.</p>
-                <p>In such high-stakes scenarios where an unlimited budget and unwavering success are imperative, I've earned the moniker 'wine sniper,' a testament to my ability to deliver excellence.</p>
+                <p>In complex negotiations between a German and a Japanese company, I played a crucial role bridging cultural gaps. Both cultures valued precision, leaving no room for error during our high-stakes meetings.</p>
+                <p>In these situations, where success is paramount and budgets are limitless, I've been dubbed the 'wine sniper' for my commitment to excellence.</p>
                 </article>`,
         position: 18,
         bottleImg: "./images/Bottles/bottle03.png"
@@ -152,7 +152,7 @@ const testimonials = [
         text: `<article>
                 PEDRA DO CRIBO
                 <p></P>
-                <p>As a humble wine hailing from a quaint town in Galicia, Spain, most of my production finds its way to local enthusiasts, and that's how it's been for generations. However, there came a day when a call reached us from the family of an expat living in Vancouver.</p>
+                <p>I'm a humble Galician wine, usually enjoyed locally for generations. However, one day, the family of an expat in Vancouver contacted us.</p>
                 <p>Regrettably, he had passed away, and his family sought to honor him by infusing his Galician heritage into his farewell. They reached out to us for help in making his funeral truly special, and I readily accepted the opportunity.</p>
                 </article>`,
         position: 38,

@@ -87,7 +87,7 @@
     transform: translate(-50%, -40%);
     text-align: center;
     margin: 0;
-    color:rgb(87,10,10,0.85);
+    color:rgb(87,10,10,0.75);
     font-family: "WindSong", cursive;
 }
 
@@ -99,7 +99,7 @@
     left: 50%;
     transform: translate(-50%, -10%);
     text-align: center;
-    color:rgb(87,10,10,0.85);
+    color:rgb(87,10,10,0.75);
     font-family: "WindSong", cursive;
     margin: 0;
 }
@@ -112,11 +112,11 @@
 }
 
 .bi-1 {
-    background-image: url('../images/MainLabel/paperGrapes.png');
     background-image: url('../images/MainLabel/paper05Grapes.png');
+    background-image: url("../images/MainLabel/backgroundDirty.png");
     position: relative;
     opacity: 0.9;
-    height: 50vw;
+    height: 30vw;
 }
 
 .bi-1::before {
