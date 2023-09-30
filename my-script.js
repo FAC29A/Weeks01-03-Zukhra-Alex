@@ -9,7 +9,7 @@ function createTeamMemberCard(member) {
         <img src="${member.imgBig}" alt="${member.name}" tabindex="${member.id}">
         <h3>${member.name}</h3>
         <p>${member.position}</p>
-        <button> Contact me </button>
+        <button> Contact ${member.name.split(' ')[0]} </button>
     `;
 
     // Add click event listener to the card
