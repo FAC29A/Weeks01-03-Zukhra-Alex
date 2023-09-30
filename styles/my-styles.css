@@ -525,7 +525,7 @@ area {
 
 /* CSS styles for the modal image */
 .modal-image {
-    flex: 1;
+    flex: 0.5;
     /*height: 57vw;
     max-height: 80vh;
     width: auto;*/
