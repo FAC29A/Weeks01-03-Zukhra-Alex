@@ -10,18 +10,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 900px; 
+    max-width: 85%;
     margin: 0 auto;
+    gap: 40px;
 }
 
 .team-member-card {
-    max-width: 200px;
+    max-width: 300px;
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 3%;
     text-align: center;
-    margin: 10px; /* Add margin to create spacing between cards*/
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.58);
 }
 
 /* style the image */
@@ -30,24 +31,24 @@
     height: auto;
     margin-bottom: 10px;
     border-radius: 3%;
+    position: relative;
 }
 
 /* Style the name */
 .team-member-card h3 {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
 /* Style the department */
 .team-member-card p {
-    font-size: 14px;
-    color: #666;
+    font-size: 0.875rem;
     margin-bottom: 10px;
 }
 
 /* Style the "Contact Me" button - width of button overridden from expert.css*/
 .team-member-card button {
-    background-color: #2525252d;
+    background-color: rgba(37, 37, 37, 0.51);
     color: #fff;
     border: none;
     padding: 10px 20px;

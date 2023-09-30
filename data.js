@@ -1,9 +1,8 @@
 const teamMembers = [
     {
         name: "Sarah Crane",
-        position: "Consultant 1",
+        position: "#Founder",
         id: 1,
-        img: './images/1.jpg',
         imgBig: "./images/01B.png",
         altText: "Sarah Crane. Founder of Someliers",
         bio: `<article>
@@ -20,9 +19,8 @@ const teamMembers = [
     },
     {
         name: "Étienne Dupont",
-        position: "Consultant 2",
+        position: "#Weddings, Anniversary",
         id: 2,
-        img: './images/2.jpg',
         imgBig: "./images/02B.png",
         altText: "Étienne Dupont. French Aristocrat",
         bio: `<article>
@@ -36,9 +34,8 @@ const teamMembers = [
     },
     {
         name: "Nicoleta Pagani",
-        position: "Consultant 3",
+        position: "#Family Events",
         id: 3,
-        img: './images/3.jpg',
         imgBig: "./images/03B.png",
         altText: "Nicoleta Pagani, the latest generation of an Italian winemakers' family",
         bio: `<article>
@@ -51,9 +48,8 @@ const teamMembers = [
     },
     {
         name: "Antonio Salcedo",
-        position: "Consultant 4",
+        position: "#Business Events",
         id: 4,
-        img: './images/4.jpg',
         imgBig: "./images/04B.png",
         altText: "Antonio Salcedo: From Successful Actor to Renowned Wine Producer",
         bio: `<article>
@@ -68,9 +64,8 @@ const teamMembers = [
     },
     {
         name: "Rajesh Kumar Patel",
-        position: "Consultant 5",
+        position: "#Romantic Dinners",
         id: 5,
-        img: './images/5.jpg',
         imgBig: "./images/05B.png",
         altText: "Rajesh Kumar Patel: The Prodigy of the Wine Industry",
         bio: `<article>
@@ -83,9 +78,8 @@ const teamMembers = [
     },
     {
         name: "Amina Njoku",
-        position: "Consultant 6",
+        position: "#Friends Gatherings",
         id: 6,
-        img: './images/6.jpg',
         imgBig: "./images/06B.png",
         altText: "Amina Njoku: Rooted in Winemaking Excellence",
         bio: `<article>
