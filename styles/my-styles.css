@@ -137,7 +137,7 @@
 .bi-5 {
     background-image: url('../images/cellar.png'); 
     background-color: black;
-    height: 20vh; 
+    height: 100%; 
     width: 100vw;
 }
 
