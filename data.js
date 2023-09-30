@@ -140,7 +140,7 @@ const testimonials = [
         text: `<article>
                 PENFOLDS GRANGE
                 <p></p>
-                <p>At the outset, I hesitated when they invited me to be the wine of choice at the MTV Awards Dinner in 2023. I've always considered myself more suitable for seasoned wine connoisseurs rather than the younger crowd. However, Rajesh from Sommeliers convinced me to take the leap, and I must admit, it turned out to be a truly remarkable experience.</p>
+                <p>At the outset, I hesitated when they invited me to be the wine of choice at the MTV Awards Dinner in 2023. I've always considered myself more suitable for seasoned wine connoisseurs rather than the younger crowd.</p>
                 <p>The attendees boasted highly refined palates, with many of them already familiar with my lineage, including some of my esteemed predecessors from 1992 and the illustrious 1986 vintage.</p>
                 </article>`,
         position: 28,

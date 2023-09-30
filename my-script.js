@@ -104,17 +104,12 @@ function closeTestimonialModal() {
     modal.style.display = "none";
 }
 
-// Close the modal when the "Close" button is clicked
-document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("close-modal-button")) {
-        closeTestimonialModal();
-    }
-});
 
-// Initialize scaleFactor (you can set it according to your needs)
+
+// Initialize scaleFactor this will resize the selecting Areas
 let scaleFactor = 1;
 
-// Define the original coordinates for each bottle (replace with your actual values)
+// Original coordinates for each bottle 
 const originalCoordinates = [
     [240, 57, 340, 400], // Bottle 1
     [480, 57, 580, 400], // Bottle 2
