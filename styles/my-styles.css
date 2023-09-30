@@ -563,3 +563,8 @@ area {
 .close-modal-button:hover {
     color: red; /* Change the color on hover */
 }
+
+/* Style the close button on focus */
+.close-modal-button:focus {
+    outline: none;
+}

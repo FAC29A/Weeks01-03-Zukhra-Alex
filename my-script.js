@@ -55,9 +55,16 @@ function openTestimonialModal(testimonialId) {
          const closeButton = document.createElement("span");
          closeButton.classList.add("close-modal-button");
          closeButton.innerHTML = "&times;"; // Use the "times" symbol (X) for the close button
- 
+         closeButton.tabIndex = 1; // Assign a tabindex to make it selectable with the keyboard
+
          // Add a click event listener to the close button to close the modal
          closeButton.addEventListener("click", closeTestimonialModal);
+
+         // Add a keydown event listener to the close button to handle keypress events
+         closeButton.addEventListener("keydown", function(event) {
+            event.preventDefault(); // Prevent any default behavior
+            closeTestimonialModal();
+        });
 
         // Create a flex container for the modal content
         const flexContainer = document.createElement("div");
@@ -72,7 +79,7 @@ function openTestimonialModal(testimonialId) {
         image.alt = "Bottle Image";
         image.classList.add("modal-image");
         
-        // Create an element for the name and text
+        // Create an element for the text
         const textElement = document.createElement("div");
         textElement.classList.add("modal-text");
         textElement.innerHTML = testimonial.text;
@@ -95,6 +102,9 @@ function openTestimonialModal(testimonialId) {
 
         // Display the modal
         modal.style.display = "block";
+
+        // Automatically focus on the close button when the modal opens
+        closeButton.focus();
     }
 }
 
