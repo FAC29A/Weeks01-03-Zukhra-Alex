@@ -99,36 +99,63 @@ const teamMembers = [
 const testimonials = [
     {
         id: 1,
+        name: "Château Margaux",
         text: `<article>
-                 <p>Being the wine for Alfred and July's wedding was a privilege,  moment in Amina's journey occurred when she first witnessed the mesmerizing stain of a wine drop on a paper tablecloth. To her, it was the epitome of beauty in the world of"</p>
-                 <p>I am just a poor wine, bla blab abla"</p>
+                CHÂTEAU MARGAUX
+                 <p></p>
+                 <p>Being the wine chosen for Alfred and Amanda's wedding was an absolute privilege. I am a traditional French wine, meticulously crafted in the heart of the region where the bride's family hails from. It was a delightful surprise for both the newlyweds and myself.</p>
+                 <p>The menu presented a delightful complexity, brimming with rich flavors, yet I gracefully navigated from the appetizers to the sumptuous desserts with finesse.</p>
                 </article>`,
-        position: 5,
+        position: 3,
         bottleImg: "./images/Bottles/bottle01.png"
 
     },
     {
         id: 2,
-        text: "TEXT Bottle02",
-        position: 15,
+        name: "Opus One",
+        text: `<article>
+                OPUS ONE
+                <p></p>
+                <p>Selected for Dana and Jason's first date, I felt the anticipation and excitement in the air. They'd met on a dating app and sought a sommelier's advice for a light red wine to pair with their seafood-based menu.</p>
+                <p>Fast forward seven years, and I've become a cherished part of their anniversary dinners. It's an honor to celebrate their love year after year.</p>
+                </article>`,
+        position: 8,
         bottleImg: "./images/Bottles/bottle02.png"
     },
     {
         id: 3,
-        text: "TEXT Bottle03",
-        position: 25,
+        name: "Brunello di Montalcino",
+        text: `<article>
+                BRUNELLO DI MONTALCINO
+                <p></p>
+                <p>Amidst the intricate negotiations between a German and a Japanese company, my presence became pivotal in bridging the cultural divide. Both cultures held a profound appreciation for detail and precision, leaving no margin for error during our pivotal dinner meetings.</p>
+                <p>In such high-stakes scenarios where an unlimited budget and unwavering success are imperative, I've earned the moniker 'wine sniper,' a testament to my ability to deliver excellence.</p>
+                </article>`,
+        position: 18,
         bottleImg: "./images/Bottles/bottle03.png"
     },
     {
         id: 4,
-        text: "TEXT Bottle04",
-        position: 35,
+        name:"Penfolds Grange",
+        text: `<article>
+                PENFOLDS GRANGE
+                <p></p>
+                <p>At the outset, I hesitated when they invited me to be the wine of choice at the MTV Awards Dinner in 2023. I've always considered myself more suitable for seasoned wine connoisseurs rather than the younger crowd. However, Rajesh from Sommeliers convinced me to take the leap, and I must admit, it turned out to be a truly remarkable experience.</p>
+                <p>The attendees boasted highly refined palates, with many of them already familiar with my lineage, including some of my esteemed predecessors from 1992 and the illustrious 1986 vintage.</p>
+                </article>`,
+        position: 28,
         bottleImg: "./images/Bottles/bottle04.png"
     },
     {
         id: 5,
-        text: "TEXT Bottle05",
-        position: 45,
+        name: "Pedra do Cribo",
+        text: `<article>
+                PEDRA DO CRIBO
+                <p></P>
+                <p>As a humble wine hailing from a quaint town in Galicia, Spain, most of my production finds its way to local enthusiasts, and that's how it's been for generations. However, there came a day when a call reached us from the family of an expat living in Vancouver.</p>
+                <p>Regrettably, he had passed away, and his family sought to honor him by infusing his Galician heritage into his farewell. They reached out to us for help in making his funeral truly special, and I readily accepted the opportunity.</p>
+                </article>`,
+        position: 38,
         bottleImg: "./images/Bottles/bottle05.png"
     }
 ];

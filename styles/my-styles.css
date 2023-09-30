@@ -331,7 +331,7 @@ article{
 }
 
 article p {
-    text-indent: 3rem; /* Apply indentation to each paragraph */
+    text-indent: 4vw; /* Apply indentation to each paragraph */
     margin-top: 0rem;
 }
 
@@ -508,33 +508,31 @@ area {
     position: fixed;
     top: 10%;
     width: 60vw;
-    height: 60vw;
     background-color: rgba(0, 0, 0, 0.90); /* Semi-transparent overlay */
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
     z-index: 1000; /* Ensure the modal appears on top of other content */
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+       
 }
 
 /* CSS styles for the modal flex container */
 .modal-flex-container {
     display: flex;
     align-items: center; /* Vertical alignment */
-    
 }
 
 /* CSS styles for the modal image */
 .modal-image {
     flex: 1;
     height: 57vw;
-   /* Ensure the image doesn't exceed the container's height */
-    margin: 1rem; /* Adjust spacing between image and text */
+    margin: 1rem; 
 }
 
 /* CSS styles for the modal text */
 .modal-text {
-    flex: 2; /* Fill available space */
-    color: #fff;
+    flex: 1; /* Fill available space */
+    color: #e4e4e4;
     align-self: flex-start;
     margin: 1rem;
     font-size: 2vw;

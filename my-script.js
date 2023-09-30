@@ -71,8 +71,8 @@ function openTestimonialModal(testimonialId) {
         image.src = testimonial.bottleImg;
         image.alt = "Bottle Image";
         image.classList.add("modal-image");
-
-        // Create an element for the text
+        
+        // Create an element for the name and text
         const textElement = document.createElement("div");
         textElement.classList.add("modal-text");
         textElement.innerHTML = testimonial.text;
@@ -98,21 +98,11 @@ function openTestimonialModal(testimonialId) {
     }
 }
 
-
-
 // Function to close the testimonials modal
 function closeTestimonialModal() {
     const modal = document.getElementById("testimonialsModal");
     modal.style.display = "none";
 }
-
-// Add an event listener to close the modal when clicking outside of it or the close button
-document.addEventListener("click", (event) => {
-    const modal = document.getElementById("testimonialsModal");
-    if (event.target === modal || event.target.classList.contains("close-modal-button")) {
-        closeTestimonialModal();
-    }
-});
 
 // Close the modal when the "Close" button is clicked
 document.addEventListener("click", (event) => {
@@ -120,45 +110,6 @@ document.addEventListener("click", (event) => {
         closeTestimonialModal();
     }
 });
-
-/*
-// Function to scale and update the coordinates based on screen width
-function updateAreaCoordinates() {
-
-    console.log("updateAreaCoordinates called");
-    // Get the current screen width
-    const screenWidth = window.innerWidth;
-
-    // Define the original image width and height
-    const originalImageWidth = 1596;
-    const originalImageHeight = 536;
-
-    // Calculate the scaling factor based on the screen width
-    const scaleFactor = screenWidth / originalImageWidth;
-    console.log (scaleFactor);
-
-    // Update the area coordinates
-    const areas = wineMap.getElementsByTagName("area");
-    for (let i = 0; i < areas.length; i++) {
-        const originalCoords = areas[i].getAttribute("coords").split(",");
-        const scaledCoords = originalCoords.map(coord => (parseFloat(coord) * scaleFactor) + "%");
-        areas[i].setAttribute("coords", scaledCoords.join(","));
-    }
-}
-
-function updateAreaCoordinates2(){
-    console.log("resize window");
-    updateAreaCoordinates();
-}
-
-// Get references to the image and map elements
-const wineImage = document.getElementById("wineImage");
-const wineMap = document.querySelector("map[name='wineMap']");
-
-// Call the updateAreaCoordinates function initially and whenever the window is resized
-updateAreaCoordinates();
-window.addEventListener("resize", updateAreaCoordinates2);
-*/
 
 // Initialize scaleFactor (you can set it according to your needs)
 let scaleFactor = 1;
