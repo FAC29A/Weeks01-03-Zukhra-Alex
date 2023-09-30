@@ -12,17 +12,21 @@
     justify-content: center;
     max-width: 85%;
     margin: 0 auto;
-    gap: 40px;
+    gap: 2.5rem;
 }
 
 .team-member-card {
     max-width: 300px;
     background-color: #f4f4f4;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 1.25rem;
     border-radius: 3%;
     text-align: center;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.58);
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.58);
+}
+
+.team-img-container {
+    position: relative;
 }
 
 /* style the image */
@@ -31,19 +35,26 @@
     height: auto;
     margin-bottom: 10px;
     border-radius: 3%;
-    position: relative;
 }
 
 /* Style the name */
 .team-member-card h3 {
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(146, 146, 146, 0.45);
+    border-radius: 5%;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0.9375rem;
 }
 
 /* Style the department */
 .team-member-card p {
     font-size: 0.875rem;
-    margin-bottom: 10px;
 }
 
 /* Style the "Contact Me" button - width of button overridden from expert.css*/
@@ -51,7 +62,7 @@
     background-color: rgba(37, 37, 37, 0.51);
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     font-size: 1rem;
     cursor: pointer;
 }
@@ -354,6 +365,7 @@ article p {
         background-image: url('../images/brides-phone-test.jpg');
     }
 }
+
 @media (max-width: 767px) {
     .grid-container-services {
         grid-template-columns: 1fr;
