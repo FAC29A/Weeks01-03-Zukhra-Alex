@@ -137,8 +137,9 @@
 .bi-5 {
     background-image: url('../images/cellar.png'); 
     background-color: black;
-    height: 100%; 
+    background-size: cover;
     width: 100vw;
+    height: 30vw; /* Aspect ratio of picture is 3:1 So we link here height and width but that same ratio*/
 }
 
 .headline {  
@@ -149,8 +150,6 @@
     font-size: 7vw;
     background-image: linear-gradient(to right, rgba(6, 6, 6, 0.35), rgba(255, 255, 255, 0.0), rgba(6,6,6,0.35)), url('../images/MainLabel/paper05.jpg'); /* Horizontal gradient background */
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-    background-size: cover;
-    background-position: medium;
 }
 
 .banner {
@@ -334,6 +333,7 @@ article p {
     text-indent: 3rem; /* Apply indentation to each paragraph */
     margin-top: 0rem;
 }
+
 
 /* Media query for .... Change later */
 @media (max-width: 1024px) {
