@@ -425,8 +425,8 @@ footer {
     padding: 0 100px 0 100px;
     font-size: small;
     align-items: center;
-    background-color: bisque;
-    height: 300px;
+    height: 250px;
+    flex-wrap: wrap;
 }
 
 /* Footer information */
