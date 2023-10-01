@@ -179,12 +179,17 @@ header{
     font-family: 'Prompt', sans-serif;
 }
 
+.about {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 3.75rem;
+}
 .row {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    row-gap: 20px;
+    row-gap: 1.25rem;
     align-items: center;
 }
 /* Create two equal columns that floats next to each other (about section)*/
@@ -192,17 +197,25 @@ header{
     width: 47%;
 }
 
-#seo-img {
+#about-img {
+    margin-top: 0.625rem;
     width: 100%;
     max-height: 380px;
     object-fit: cover;
     border-radius: 10px;
-    background-position: top;
+    background-position: center;
 }
 
 h2 {
     text-align: center;
     margin: 0;
+}
+.text-style {
+    line-height: 1.5;
+    text-align: justify;
+    font-size: calc(0.4vw + 16px);
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
 }
 
 p {
@@ -516,6 +529,10 @@ article p {
     .team-member-card {
         max-width: 300px;
         margin: 0 0.625rem;
+    }
+
+    .column {
+        width: 100%;
     }
 
 }
