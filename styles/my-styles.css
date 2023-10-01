@@ -14,7 +14,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 85%;
+    max-width: 1300px;
     margin: 0 auto;
     gap: 2.5rem;
 }
@@ -334,6 +334,7 @@ footer {
     margin-right: 0.625rem;
 }
 
+
 /* Expert Flexbox */
 .flex-container-expert {
     display: flex;
@@ -443,6 +444,10 @@ article p {
     footer {
         padding: 0 3.125rem 0 3.125rem;
     }
+
+    .team-member-card {
+        max-width: 250px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -496,8 +501,14 @@ article p {
     footer {
         padding: 0 0.625rem 0 0.625rem;
     }
+
     .name-footer {
         font-size: 1.25rem;
+    }
+
+    .team-member-card {
+        max-width: 300px;
+        margin: 0 0.625rem;
     }
 
 }
