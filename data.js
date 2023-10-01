@@ -15,7 +15,7 @@ const teamMembers = [
                 <p>Together, they laid the foundation for Someliers, a prestigious agency that would become synonymous with expert wine guidance and the pursuit of exceptional wine experiences.</p>
                 <p>Today, Sarah Crane and her team at Someliers continue to share their profound knowledge and passion for wine with enthusiasts worldwide.</p>
             </article>`,
-        Label: "./images/L01.png"
+        Label: "./images/FormLabels/label01.png"
     },
     {
         name: "Étienne Dupont",
@@ -30,7 +30,7 @@ const teamMembers = [
                 <p>In pursuit of this noble goal, Étienne embarked on a journey to bridge the gap between exclusivity and accessibility in the realm of wine. His dedication led him to create innovative platforms and educational initiatives, making it possible for people from all walks of life to savor the excellence he had been fortunate to experience.</p>
                 <p>Today, Étienne Dupont stands as a beacon of generosity, using his privilege to enrich the lives of wine enthusiasts everywhere.</p>
             </article>`,
-        Label: "./images/L02.png"
+        Label: "./images/FormLabels/label02.png"
     },
     {
         name: "Nicoleta Pagani",
@@ -44,7 +44,7 @@ const teamMembers = [
                 <p>Nicoleta possesses expertise not only in flavors, textures, and colors but also in the rich history behind each bottle of artisanal wine. Her passion for wine extends beyond its sensory attributes, delving into the profound stories and traditions that make each bottle a true work of art.</p>
                 <p>Her dedication to preserving the heritage of winemaking is a testament to her family's legacy and the cultural significance of the craft. Today, Nicoleta Pagani shares her family's centuries-old expertise and passion with the world, making each bottle a unique journey through time and tradition.</p>
             </article>`,
-        Label: "./images/L03.png"
+        Label: "./images/FormLabels/label03.png"
     },
     {
         name: "Antonio Salcedo",
@@ -60,7 +60,7 @@ const teamMembers = [
                 <p>This labor of love would later become the renowned Viña Clara. Throughout numerous gatherings and insightful discussions with fellow townsfolk and seasoned producers, Antonio uncovered the enigmatic qualities that infuse a wine with true character and soul.</p>
                 <p>Today, he shares this profound understanding and appreciation for winemaking with the world through his involvement with Someliers, ensuring that every bottle tells a compelling tale of Benalmádena's heritage.</p>
             </article>`,
-        Label: "./images/L04.png"
+        Label: "./images/FormLabels/label04.png"
     },
     {
         name: "Rajesh Kumar Patel",
@@ -74,7 +74,7 @@ const teamMembers = [
                 <p>She took it upon herself to reach out to the Indian government and embarked on a lengthy process to bring both Rajesh and his family to the UK, providing them with a fresh start and opportunities previously beyond their reach. Rajesh's innate talent is a marvel to behold. His ability to discern extraordinary levels of detail in blind tastings leaves his peers at Someliers in awe.</p>
                 <p>They often say: All wines already exist within Rajesh's mind; he simply rediscovers them. His presence enriches the world of wine with a unique perspective and a story that resonates with the very essence of passion and resilience.</p>
             </article>`,
-        Label: "./images/L05.png"
+        Label: "./images/FormLabels/label05.png"
     },
     {
         name: "Amina Njoku",
@@ -91,7 +91,7 @@ const teamMembers = [
                 <p>Amina's fascination with wine transcends the ordinary; it's a deep appreciation for the intricate details, the history, and the enchanting moments that each bottle holds.</p>
                 <p>She believes in the profound connection between beauty and wine, and she brings this exceptional viewpoint to Someliers, enriching the team and inspiring all with her passion for the beauty found within each sip.</p>
             </article>`,
-        Label: "./images/L06.png"
+        Label: "./images/FormLabels/label06.png"
     },
 ];
 

@@ -112,7 +112,6 @@
 }
 
 .bi-1 {
-    background-image: url('../images/MainLabel/paper05Grapes.png');
     background-image: url("../images/MainLabel/backgroundDirty.png");
     position: relative;
     opacity: 0.9;
@@ -266,37 +265,37 @@ h2 {
     flex-wrap: wrap; /* This enables wrapping */
 }
 
-/* Expert grid */
-.grid-container-expert {
-    display: grid;
-    margin: 5rem;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr;
-    grid-row-gap: 2rem;
-    grid-column-gap: 3rem;
+/* Expert Flexbox */
+.flex-container-expert {
+    display: flex;
+    margin: 2vw;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Define the grid cell areas */
-.grid-expert-photo {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    background-size:auto;
+/* Left part of Flexbox is just the photo */
+.flex-expert-photo {
+    flex: 0 0 40%;
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative; 
+    min-width: 20rem;
 }
 
 .expertPhoto{
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-    height: auto;
-    max-width: 100%; 
+    width: 100%;
+    height: 100%; /* This ensures all images have the same height */
+    max-width: 100%; /* Responsive image sizing */
+    object-fit: cover; /* Maintain aspect ratio */
+
 }
 
 .bioName {
     font-family: 'WindSong', sans-serif;
-    font-size: 400%;
+    font-size: calc(2vw + 1rem);
     color: rgba(0, 0, 0, 0.85);
     margin: 0;
     padding-top: 1rem;
@@ -305,29 +304,37 @@ h2 {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     position: absolute;
     width: 100%;
+    height: calc(2vw + 2rem);
 }
 
-.grid-expert-bio {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    background-color: rgba(146, 146, 146, 0.45);
+/* Style the expert info and contact form container */
+.flex-expert-nested {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    row-gap: 2vw;
+    min-width: 20rem;
+}
+
+/* Style the expert bio */
+.flex-expert-bio {
+    flex:1;
+    background-color: rgba(209, 209, 209, 0.45);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     padding: 2rem;
     line-height: 1.5;
     text-align: justify;
-    font-size: 1rem;
+    font-size: calc(0.4vw + 16px);
 }
 
-.grid-expert-form {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
+/* Style the contact form section */
+.flex-expert-form {
+    flex:1;
+    width: 100%;
 }
 
-.grid-back-button {
+.flex-back-button {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
@@ -338,7 +345,6 @@ h2 {
 
 article{
     font-family: 'Palatino', sans-serif;
-   /* font-size: Large;*/
 }
 
 article p {
@@ -449,16 +455,17 @@ form{
 .contact-form{
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     max-width: 100%; 
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     padding: 2rem;
 }
 
 .formExpertName{
+    color:rgb(87,10,10,0.75);
     font-family: 'Palatino', sans-serif;
-    font-size: 2rem;
+    font-size: calc(1vw + 18px);
     margin: 0;
-
 }
 
 
@@ -466,10 +473,15 @@ label,
 input,
 button,
 textarea {
+  color:rgb(87,10,10,0.75);
   font-family: 'Palatino', sans-serif;
-  font-size: Large;
-  display: block;
-  color: inherit;
+  font-size: calc(0.4vw + 16px);
+  display:  inline-block;  
+}
+
+label{
+    background-color: rgba(236, 236, 236, 0.65);
+    padding: 0.2rem 0.5rem;
 }
 
 input,
