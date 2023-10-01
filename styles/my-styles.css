@@ -563,10 +563,10 @@ textarea
 {
   resize: vertical;
 }
-
+ /*
 form > * + * {
  
-}
+} */
 
 button {
   padding: .3rem 1.5rem;
