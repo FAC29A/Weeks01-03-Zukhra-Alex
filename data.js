@@ -66,6 +66,7 @@ const teamMembers = [
                 <p>They often say: All wines already exist within Rajesh's mind; he simply rediscovers them.</p>
             </article>`,
         Label: "./images/FormLabels/label05.png"
+        
     },
     {
         name: "Amina Njoku",
