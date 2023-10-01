@@ -239,6 +239,9 @@ p {
     grid-row-end: 2;
     background-image: url('../images/serviceWedding.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: auto;
     background-position: center;
 }
 
@@ -250,6 +253,7 @@ p {
     background-image: url('../images/serviceBusiness.png');
     background-size: cover;
     background-position: center;
+    height: 100%;
 }
 
 .img-cell3 {
@@ -425,6 +429,7 @@ article p {
 }
 
 
+
 /* Media query for .... Change later */
 @media (max-width: 1024px) {
     .grid-container-services {
@@ -515,7 +520,6 @@ article p {
 
 }
 /* CSS services section(end) */
-
 
 
 /*Style for Experts page*/
