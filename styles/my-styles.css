@@ -155,6 +155,7 @@ header{
     background-size: cover;
     width: 100vw;
     height: 30vw; /* Aspect ratio of picture is 3:1 So we link here height and width but that same ratio*/
+    margin-bottom: 8vw;
 }
 
 .headline {  
