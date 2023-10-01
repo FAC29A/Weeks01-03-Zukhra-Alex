@@ -16,13 +16,13 @@ if (expert) {
     var expertImage = document.querySelector('.flex-expert-photo img');
     var expertBio = document.querySelector('.flex-expert-bio article');
     var contactForm = document.querySelector('.contact-form');
-    var contactFormExpertName = document.querySelector('.contact-form h2')
+    var contactFormExpertName = document.querySelector('label[for="message"]');
 
     expertImage.src = expert.imgBig;
     expertImage.alt = expert.altText
     expertName.textContent = expert.name;
     expertBio.innerHTML = expert.bio;
-    contactFormExpertName.textContent = "Contact " + expert.name;
+    contactFormExpertName.textContent = "Message " + expert.name;
 
     contactForm.style.backgroundImage = 'url("' + expert.Label + '")';
    

@@ -205,6 +205,12 @@ h2 {
     margin: 0;
 }
 
+p {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem ;
+}
+
 /* CSS services section(start) */
 .grid-container-services {
     display: grid;
@@ -298,11 +304,6 @@ footer {
 .contact-info {
     margin: 0.625rem 0;
     text-align: left;
-}
-
-/* Footer icons (they are not links) */
-.social-icons i {
-    margin-right: 0.625rem;
 }
 
 footer {
@@ -507,10 +508,7 @@ article p {
 
 /*Style for Experts page*/
 
-form{
-    max-width: 90%;
-    margin: auto;
-}
+
 
 .contact-form{
     background-size: cover;
@@ -521,27 +519,26 @@ form{
     padding: 2rem;
 }
 
-.formExpertName{
-    color:rgba(119, 12, 12, 0.75);
-    font-family: 'Palatino', sans-serif;
-    font-size: calc(1vw + 18px);
-    margin-top: 0.75rem;
-}
-
-
 label,
 input,
 button,
 textarea {
   color:rgb(87,10,10,0.75);
   font-family: 'Palatino', sans-serif;
-  font-size: calc(0.4vw + 16px);
-  display:  inline-block;  
+  font-size: calc(0.6vw + 16px);
+  display: inline-block;
+  width: 100%;
+}
+
+input,
+textarea {
+  margin-top: 0.2rem;
+
 }
 
 label{
-    background-color: rgba(236, 236, 236, 0.65);
-    padding: 0.2rem 0.5rem;
+   
+  
 }
 
 input,
@@ -549,22 +546,19 @@ textarea,
 fieldset {
   width: 100%;
   opacity: 0.7;
-  border: none;
+  border: solid ;
+  margin-top: 0.2rem;
 }
 
-textarea {
+textarea 
+{
   resize: vertical;
 }
 
 form > * + * {
-  margin-top: 1.5rem;
+ 
 }
 
-input,
-textarea {
-  margin-top: 0.5rem;
-  padding: 0.5rem 0.5rem;
-}
 
 button {
   padding: .75rem 2.5rem;
@@ -575,6 +569,7 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width:auto;
 }
 
 button:hover {
@@ -624,7 +619,7 @@ area {
     color: #e4e4e4;
     align-self: flex-start;
     margin: 2vw;
-    font-size: 1.8vw;    
+    font-size: 1.6vw;    
 }
 
 /* Close button */
