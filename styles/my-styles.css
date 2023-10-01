@@ -674,3 +674,45 @@ area {
 .close-modal-button:focus {
     outline: none;
 }
+
+
+/*CSS FOR NAVBAR*/
+.navbar {
+   overflow: hidden;
+   position: absolute;
+   bottom: 1.1vw;
+   width: 100%;
+   z-index: 1; 
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 17vw;
+    margin-right: 16vw;
+}
+
+.navbar li {
+    margin-left: auto; /* Push items to the right */
+    margin-right: auto; /* Push items to the right */
+}
+
+.navbar a {
+    display: block;
+    color: rgb(87,10,10,0.85);
+    font-size: 2vw;
+    bottom: 1%;
+    text-align: center;
+    font-family: "WindSong", cursive;
+    text-decoration: none;
+    /*position: absolute;*/
+}
+
+/* Change link color on hover */
+.navbar a:hover {
+    background-color: #555;
+    color: white;
+}
