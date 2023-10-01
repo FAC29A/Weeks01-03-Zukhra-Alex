@@ -15,12 +15,11 @@ const teamMembers = [
     },
     {
         name: "Étienne Dupont",
-        position: "#Weddings, Anniversary",
+        position: "#Weddings, #Anniversaries",
         id: 2,
         imgBig: "./images/02B.png",
         altText: "Étienne Dupont. French Aristocrat",
         bio: `<article>
-                <p>Introducing Étienne Dupont, the illustrious French wine connoisseur, hailing from a prestigious aristocratic lineage with vast estates in the Champagne region.</p>
                 <p>From a young age, Étienne was groomed with a refined education encompassing arts, literature, music, and, naturally, the finest culinary and oenological experiences. His upbringing was nothing short of extraordinary, granting him access to a world of exclusive products that few of his peers could fathom.</p>
                 <p>Yet, Étienne's story takes an altruistic turn. Rather than simply indulging in the luxuries that life bestowed upon him, he felt a profound calling to extend his blessings to those less fortunate. His mission became clear: to share the wealth of knowledge he had amassed and the exceptional products he had savored with the wider world.</p>
                 <p>In pursuit of this noble goal, Étienne embarked on a journey to bridge the gap between exclusivity and accessibility in the realm of wine. His dedication led him to create innovative platforms and educational initiatives, making it possible for people from all walks of life to savor the excellence he had been fortunate to experience.</p>
@@ -50,11 +49,8 @@ const teamMembers = [
         altText: "Antonio Salcedo: From Successful Actor to Renowned Wine Producer",
         bio: `<article>
                 <p>You may well recognize the Spanish actor Antonio Salcedo, a native of Malaga, who catapulted himself into Hollywood during the mid-80s, ultimately solidifying his status as the international sensation we know today.</p>
-                <p>In keeping with his Malagueño roots, Antonio has always held a profound affection for the treasures of Andalusia.</p>
-                <p>After semi-retiring from the glitz and glamour of the entertainment world, he made a heartfelt decision to rekindle his family ties and immerse himself in the close-knit community of Benalmádena.</p>
-                <p>Driven by a desire to connect and give back, Antonio embarked on a unique social endeavor. He founded a cooperative, where each neighbor contributed their expertise, united by a common goal: to craft a wine that would encapsulate the rich history of their beloved town.</p>
-                <p>This labor of love would later become the renowned Viña Clara. Throughout numerous gatherings and insightful discussions with fellow townsfolk and seasoned producers, Antonio uncovered the enigmatic qualities that infuse a wine with true character and soul.</p>
-                <p>Today, he shares this profound understanding and appreciation for winemaking with the world through his involvement with Someliers, ensuring that every bottle tells a compelling tale of Benalmádena's heritage.</p>
+                <p>After semi-retiring from the glitz and glamour of the entertainment world, he made a heartfelt decision to rekindle his family ties and immerse himself in the close-knit community of Benalmádena. Driven by a desire to connect and give back, Antonio embarked on a unique social endeavor. He founded a cooperative, where each neighbor contributed their expertise, united by a common goal: to craft a wine that would encapsulate the rich history of their beloved town.</p>
+                <p>This labor of love would later become the renowned Viña Clara. Throughout numerous gatherings and insightful discussions with fellow townsfolk and seasoned producers, Antonio uncovered the enigmatic qualities that infuse a wine with true character and soul. Today, he shares this profound understanding and appreciation for winemaking with the world through his involvement with Someliers, ensuring that every bottle tells a compelling tale of Benalmádena's heritage.</p>
             </article>`,
         Label: "./images/FormLabels/label04.png"
     },
@@ -66,9 +62,8 @@ const teamMembers = [
         altText: "Rajesh Kumar Patel: The Prodigy of the Wine Industry",
         bio: `<article>
                 <p>Meet the prodigious talent of Someliers, Rajesh Kumar Patel. His story is nothing short of remarkable. Even in his early years, Rajesh displayed an uncanny palate, much to his mother's recollection, who fondly remembers how he insisted on the absolute perfection of spice balance in her Biryani.</p>
-                <p>At the tender age of ten, Rajesh's life took an unexpected turn. He was taken under the wing of a group of wine counterfeiters who recognized his unparalleled skills and used him to refine their blends. His journey was far from easy, marked by challenges and adversity. However, fate had a twist in store for Rajesh when Sarah Crane learned of his extraordinary story.</p>
-                <p>She took it upon herself to reach out to the Indian government and embarked on a lengthy process to bring both Rajesh and his family to the UK, providing them with a fresh start and opportunities previously beyond their reach. Rajesh's innate talent is a marvel to behold. His ability to discern extraordinary levels of detail in blind tastings leaves his peers at Someliers in awe.</p>
-                <p>They often say: All wines already exist within Rajesh's mind; he simply rediscovers them. His presence enriches the world of wine with a unique perspective and a story that resonates with the very essence of passion and resilience.</p>
+                <p>At the tender age of ten, Rajesh's life took an unexpected turn. He was taken under the wing of a group of wine counterfeiters who recognized his unparalleled skills and used him to refine their blends. His journey was far from easy. However, fate had a twist in store for Rajesh when Sarah Crane learned of his extraordinary story. She took it upon herself to reach out to the Indian government and embarked on a lengthy process to bring both Rajesh and his family to the UK, providing them with a fresh start and opportunities previously beyond their reach. His ability to discern extraordinary levels of detail in blind tastings leaves his peers at Someliers in awe.</p>
+                <p>They often say: All wines already exist within Rajesh's mind; he simply rediscovers them.</p>
             </article>`,
         Label: "./images/FormLabels/label05.png"
     },
@@ -80,12 +75,9 @@ const teamMembers = [
         altText: "Amina Njoku: Rooted in Winemaking Excellence",
         bio: `<article>
                 <p>Amina Njoku, the most recent addition to the Someliers team, hails from the picturesque landscapes of South Africa, a place where her lifelong love affair with wine began.</p>
-                <p>Her introduction to the world of wine was anything but ordinary, and it all started during family gatherings where most kids were content with play.</p>
-                <p>Amina, however, had a different curiosity that set her apart. She posed questions like, Where does this bottle come from? or How can it be that our local wine, so affordable, surpasses the taste of some pricey imports?</p>
-                <p>A pivotal moment in Amina's journey occurred when she first witnessed the mesmerizing stain of a wine drop on a paper tablecloth. To her, it was the epitome of beauty in the world of wine.</p>
-                <p>This simple yet profound image captured her imagination and encapsulated her unique perspective on wine—a complex, multisensory experience, and an art form driven solely by its inherent beauty.</p>
-                <p>Amina's fascination with wine transcends the ordinary; it's a deep appreciation for the intricate details, the history, and the enchanting moments that each bottle holds.</p>
-                <p>She believes in the profound connection between beauty and wine, and she brings this exceptional viewpoint to Someliers, enriching the team and inspiring all with her passion for the beauty found within each sip.</p>
+                <p>Her introduction to the world of wine was anything but ordinary, and it all started during family gatherings where most kids were content with play. Amina, however, had a different curiosity that set her apart. She posed questions like, Where does this bottle come from? or How can it be that our local wine, so affordable, surpasses the taste of some pricey imports?</p>
+                <p>A pivotal moment in Amina's journey occurred when she first witnessed the mesmerizing stain of a wine drop on a paper tablecloth. To her, it was the epitome of beauty in the world of wine. This simple yet profound image captured her imagination and encapsulated her unique perspective on wine—a complex, multisensory experience, and an art form driven solely by its inherent beauty.</p>
+                <p>She believes in the profound connection between beauty and wine, and she brings this exceptional viewpoint to Someliers, inspiring all with her passion for the beauty found within each sip.</p>
             </article>`,
         Label: "./images/FormLabels/label06.png"
     },
