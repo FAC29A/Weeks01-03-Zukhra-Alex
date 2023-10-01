@@ -12,9 +12,9 @@ var expert = teamMembers.find(function (member) {
 
 if (expert) {
     // Populate the Expert-section with the expert's information
-    var expertName = document.querySelector('.grid-expert-photo h2');
-    var expertImage = document.querySelector('.grid-expert-photo img');
-    var expertBio = document.querySelector('.grid-expert-bio article');
+    var expertName = document.querySelector('.flex-expert-photo h2');
+    var expertImage = document.querySelector('.flex-expert-photo img');
+    var expertBio = document.querySelector('.flex-expert-bio article');
     var contactForm = document.querySelector('.contact-form');
     var contactFormExpertName = document.querySelector('.contact-form h2')
 
@@ -28,11 +28,9 @@ if (expert) {
    
 
  // Apply the background image to html. I need to do it this way to dont affect the html for the main
- document.documentElement.style.backgroundImage = 'url(./images/MainLabel/labelBackground.png)';
+ document.documentElement.style.backgroundImage = 'url(./images/MainLabel/paper05Big.png)';
  document.documentElement.style.backgroundSize = 'cover';
- document.documentElement.style.backgroundRepeat = 'no-repeat';
- document.documentElement.style.backgroundColor = 'black';
- 
+ document.documentElement.style.backgroundRepeat = 'no-repeat'; 
 
 } else {
     // Handle the case where the expert with the specified 'id' is not found

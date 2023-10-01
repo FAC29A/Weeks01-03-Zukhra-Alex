@@ -14,6 +14,8 @@
     </head>
 
         <body>
+
+                <!--
                 <main>
                     <div class="grid-container-expert">                  
 
@@ -26,9 +28,7 @@
                             <article tabindex="3"></article>
                         </div>
 
-                        <div class="grid-back-button">
-                                <button id="backbutton" tabindex="7">Back</button>                 
-                        </div>
+                      
 
                         <div class="grid-expert-form">
                             <section class="contact-form">
@@ -49,8 +49,53 @@
                             </section>
                         </div>
                     </div>
+                    <div class="grid-back-button">
+                        <button id="backbutton" tabindex="7">Back</button>                 
+                    </div>
                 
                 </main>
+                -->
+
+                <main>
+    <div class="flex-container-expert">
+        <div class="flex-expert-photo">
+            <h2 class="bioName"></h2>
+            <img src="" alt="Expert's Photo" tabindex="2" class="expertPhoto">
+        </div>
+
+        <div class="flex-expert-nested">
+            <div class="flex-expert-bio">
+                <article tabindex="3"></article>
+            </div>
+
+            <div class="flex-expert-form">
+                <section class="contact-form">
+                    <h2 class="formExpertName"></h2>
+                    <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" tabindex="3"/>
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" tabindex="4"/>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" tabindex="5"></textarea>
+
+                        <button type="submit" tabindex="6">Submit</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="flex-back-button">
+                <button id="backbutton" tabindex="7">Back</button>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</main>
+
 
                 <!-- Using the next script I add a timestamp, this way it will reload the JS when I reload the page, otherwise it was keeping the old JS after an update -->
                 <script>
