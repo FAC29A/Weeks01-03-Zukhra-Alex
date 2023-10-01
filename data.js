@@ -7,13 +7,9 @@ const teamMembers = [
         altText: "Sarah Crane. Founder of Someliers",
         bio: `<article>
                 <p>Sarah Crane, emerged from humble beginnings in a middle-class British family. Her journey into the world of wine was an unexpected twist in her career, as she initially pursued education and built a successful career in the field of finance.</p>
-                <p>However, her destiny was forever altered by her passion for wine, ignited at an early age by her father's wisdom that exceptional wines need not come with an extravagant price tag.</p>
-                <p>Sarah's innate talent for discerning the nuances of wines soon became evident to her friends and colleagues, who sought her recommendations for special occasions.</p>
-                <p>Word of mouth quickly spread her reputation, transforming her into a trusted wine advisor sought after by people all across London.</p>
-                <p>This newfound role not only satisfied her passion but also provided her with an additional source of income.</p>
-                <p>In 2002, Sarah made a courageous decision to leave her financial career behind. She dedicated a year to assemble a diverse team of six wine experts hailing from various corners of the world.</p>
+                <p>However, her destiny was forever altered by her passion for wine, ignited at an early age by her father's wisdom that exceptional wines need not come with an extravagant price tag. Sarah's innate talent for discerning the nuances of wines soon became evident to her friends and colleagues, who sought her recommendations for special occasions.</p>
+                <p>Word of mouth quickly spread her reputation, transforming her into a trusted wine advisor sought after by people all across London. In 2002, Sarah made a courageous decision to leave her financial career behind. She dedicated a year to assemble a diverse team of six wine experts hailing from various corners of the world.</p>
                 <p>Together, they laid the foundation for Someliers, a prestigious agency that would become synonymous with expert wine guidance and the pursuit of exceptional wine experiences.</p>
-                <p>Today, Sarah Crane and her team at Someliers continue to share their profound knowledge and passion for wine with enthusiasts worldwide.</p>
             </article>`,
         Label: "./images/FormLabels/label01.png"
     },
