@@ -704,6 +704,7 @@ area {
     display: block;
     color: rgb(87,10,10,0.85);
     font-size: 2vw;
+    font-weight: 600;
     bottom: 1%;
     text-align: center;
     font-family: "WindSong", cursive;
