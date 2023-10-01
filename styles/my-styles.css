@@ -287,6 +287,7 @@ footer {
     flex-wrap: wrap;
     background-image: url("../images/MainLabel/paper05.jpg");
     color: rgb(87,10,10,0.85);
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.58);
 }
 /* Footer name and year */
 .name-footer {
