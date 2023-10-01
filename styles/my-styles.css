@@ -6,6 +6,9 @@
 
 } */
 
+header{
+    padding-bottom: 2rem;
+}
 
 .team-container {
     display: flex;
