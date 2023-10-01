@@ -1,4 +1,5 @@
 /* Font Awesome Icons  */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
 /*Global variables
 :root {
@@ -266,6 +267,35 @@ h2 {
     flex-wrap: wrap; /* This enables wrapping */
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 4.6875rem 0 4.6875rem;
+    font-size: 0.85rem;
+    align-items: center;
+    min-height: 200px;
+    flex-wrap: wrap;
+    background-image: url("../images/MainLabel/paper05.jpg");
+    color: rgb(87,10,10,0.85);
+}
+/* Footer name and year */
+.name-footer {
+    font-weight: bold;
+    font-size: 1.5625rem;
+}
+
+/* Footer information */
+.contact-info {
+    margin: 0.625rem 0;
+    text-align: left;
+}
+
+/* Footer icons (they are not links) */
+.social-icons i {
+    margin-right: 0.625rem;
+}
+
 /* Expert grid */
 .grid-container-expert {
     display: grid;
@@ -364,6 +394,10 @@ article p {
     .img-cell4 {
         background-image: url('../images/brides-phone-test.jpg');
     }
+
+    footer {
+        padding: 0 3.125rem 0 3.125rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -414,30 +448,17 @@ article p {
         order: 8;
     }
 
+    footer {
+        padding: 0 0.625rem 0 0.625rem;
+    }
+    .name-footer {
+        font-size: 1.25rem;
+    }
+
 }
 /* CSS services section(end) */
 
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 100px 0 100px;
-    font-size: small;
-    align-items: center;
-    background-color: bisque;
-    height: 300px;
-}
 
-/* Footer information */
-.contact-info {
-    margin: 10px 0;
-    text-align: left;
-}
-
-/* Footer icons (they are not links) */
-.social-icons i {
-    margin-right: 10px;
-}
 
 /*Style for Experts page*/
 
