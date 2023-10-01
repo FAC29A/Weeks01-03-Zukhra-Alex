@@ -169,6 +169,10 @@
     margin-bottom: 3rem;
 }
 
+.introText{
+    padding-top: 3rem;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
