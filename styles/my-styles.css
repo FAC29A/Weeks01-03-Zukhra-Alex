@@ -184,7 +184,7 @@ header{
 .about {
     max-width: 1000px;
     margin: auto;
-    padding: 0 3.75rem;
+    padding: 0 1.75rem;
 }
 .row {
     display: flex;
