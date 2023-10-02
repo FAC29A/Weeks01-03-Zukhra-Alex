@@ -698,7 +698,8 @@ area {
 
 .sticky .navbar ul {
     background-image: url('../images/MainLabel/paper05.jpg');
-    background-color: #5f6265;
+    border-style: solid;
+    border-color: rgb(87,10,10,0.75);
     
   }
   
@@ -711,6 +712,7 @@ area {
     justify-content: space-between;
     margin-left: 17vw;
     margin-right: 16vw;
+
 }
 
 .navbar li {
@@ -727,7 +729,7 @@ area {
     text-align: center;
     font-family: "WindSong", cursive;
     text-decoration: none;
-    /*position: absolute;*/
+
 }
 
 /* Change link color on hover */
