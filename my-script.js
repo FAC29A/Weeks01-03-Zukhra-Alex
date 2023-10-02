@@ -97,11 +97,13 @@ function openTestimonialModal(testimonialId) {
         // Append the flex container to the modal
         modal.appendChild(flexContainer);
 
+        /* Problem with small screens
         // Calculate the left position based on the testimonial's position property
         const leftPosition = testimonial.position + "%";
 
         // Set the left property of the modal
         modal.style.left = leftPosition;
+        */
 
         // Display the modal
         modal.style.display = "block";

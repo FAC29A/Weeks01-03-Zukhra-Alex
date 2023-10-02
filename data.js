@@ -90,7 +90,7 @@ const testimonials = [
         id: 1,
         name: "Château Margaux",
         text: `<article>
-                CHÂTEAU MARGAUX
+                 <p>CHÂTEAU MARGAUX</p>
                  <p></p>
                  <p>Being the wine chosen for Alfred and Amanda's wedding was an absolute privilege. I am a traditional French wine, meticulously crafted in the heart of the region where the bride's family hails from. It was a delightful surprise for both the newlyweds and myself.</p>
                  <p>The menu presented a delightful complexity, brimming with rich flavors, yet I gracefully navigated from the appetizers to the sumptuous desserts with finesse.</p>
@@ -103,7 +103,7 @@ const testimonials = [
         id: 2,
         name: "Opus One",
         text: `<article>
-                OPUS ONE
+                <p>OPUS ONE</p>
                 <p></p>
                 <p>Selected for Dana and Jason's first date, I felt the anticipation and excitement in the air. They'd met on a dating app and sought a sommelier's advice for a light red wine to pair with their seafood-based menu.</p>
                 <p>Fast forward seven years, and I've become a cherished part of their anniversary dinners. It's an honor to celebrate their love year after year.</p>
@@ -115,7 +115,7 @@ const testimonials = [
         id: 3,
         name: "Andresen",
         text: `<article>
-                ANDRESEN
+                <p>ANDRESEN</p>
                 <p></p>
                 <p>In complex negotiations between a German and a Japanese company, I played a crucial role bridging cultural gaps. Both cultures valued precision, leaving no room for error during our high-stakes meetings.</p>
                 <p>In these situations, where success is paramount and budgets are limitless, I've been dubbed the 'wine sniper' for my commitment to excellence.</p>
@@ -127,7 +127,7 @@ const testimonials = [
         id: 4,
         name:"Penfolds Grange",
         text: `<article>
-                PENFOLDS GRANGE
+                <p>PENFOLDS GRANGE</p>
                 <p></p>
                 <p>At the outset, I hesitated when they invited me to be the wine of choice at the MTV Awards Dinner in 2023. I've always considered myself more suitable for seasoned wine connoisseurs rather than the younger crowd.</p>
                 <p>The attendees boasted highly refined palates, with many of them already familiar with my lineage, including some of my esteemed predecessors from 1992 and the illustrious 1986 vintage.</p>
@@ -139,7 +139,7 @@ const testimonials = [
         id: 5,
         name: "Pedra do Cribo",
         text: `<article>
-                PEDRA DO CRIBO
+                <p>PEDRA DO CRIBO</p>
                 <p></P>
                 <p>I'm a humble Galician wine, usually enjoyed locally for generations. However, one day, the family of an expat in Vancouver contacted us.</p>
                 <p>Regrettably, he had passed away, and his family sought to honor him by infusing his Galician heritage into his farewell. They reached out to us for help in making his funeral truly special, and I readily accepted the opportunity.</p>
