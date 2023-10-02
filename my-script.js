@@ -106,6 +106,7 @@ function openTestimonialModal(testimonialId) {
         */
 
         // Display the modal
+   
         modal.style.display = "block";
 
         // Automatically focus on the close button when the modal opens
