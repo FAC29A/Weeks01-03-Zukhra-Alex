@@ -232,7 +232,7 @@ p {
     grid-template-rows: repeat(4, 1fr);
     /* Define 4 rows with equal height */
     grid-gap: 1.25rem;
-    row-gap: 4rem;
+    row-gap: 1rem;
 }
 
 .grid-item-service {
@@ -243,15 +243,17 @@ p {
 }
 
 /* Define the grid cell areas */
+.img-cell {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .img-cell1 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
     background-image: url('../images/serviceWedding.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .img-cell2 {
@@ -260,9 +262,6 @@ p {
     grid-row-start: 2;
     grid-row-end: 3;
     background-image: url('../images/serviceBusiness.png');
-    background-size: cover;
-    background-position: center;
-
 }
 
 .img-cell3 {
@@ -271,16 +270,12 @@ p {
     grid-row-start: 3;
     grid-row-end: 4;
     background-image: url('../images/serviceFamily.png');
-    background-size: cover;
-    background-position: center;
 }
 
 .img-cell4 {
     grid-column-start: 2;
     grid-column-end: 4;
     background-image: url('../images/serviceDate.png');
-    background-size: cover;
-    background-position: center;
 }
 
 /*.tall-row {*/
