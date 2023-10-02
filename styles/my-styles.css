@@ -232,26 +232,28 @@ p {
     grid-template-rows: repeat(4, 1fr);
     /* Define 4 rows with equal height */
     grid-gap: 1.25rem;
-    row-gap: 4rem;
+    row-gap: 1rem;
 }
 
 .grid-item-service {
     padding: 1.25rem;
     line-height: 1.5;
     text-align: justify;
-    font-size: calc(0.4vw + 16px);
+    font-size: calc(0.4vw + 14px);
 }
 
 /* Define the grid cell areas */
+.img-cell {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .img-cell1 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
     background-image: url('../images/serviceWedding.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .img-cell2 {
@@ -260,9 +262,6 @@ p {
     grid-row-start: 2;
     grid-row-end: 3;
     background-image: url('../images/serviceBusiness.png');
-    background-size: cover;
-    background-position: center;
-
 }
 
 .img-cell3 {
@@ -271,16 +270,12 @@ p {
     grid-row-start: 3;
     grid-row-end: 4;
     background-image: url('../images/serviceFamily.png');
-    background-size: cover;
-    background-position: center;
 }
 
 .img-cell4 {
     grid-column-start: 2;
     grid-column-end: 4;
     background-image: url('../images/serviceDate.png');
-    background-size: cover;
-    background-position: center;
 }
 
 /*.tall-row {*/
@@ -439,6 +434,7 @@ article p {
     .grid-container-services {
         grid-template-columns: 49% calc(2% - 1.25rem) 49%;
         max-width: 90%;
+        row-gap: 3rem;
     }
 
     .img-cell1 {
@@ -468,6 +464,7 @@ article p {
     }
 }
 
+
 @media (max-width: 767px) {
     .grid-container-services {
         grid-template-columns: 1fr;
@@ -490,6 +487,24 @@ article p {
         /* Reset column placement for smaller screens */
         grid-row: auto;
         /* Reset row placement for smaller screens */
+    }
+
+    .img-cell1 {
+        background-image: url('../images/serviceWedding.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusiness.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamily.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDate.png');
+
     }
 
     .order3 {
@@ -533,6 +548,26 @@ article p {
         width: 100%;
     }
 
+}
+
+@media (max-width: 500px) {
+    .img-cell1 {
+        background-image: url('../images/serviceWeddingSQ.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusinessSQ.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamilySQ.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDateSQ.png');
+
+    }
 }
 /* CSS services section(end) */
 
