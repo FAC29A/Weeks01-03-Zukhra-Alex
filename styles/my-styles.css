@@ -634,17 +634,35 @@ area {
     max-width: 60vw;
     min-width: 12rem;
     flex-wrap: wrap;
+    margin: 2vw;
+}
+
+.modal-right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Display its children elements vertically */
 }
 
 /* CSS styles for the modal image */
 .modal-image {
-    flex: 1;
+    flex: 0.21;
     width: 25vw;
     max-width: 100%;
     min-width: 10rem;
     max-height: 100%;
     object-fit: contain;
-    margin: 2vw; 
+    margin: 0 auto; 
+}
+
+.modal-name {
+    flex: 1;
+    min-width: 10rem;  
+    font-size: calc(1.5vw + 18px); /* Adjust the font size as needed */
+    font-weight: bold; /* Make the name text bold */
+    font-family: "WindSong", cursive;
+    font-weight: 500;
+    color: #fff; /* Text color for the right-side content */
+    margin: 0.8vw; /* Add margin for spacing between name and text */
 }
 
 /* CSS styles for the modal text */
@@ -653,9 +671,12 @@ area {
     color: #e4e4e4;
     align-self: flex-start;
     margin: 2vw;
+    margin-top: 0;
     font-size: 1.6vw;
     min-width: 10rem;    
 }
+
+
 
 /* Close button */
 .close-modal-button {

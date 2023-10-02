@@ -82,14 +82,29 @@ function openTestimonialModal(testimonialId) {
         image.alt = "Bottle Image";
         image.classList.add("modal-image");
         
+        // Create a vertical flex container for the right side
+        const rightContainer = document.createElement("div");
+        rightContainer.classList.add("modal-right-container");
+
+        // Create an element for the name
+        const nameElement = document.createElement("h3");
+        nameElement.textContent = testimonial.name;
+        nameElement.classList.add("modal-name");
+
+
         // Create an element for the text
         const textElement = document.createElement("div");
         textElement.classList.add("modal-text");
         textElement.innerHTML = testimonial.text;
 
-        // Append the image and text to the flex container
+        // Append the name and text to the right container
+        rightContainer.appendChild(nameElement);
+        rightContainer.appendChild(textElement);
+
+        // Append the close button, image, and right container to the flex container
+        flexContainer.appendChild(closeButton);
         flexContainer.appendChild(image);
-        flexContainer.appendChild(textElement);
+        flexContainer.appendChild(rightContainer);
 
         // Clear any existing content in the modal
         modal.innerHTML = "";
