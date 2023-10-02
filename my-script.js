@@ -188,3 +188,18 @@ window.addEventListener("resize", updateWineMap);
 document.addEventListener('DOMContentLoaded', function () {
     createTeamMembersCards();
 });
+
+// Make Navbar sticky
+window.addEventListener("scroll", function() {
+    var navbarContainer = document.getElementById("navbar-container");
+    var headerHeight = document.querySelector("header").offsetHeight;
+    
+    if (window.pageYOffset >= headerHeight) {
+      // When the user scrolls down past the header, add the "sticky" class to the navbar
+      navbarContainer.classList.add("sticky");
+    } else {
+      // Remove the "sticky" class when the user scrolls back up
+      navbarContainer.classList.remove("sticky");
+    }
+  });
+  
