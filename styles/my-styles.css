@@ -30,6 +30,7 @@ header{
 }
 
 .team-img-container {
+    /* position:relative makes the pictures to be on top of the navbar */
     position: relative;
 }
 
@@ -39,6 +40,7 @@ header{
     height: auto;
     margin-bottom: 10px;
     border-radius: 3%;
+    z-index: 2;
 }
 
 /* Style the name */
@@ -687,22 +689,8 @@ area {
    position: absolute;
    bottom: 1.1vw;
    width: 100%;
-   z-index: 999; 
-} 
-
-.sticky .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.sticky .navbar ul {
-    background-image: url('../images/MainLabel/paper05.jpg');
-    border-style: solid;
-    border-color: rgb(87,10,10,0.75);
-    
-  }
-  
+   z-index: 100;
+ } 
 
 .navbar ul {
     list-style-type: none;
@@ -719,21 +707,52 @@ area {
     margin-left: auto;
     margin-right: auto;
 }
-
+/* Change link color on hover */
 .navbar a {
     display: block;
-    color: rgb(87,10,10,0.85);
+    color: rgb(87, 10, 10, 0.85);
     font-size: 2vw;
     font-weight: 600;
     bottom: 1%;
     text-align: center;
     font-family: "WindSong", cursive;
     text-decoration: none;
-
+    position: relative; /* Add relative positioning */
 }
 
-/* Change link color on hover */
-.navbar a:hover {
-    background-color: #555;
-    color: white;
+/* Add transition to the ::before pseudo-element */
+.navbar a::before {
+    content: ""; /* Add a pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/MainLabel/singleWineDrop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* Place it behind the anchor text */
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.5s ease; /* Add transition effect */
 }
+
+/* Change opacity on hover to make the image appear */
+.navbar a:hover::before {
+    opacity: 0.5; /* Change opacity on hover */
+}
+
+ /*Position Relative on team-img-container makes the images to be on top of sticky navbar
+.sticky .navbar {
+    position: fixed;
+    top: 0;
+    height: 3vw;
+}
+
+.sticky .navbar ul {
+    background-image: url('../images/MainLabel/paper05.jpg');
+    border-style: solid;
+    border-color: rgb(87,10,10,0.75);
+}*/
+
+

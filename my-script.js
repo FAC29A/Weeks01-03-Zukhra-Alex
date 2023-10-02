@@ -3,13 +3,13 @@ function createTeamMemberCard(member) {
     const card = document.createElement("div");
     card.classList.add("team-member-card");
 
-    // Create card content (img, name, position)
+    // Create card content (img, name, tags)
     card.innerHTML = `
         <div class="team-img-container">
         <h3>${member.name}</h3>
         <img src="${member.imgBig}" alt="${member.name}" tabindex="${member.id}">
         </div>  
-        <p>${member.position}</p>
+        <p>${member.tags}</p>
         <button> Contact ${member.name.split(' ')[0]} </button>
     `;
 
@@ -24,13 +24,6 @@ function createTeamMemberCard(member) {
     return card;
 }
 
-// Function to navigate to the expert page
-function navigateToExpertPage(memberId) {
-    // Build the URL with parameters
-    const url = `expert.html?id=${memberId}`;
-    // Navigate to the expert.html page with parameters
-    window.location.href = url;
-}
 
 // Function to create team members cards and append them to the container
 function createTeamMembersCards() {
@@ -42,6 +35,14 @@ function createTeamMembersCards() {
         const card = createTeamMemberCard(member);
         teamMembersContainer.appendChild(card);
     });
+}
+
+// Function to navigate to the expert page
+function navigateToExpertPage(memberId) {
+    // Build the URL with parameters
+    const url = `expert.html?id=${memberId}`;
+    // Navigate to the expert.html page with parameters
+    window.location.href = url;
 }
 
 // Function to open the testimonials modal
@@ -194,16 +195,18 @@ function vwToPixels(vw) {
     return (vw * window.innerWidth) / 100;
 }
 
+/* Position Relative on team-img-container makes the images to be on top of sticky navbar
 // Make Navbar sticky
 window.addEventListener("scroll", function() {
     var navbarContainer = document.getElementById("navbar-container");
     var headerHeight = document.querySelector("header").offsetHeight;
     
-    if (window.scrollY >= headerHeight - vwToPixels(5)) {
+    if (window.scrollY >= headerHeight - vwToPixels(6)) {
       // When the user scrolls down past the header, add the "sticky" class to the navbar
       navbarContainer.classList.add("sticky");
+
     } else {
       // Remove the "sticky" class when the user scrolls back up
       navbarContainer.classList.remove("sticky");
     }
-});
+}); */

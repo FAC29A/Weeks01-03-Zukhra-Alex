@@ -1,7 +1,7 @@
 const teamMembers = [
     {
         name: "Sarah Crane",
-        position: "#Founder",
+        tags: "#Founder",
         id: 1,
         imgBig: "./images/01B.png",
         altText: "Sarah Crane. Founder of Someliers",
@@ -15,7 +15,7 @@ const teamMembers = [
     },
     {
         name: "Étienne Dupont",
-        position: "#Weddings, #Anniversaries",
+        tags: "#Weddings, #Anniversaries",
         id: 2,
         imgBig: "./images/02B.png",
         altText: "Étienne Dupont. French Aristocrat",
@@ -29,7 +29,7 @@ const teamMembers = [
     },
     {
         name: "Nicoleta Pagani",
-        position: "#Family Events",
+        tags: "#Family Events",
         id: 3,
         imgBig: "./images/03B.png",
         altText: "Nicoleta Pagani, the latest generation of an Italian winemakers' family",
@@ -43,7 +43,7 @@ const teamMembers = [
     },
     {
         name: "Antonio Salcedo",
-        position: "#Business Events",
+        tags: "#Business Events",
         id: 4,
         imgBig: "./images/04B.png",
         altText: "Antonio Salcedo: From Successful Actor to Renowned Wine Producer",
@@ -56,7 +56,7 @@ const teamMembers = [
     },
     {
         name: "Rajesh Kumar Patel",
-        position: "#Romantic Dinners",
+        tags: "#Romantic Dinners",
         id: 5,
         imgBig: "./images/05B.png",
         altText: "Rajesh Kumar Patel: The Prodigy of the Wine Industry",
@@ -70,7 +70,7 @@ const teamMembers = [
     },
     {
         name: "Amina Njoku",
-        position: "#Friends Gatherings",
+        tags: "#Friends Gatherings",
         id: 6,
         imgBig: "./images/06B.png",
         altText: "Amina Njoku: Rooted in Winemaking Excellence",
