@@ -239,7 +239,7 @@ p {
     padding: 1.25rem;
     line-height: 1.5;
     text-align: justify;
-    font-size: calc(0.4vw + 16px);
+    font-size: calc(0.4vw + 14px);
 }
 
 /* Define the grid cell areas */
@@ -434,6 +434,7 @@ article p {
     .grid-container-services {
         grid-template-columns: 49% calc(2% - 1.25rem) 49%;
         max-width: 90%;
+        row-gap: 3rem;
     }
 
     .img-cell1 {
@@ -463,6 +464,7 @@ article p {
     }
 }
 
+
 @media (max-width: 767px) {
     .grid-container-services {
         grid-template-columns: 1fr;
@@ -485,6 +487,24 @@ article p {
         /* Reset column placement for smaller screens */
         grid-row: auto;
         /* Reset row placement for smaller screens */
+    }
+
+    .img-cell1 {
+        background-image: url('../images/serviceWedding.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusiness.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamily.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDate.png');
+
     }
 
     .order3 {
@@ -528,6 +548,26 @@ article p {
         width: 100%;
     }
 
+}
+
+@media (max-width: 500px) {
+    .img-cell1 {
+        background-image: url('../images/serviceWeddingSQ.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusinessSQ.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamilySQ.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDateSQ.png');
+
+    }
 }
 /* CSS services section(end) */
 
