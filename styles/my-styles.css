@@ -372,7 +372,6 @@ footer {
 .expertPhoto{
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     width: 100%;
-   
     max-width: 100%; /* Responsive image sizing */
     object-fit: cover; /* Maintain aspect ratio */
 
@@ -420,12 +419,7 @@ footer {
 }
 
 .flex-back-button {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    justify-self: start;
-    align-self: start;
+   
 }
 
 article{
@@ -435,7 +429,7 @@ article{
 article p {
     text-indent: 4vw; /* Apply indentation to each paragraph */
     margin-top: 0rem;
-    font-size: 1.4rem ;
+    font-size: calc(0.2vw + 16px) ;
 }
 
 
