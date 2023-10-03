@@ -188,14 +188,14 @@ function updateWineMap() {
       // Check if the testimonial exists
       if (testimonial) {
         // Update the text with the wine name from the testimonial
-        introText.textContent = `Ask ${testimonial.name} for its experience`;
+        introText.textContent = `Click "${testimonial.name}" to explore its story`;
       }
     });
 
     // Add the mouseout event listener to remove the hover effect
     area.addEventListener("mouseout", function () {
       // Restore the original text
-      introText.textContent = "Choose a wine to inquire about its experience";
+      introText.textContent = "Click on a wine bottle to explore its story";
     });
 
     // Append the area to the wineMap
