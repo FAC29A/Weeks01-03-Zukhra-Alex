@@ -56,13 +56,13 @@ const teamMembers = [
     Label: "./images/FormLabels/label04.png",
   },
   {
-    name: "Rajesh Kumar Patel",
+    name: "Rajesh Kumar",
     tags: "#Romantic Dinners",
     id: 5,
     imgBig: "./images/05B.png",
-    altText: "Rajesh Kumar Patel: The Prodigy of the Wine Industry",
+    altText: "Rajesh Kumar: The Prodigy of the Wine Industry",
     bio: [
-      "Meet the prodigious talent of Someliers, Rajesh Kumar Patel. His story is nothing short of remarkable. Even in his early years, Rajesh displayed an uncanny palate, much to his mother's recollection, who fondly remembers how he insisted on the absolute perfection of spice balance in her Biryani.",
+      "Meet the prodigious talent of Someliers, Rajesh Kumar. His story is nothing short of remarkable. Even in his early years, Rajesh displayed an uncanny palate, much to his mother's recollection, who fondly remembers how he insisted on the absolute perfection of spice balance in her Biryani.",
       "At the tender age of ten, Rajesh's life took an unexpected turn. He was taken under the wing of a group of wine counterfeiters who recognized his unparalleled skills and used him to refine their blends. His journey was far from easy. However, fate had a twist in store for Rajesh when Sarah Crane learned of his extraordinary story. She took it upon herself to reach out to the Indian government and embarked on a lengthy process to bring both Rajesh and his family to the UK, providing them with a fresh start and opportunities previously beyond their reach. His ability to discern extraordinary levels of detail in blind tastings leaves his peers at Someliers in awe.",
       "They often say: All wines already exist within Rajesh's mind; he simply rediscovers them.",
     ],
