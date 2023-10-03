@@ -186,6 +186,7 @@ function updateWineMap() {
         area.coords = scaledCoords.join(",");
         area.alt = "Bottle " + i;
         area.setAttribute("data-testimonial-id", i);
+        area.tabIndex = 10+i;
 
         // Add the click event listener
         area.onclick = function() {
