@@ -72,31 +72,28 @@ const submitButton = document.getElementById("submit-button");
 submitButton.addEventListener("click", function (event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
-  // Get a reference to the modal and the modal content element
+  // Get a reference to the modal
   const modal = document.getElementById("captchaModal");
-  //const modalContent = modal.querySelector(".modal-content");
-  const modalContent = document.querySelector("#captchaModal div");
 
   // Generate random captcha items
   const randomCaptchaItems = getRandomCaptchaItems();
 
   // Create a 3x3 grid for the modal content (grid of images)
-
   const modalContentHTML =
-    `
-  <div class="captcha-text">Select only the wine bottles</div>
-  <div class="captcha-grid">` +
-    randomCaptchaItems
-      .map(
-        (item) =>
-          `<div class="captcha-cell"><img src="${item.captchaImg}" alt="Captcha Image ${item.id}" class="captchaImage" /></div>`
-      )
-      .join("") +
-    `</div>`;
+  `
+<div class="captcha-text">Select only the wine bottles</div>
+<div class="captcha-grid">` +
+  randomCaptchaItems
+    .map(
+      (item) =>
+        `<div class="captcha-cell"><img src="${item.captchaImg}" alt="Captcha Image ${item.id}" class="captchaImage" /></div>`
+    )
+    .join("") +
+  `</div>`;
 
-  // Set the modal content HTML
-  modalContent.innerHTML = modalContentHTML;
+// Set the modal content HTML
+modal.innerHTML = modalContentHTML;
 
-  // Display the modal
-  modal.style.display = "block";
+// Display the modal
+modal.style.display = "block";
 });

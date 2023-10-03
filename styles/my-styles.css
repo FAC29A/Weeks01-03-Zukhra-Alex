@@ -1,0 +1,816 @@
+/* Font Awesome Icons  */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/*Global variables*/
+:root {
+    --white: #fff;
+    --lightest-color: #f4f4f4;
+    --lightest-transparent:rgba(233, 233, 233, 0.767);
+    --dark-white: #ddd;
+    --light-grey: rgba(146,146,146,0.45);
+    --medium-grey: rgba(209,209,209,0.45);
+    --medium-dark-grey: rgba(37,37,37,0.51);
+    --dark-grey: rgba(0,0,0,0.58);
+    --darker-grey: rgba(0,0,0,0.85);
+    --burgundy: rgba(87,10,10,0.75);
+
+    --font-titles: WindSong, cursive;
+    --font-main: Prompt, sans-serif;
+
+    --box-shadow-light: 0 0 1.25rem rgba(0,0,0,0.58);
+    --box-shadow-dark: 0 0 1.25rem rgba(0,0,0,0.8);
+    --box-shadow-small: 0 0 0.75rem rgba(0,0,0,0.4);
+
+} 
+
+header{
+    padding-bottom: 2rem;
+}
+
+body{
+    font-family: var(--font-main);
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 2.5rem;
+}
+
+.team-member-card {
+    max-width: 300px;
+    background-color: var(--lightest-color);
+    border: 1px solid var(--dark-white);
+    padding: 1.25rem;
+    border-radius: 3%;
+    text-align: center;
+    box-shadow: var(--box-shadow-light);
+}
+
+.team-img-container {
+    /* position:relative makes the pictures to be on top of the navbar */
+    position: relative;
+}
+
+/* style the image */
+.team-member-card img {
+    width: 100%; /* Set the width to 100% to fill the container */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 3%;
+    z-index: 2;
+}
+
+/* Style the name */
+.team-member-card h3 {
+    font-size: 1.25rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--light-grey);
+    border-radius: 5%;
+    color: var(--white);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0.9375rem;
+}
+
+/* Style the department */
+.team-member-card p {
+    font-size: 0.875rem;
+}
+
+/* Style the "Contact Me" button - width of button overridden from expert.css*/
+.team-member-card button {
+    background-color: var(--medium-dark-grey);
+    color: var(--white);
+    border: none;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Add hover effect to the button */
+.team-member-card button:hover {
+    background-color: var(--dark-grey);
+}
+
+/* To make a background image take up the whole screen width */
+.margin-0 {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.labelTitle{
+    font-weight: 550;
+    font-size: 12vw;
+    position: absolute;
+    left: 50%;
+    top: 23%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+    margin: 0;
+    color:var(--burgundy);
+    font-family: "WindSong", cursive;
+}
+
+.sinceClass{
+    font-weight: 550;
+    font-size: 6vw;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+    color:var(--burgundy);
+    font-family: "WindSong", cursive;
+    margin: 0;
+}
+
+.background-image {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bi-1 {
+    background-image: url("../images/MainLabel/backgroundDirty.png");
+    position: relative;
+    opacity: 0.9;
+    height: 30vw;
+}
+
+.bi-1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/MainLabel/onlyFrame.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.bi-2 {
+    background-image: url('../images/cellar.png'); 
+    z-index: 0;
+    background-size: cover;
+    width: 100vw;
+    height: 30vw; /* Aspect ratio of picture is 3:1 So we link here height and width but that same ratio*/
+    margin-bottom: 8vw;
+}
+
+.headline {  
+    text-align: center;
+    width: 100%;
+    color: var(--burgundy);
+    font-size: 7vw;
+    background-image: linear-gradient(to right, rgba(6, 6, 6, 0.35), rgba(255, 255, 255, 0.0), rgba(6,6,6,0.35)), url('../images/MainLabel/paper05.jpg'); /* Horizontal gradient background */
+    box-shadow: var(--box-shadow-dark);
+}
+
+.banner {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.introText{
+    padding-bottom: 3rem;
+    font-size: calc(1vw + 20px);
+}
+/* css for about section */
+.padding-important {
+    padding-top: 2rem;
+    padding-bottom: 2rem!important;
+}
+.about {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 1.75rem;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 1.25rem;
+    align-items: center;
+}
+/* Create two equal columns that floats next to each other (about section)*/
+.column {
+    width: 47%;
+}
+
+#about-img {
+    margin-top: 0.625rem;
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-position: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.text-style {
+    line-height: 1.5;
+    text-align: justify;
+    font-size: calc(0.4vw + 16px)!important;
+}
+
+p {
+    font-weight: 500;
+}
+
+/* CSS services section(start) */
+.grid-container-services {
+    display: grid;
+    max-width: 85%;
+    margin: auto;
+    grid-template-columns: 45% calc(10% - 1.25rem) 45%; /* Set the columnns width; Subtract 20px from the second column */
+    grid-template-rows: repeat(4, 1fr);
+    /* Define 4 rows with equal height */
+    grid-gap: 1.25rem;
+    row-gap: 1rem;
+}
+
+.grid-item-service {
+    padding: 1.25rem;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: calc(0.4vw + 14px);
+}
+
+/* Define the grid cell areas */
+.img-cell {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-cell1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url('../images/serviceWedding.png');
+}
+
+.img-cell2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url('../images/serviceBusiness.png');
+}
+
+.img-cell3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-image: url('../images/serviceFamily.png');
+}
+
+.img-cell4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-image: url('../images/serviceDate.png');
+}
+
+
+/* Align text vertically in the center of the cell*/
+.self-center {
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    flex-wrap: wrap; /* This enables wrapping */
+}
+
+/* css (footer)*/
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 4.6875rem 0 4.6875rem;
+    font-size: 0.85rem;
+    align-items: center;
+    min-height: 200px;
+    flex-wrap: wrap;
+    background-image: url("../images/MainLabel/paper05.jpg");
+    color: var(--burgundy);
+    box-shadow: var(--box-shadow-light);
+}
+/* Footer name and year */
+.name-footer {
+    font-weight: bold;
+    font-size: 1.5625rem;
+}
+
+/* Footer information */
+.contact-info {
+    margin: 0.625rem 0;
+    text-align: left;
+}
+
+/* Footer icons (they are not links) */
+.social-icons i {
+    margin-right: 0.625rem;
+}
+
+/* Expert Flexbox */
+.flex-container-expert {
+    display: flex;
+    margin: 2vw;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Left part of Flexbox is just the photo */
+.flex-expert-photo {
+    flex: 0 0 40%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; 
+    min-width: 20rem;
+}
+
+.expertPhoto{
+    box-shadow: var(--box-shadow-dark);
+    width: 100%;
+    max-width: 100%; /* Responsive image sizing */
+    object-fit: cover; /* Maintain aspect ratio */
+
+}
+
+.bioName {
+    font-family: var(--font-titles);
+    font-size: calc(2vw + 1rem);
+    color: var(--darker-grey);
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--light-grey);
+    box-shadow: var(--box-shadow-dark);
+    position: absolute;
+    width: 100%;
+    height: calc(2vw + 2rem);
+}
+
+/* Style the expert info and contact form container */
+.flex-expert-nested {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    row-gap: 1.3vw;
+    min-width: 20rem;
+}
+
+/* Style the expert bio */
+.flex-expert-bio {
+    flex:1;
+    background-color: var(--medium-grey);
+    box-shadow: var(--box-shadow-dark);
+    padding: 2rem;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: calc(0.4vw + 16px);
+}
+
+/* Style the contact form section */
+.flex-expert-form {
+    flex:1;
+    width: 100%;
+}
+
+article p {
+    text-indent: 4vw; /* Apply indentation to each paragraph */
+    margin-top: 0rem;
+    font-size: calc(0.2vw + 16px) ;
+}
+
+/*Style for Experts page*/
+.contact-form{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%; 
+    box-shadow: var(--box-shadow-dark);
+    padding: 2rem;
+}
+
+label,
+input,
+button,
+textarea {
+  color:var(--burgundy);
+  font-size: calc(0.6vw + 16px);
+  display: inline-block;
+  width: 100%;
+}
+
+label{
+   padding-left: 1.5rem;
+   padding-right: 1rem;
+   background-color: var(--lightest-transparent);
+   display: block;
+   margin-top: 0.2rem;
+   width:fit-content;
+}
+
+input,
+textarea,
+fieldset {
+  width: 100%;
+  opacity: 0.7;
+  border: solid ;
+}
+
+textarea 
+{
+  resize: vertical;
+}
+
+button {
+  padding: .3rem 1.5rem;
+  background-color: var(--white);
+  transition: background-color 0.2s;
+  box-shadow: var(--box-shadow-small);
+  border: none;
+  display: block;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width:auto;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* Modal container */
+.modalWindow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%; /* Set left to 50% */
+    transform: translate(-50%, -50%); /* Center horizontally */
+    max-width: 85vw;
+    min-width: 12rem;
+    background-color: var(--darker-grey); /* Semi-transparent overlay */
+    box-shadow: var(--box-shadow-dark);
+    z-index: 10; /* Ensure the modal appears on top of other content */
+    justify-content: center;
+    align-items: center;       
+}
+
+/* CSS styles for the modal flex container */
+.modal-flex-container {
+    display: flex;
+    align-items: flex-start; /* Vertical alignment */
+    max-width: 60vw;
+    min-width: 12rem;
+    flex-wrap: wrap;
+    margin: 2vw;
+    gap: 2vw;
+}
+
+.modal-right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 12rem; /* Display its children elements vertically */
+}
+
+/* CSS styles for the modal image */
+.modal-image {
+    flex: 0.21;
+    width: 25vw;
+    max-width: 100%;
+    min-width: 10rem;
+    max-height: 100%;
+    object-fit: contain;
+    margin: 0 auto; 
+}
+
+.modal-name {
+    flex: 1;
+    min-width: 10rem;  
+    font-size: calc(1.5vw + 18px); /* Adjust the font size as needed */
+    font-weight: bold; /* Make the name text bold */
+    font-family: var(--font-titles);
+    font-weight: 500;
+    color: var(--white); /* Text color for the right-side content */
+    margin: 0.8vw; /* Add margin for spacing between name and text */
+}
+
+/* CSS styles for the modal text */
+.modal-text {
+    flex: 1; /* Fill available space */
+    color: var(--white);
+    align-self: flex-start;
+    /*margin: 2vw;*/
+    margin-top: 0;
+    font-size: 1.6vw;
+    min-width: 10rem;    
+}
+
+/* Close button */
+.close-modal-button {
+    color: var(--white);
+    position: absolute;
+    top: 0vw;
+    left: 1vw;
+    font-size: calc(7vw + 18px);
+    cursor: pointer;
+    line-height: 4vw;
+}
+
+/* Add a smooth transition effect */
+.modal-content, .close-modal-button {
+    transition: 0.5s;
+}
+
+/* Style the close button on hover */
+.close-modal-button:hover {
+    color: var(--burgundy) /* Change the color on hover */
+}
+
+/* Style the close button on focus */
+.close-modal-button:focus {
+    outline: none;
+}
+
+/*CSS FOR NAVBAR*/
+.navbar {
+   overflow: hidden;
+   position: absolute;
+   bottom: 1.1vw;
+   width: 100%;
+   z-index: 100;
+ } 
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 17vw;
+    margin-right: 16vw;
+}
+
+.navbar li {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Change link color on hover */
+.navbar a {
+    display: block;
+    color: var(--burgundy);
+    font-size: 2vw;
+    font-weight: 600;
+    bottom: 1%;
+    text-align: center;
+    font-family: var(--font-titles);
+    text-decoration: none;
+    position: relative; /* Add relative positioning */
+}
+
+/* Add transition to the ::before pseudo-element */
+.navbar a::before {
+    content: ""; /* Add a pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/MainLabel/singleWineDrop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* Place it behind the anchor text */
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.5s ease; /* Add transition effect */
+}
+
+/* Change opacity on hover to make the image appear */
+.navbar a:hover::before {
+    opacity: 0.5; /* Change opacity on hover */
+}
+
+/* Remove the default focus outline */
+.navbar a:focus {
+    outline: none;
+}
+
+/* Add custom styles for the focused element */
+.navbar a:focus::before {
+    opacity: 0.7; /* Change opacity to indicate focus */
+}
+
+/*Cursor for testimonial bottles */
+area {
+    cursor: pointer;
+}
+
+area:focus {
+    outline: solid var(--burgundy);
+}
+
+
+/* CSS for the 3x3 grid */
+.modalWindowCaptcha {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%; /* Set left to 50% */
+    transform: translate(-50%, -50%); /* Center horizontally */
+    min-width: 12rem;
+    width: 85%;
+    height: auto;
+    background-color: var(--darker-grey); /* Semi-transparent overlay */
+    box-shadow: var(--box-shadow-dark);
+    z-index: 100; /* Ensure the modal appears on top of other content */
+    justify-content: center;
+    align-items: center;  
+    max-height: 100vh;     
+}
+
+/* Create a 3x3 grid using flexbox */
+.captcha-grid {
+    display: flex;
+  
+    justify-content: space-between; /* Create 3 columns */
+    gap: 1vw; /* Adjust the gap between images as needed */
+    margin: 2vw;
+    max-height: 100vh;
+    
+}
+
+.captcha-cell {
+    flex: 0 0 calc(33.33% - 1vw); /* Adjust the width for 3 columns and spacing */
+    margin-bottom: 1vw; /* Adjust the margin for spacing between rows */
+}
+
+.captchaImage {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.captcha-text {
+    color: #f4f4f4;
+    font-size: calc(3.6vw + 16px);
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+}
+
+/* Media query */
+@media (max-width: 1024px) {
+    .grid-container-services {
+        grid-template-columns: 49% calc(2% - 1.25rem) 49%;
+        max-width: 90%;
+        row-gap: 3rem;
+    }
+
+    .img-cell1 {
+        background-image: url('../images/serviceWeddingSQ.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusinessSQ.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamilySQ.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDateSQ.png');
+
+    }
+
+    footer {
+        padding: 0 3.125rem 0 3.125rem;
+    }
+
+    .team-member-card {
+        max-width: 250px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .grid-container-services {
+        grid-template-columns: 1fr;
+        /* 1 column for phones */
+        grid-template-rows: repeat(8, 1fr);
+        /* Adjust the number of rows */
+        row-gap: 0;
+        width: 95%;
+    }
+
+    .grid-item-service {
+        padding: 0 1.25rem;
+    }
+
+    .img-cell1,
+    .img-cell2,
+    .img-cell3,
+    .img-cell4 {
+        grid-column: auto;
+        /* Reset column placement for smaller screens */
+        grid-row: auto;
+        /* Reset row placement for smaller screens */
+    }
+
+    .img-cell1 {
+        background-image: url('../images/serviceWedding.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusiness.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamily.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDate.png');
+
+    }
+
+    .order3 {
+        order: 3;
+    }
+
+    .order4 {
+        order: 4;
+    }
+
+    .order5 {
+        order: 5;
+    }
+
+    .order6 {
+        order: 6;
+    }
+
+    .order7 {
+        order: 7;
+    }
+
+    .order8 {
+        order: 8;
+    }
+
+    footer {
+        padding: 0 0.625rem 0 0.625rem;
+    }
+
+    .name-footer {
+        font-size: 1.25rem;
+    }
+
+    .team-member-card {
+        max-width: 300px;
+        margin: 0 0.625rem;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .img-cell1 {
+        background-image: url('../images/serviceWeddingSQ.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusinessSQ.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamilySQ.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDateSQ.png');
+
+    }
+}
