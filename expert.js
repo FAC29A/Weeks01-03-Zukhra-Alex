@@ -54,18 +54,38 @@ document.getElementById("backbutton").addEventListener("click", function () {
 });
 
 //Retrieves 9 items for the captcha Array
+// Function to get random captcha items
 function getRandomCaptchaItems() {
-  const randomCaptchaItems = [];
-  while (randomCaptchaItems.length < 9) {
-    const randomIndex = Math.floor(Math.random() * captchaItems.length);
-    const randomCaptchaItem = captchaItems[randomIndex];
-    if (!randomCaptchaItems.includes(randomCaptchaItem)) {
-      randomCaptchaItems.push(randomCaptchaItem);
-    }
-  }
-  console.log(randomCaptchaItems);
+  // Get all captcha items with isWine = 1
+  const wineCaptchaItems = captchaItems.filter((item) => item.isWine === 1);
+
+  // Get all captcha items with isWine = 0
+  const nonWineCaptchaItems = captchaItems.filter((item) => item.isWine === 0);
+
+  // Shuffle the arrays to randomize the items
+  shuffleArray(wineCaptchaItems);
+  shuffleArray(nonWineCaptchaItems);
+
+  // Select three random wine captcha items
+  const randomWineItems = wineCaptchaItems.slice(0, 3);
+
+  // Select three random non-wine captcha items
+  const randomNonWineItems = nonWineCaptchaItems.slice(0, 3);
+
+  // Combine the wine and non-wine items
+  const randomCaptchaItems = [...randomWineItems, ...randomNonWineItems];
+
   return randomCaptchaItems;
 }
+
+// Function to shuffle an array using the Fisher-Yates algorithm
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+}
+
 
 // Add an event listener to the form submit button
 const submitButton = document.getElementById("submit-button");
