@@ -190,6 +190,8 @@ function updateWineMap() {
         // Update the text with the wine name from the testimonial
         introText.textContent = `Click "${testimonial.name}" to explore its story`;
       }
+      // Set focus on the area
+      area.focus();
     });
 
     // Add the mouseout event listener to remove the hover effect
