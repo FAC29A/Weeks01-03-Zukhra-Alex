@@ -75,7 +75,7 @@ function openTestimonialModal(testimonialId) {
     // Create an element for the image
     const image = document.createElement("img");
     image.src = testimonial.bottleImg;
-    image.alt = "Bottle Image";
+    image.alt = testimonial.name + " wine bottle";
     image.classList.add("modal-image");
 
     // Create a vertical flex container for the right side
