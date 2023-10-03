@@ -178,6 +178,10 @@ function updateWineMap() {
       openTestimonialModal(i);
     };
 
+    // Add key press event listeners to the bottle areas
+    area.addEventListener('keydown', (event) => handleBottleKeyPress(event, i));
+
+
     // Select the <h2> element that we will modify when hover on
     const introText = document.querySelector("#hoverMessage");
 
@@ -206,6 +210,13 @@ function updateWineMap() {
 
   // Append the wineMap to the wineMapContainer
   wineMapContainer.appendChild(wineMap);
+}
+
+// Function to handle key presses for bottles
+function handleBottleKeyPress(event, bottleId) {
+  if (event.key === ' ' || event.key === 'Enter') {
+    openTestimonialModal(bottleId);
+  }
 }
 
 // Call the initial updateWineMap function and whenever the window is resized
