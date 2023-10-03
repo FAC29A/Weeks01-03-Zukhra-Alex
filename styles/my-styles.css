@@ -222,7 +222,7 @@ h2 {
 .text-style {
     line-height: 1.5;
     text-align: justify;
-    font-size: calc(0.4vw + 16px)!;
+    font-size: calc(0.4vw + 16px)!important;
 }
 
 p {
