@@ -131,11 +131,11 @@ let scaleFactor = 1;
 
 // Original coordinates for each bottle
 const originalCoordinates = [
-  [250, 57, 340, 400], // Bottle 1
-  [480, 57, 580, 400], // Bottle 2
-  [750, 57, 840, 400], // Bottle 3
-  [990, 57, 1080, 400], // Bottle 4
-  [1230, 57, 1320, 400], // Bottle 5
+  [250, 65, 340, 390], // Bottle 1
+  [500, 65, 580, 390], // Bottle 2
+  [750, 65, 835, 390], // Bottle 3
+  [993, 65, 1080, 390], // Bottle 4 
+  [1235, 65, 1325, 390], // Bottle 5
 ];
 
 // Function to scale and update the wine map
@@ -187,8 +187,7 @@ function updateWineMap() {
 
     // Select the <h2> element that we will modify when hover on
     const introText = document.querySelector("#hoverMessage");
-    console.log(introText);
-
+ 
     // Add the mouseover event listener to apply the hover effect
     area.addEventListener("mouseover", function () {
         // Get the testimonial object by its ID
@@ -196,8 +195,7 @@ function updateWineMap() {
         // Check if the testimonial exists
         if (testimonial) {
             // Update the text with the wine name from the testimonial
-            introText.textContent = `Ask ${testimonial.name} for its experience`;
-            console.log("cambio texto");
+            introText.textContent = `Ask ${testimonial.name} for its experience`;   
         }
     });
 
