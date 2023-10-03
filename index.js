@@ -7,19 +7,14 @@ function createTeamMemberCard(member) {
     card.innerHTML = `
         <div class="team-img-container">
         <h3>${member.name}</h3>
-        <img src="${member.imgBig}" alt="${member.name}" tabindex="${member.id}">
+        <img src="${member.imgBig}" alt="${member.name}">
         </div>  
         <p>${member.tags}</p>
-        <button> Contact ${member.name.split(' ')[0]} </button>
+        <button  tabindex="${member.id +4}"> Contact ${member.name.split(' ')[0]} </button>
     `;
 
     // Add click event listener to the card
     card.addEventListener("click", () => navigateToExpertPage(member.id));
-    card.addEventListener("keypress", (event) => {
-        if (event.key === "Enter") {
-            navigateToExpertPage(member.id);
-        }
-    });
 
     return card;
 }
