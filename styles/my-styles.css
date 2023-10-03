@@ -624,22 +624,15 @@ button:hover {
     opacity: 0.5; /* Change opacity on hover */
 }
 
-/* Styling of the areas*/
-
-/*Style of the map*/
-.imagemap {position: relative;}
-.imagemap img {display: block;}
-.imagemap .area {display: block; position: absolute; transition: box-shadow 0.15s ease-in-out;}
-.imagemap .area:hover {box-shadow: 0px 0px 1vw rgba(0,0,0,0.5);}
 
 /*Cursor for testimonial bottles */
 area {
     cursor: pointer;
 }
 /* Add a border to the map area on hover */
-.hovered {
-    border: 2px solid var(--burgundy) !important;
-    color:rgba(0, 0, 0, 0.85);
+.hovered-image {
+    background-size: cover;
+    z-index:100;
 }
 
 /* CSS for the 3x3 grid */

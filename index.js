@@ -10,11 +10,13 @@ function createTeamMemberCard(member) {
         <img src="${member.imgBig}" alt="${member.name}">
         </div>  
         <p>${member.tags}</p>
-        <button  tabindex="${member.id +4}"> Contact ${member.name.split(' ')[0]} </button>
+        <button  tabindex="${member.id + 4}"> Contact ${
+    member.name.split(" ")[0]
+  } </button>
     `;
 
-    // Add click event listener to the card
-    card.addEventListener("click", () => navigateToExpertPage(member.id));
+  // Add click event listener to the card
+  card.addEventListener("click", () => navigateToExpertPage(member.id));
 
   return card;
 }
@@ -127,7 +129,7 @@ const originalCoordinates = [
   [250, 65, 340, 390], // Bottle 1
   [500, 65, 580, 390], // Bottle 2
   [750, 65, 835, 390], // Bottle 3
-  [993, 65, 1080, 390], // Bottle 4 
+  [993, 65, 1080, 390], // Bottle 4
   [1235, 65, 1325, 390], // Bottle 5
 ];
 
@@ -170,35 +172,32 @@ function updateWineMap() {
     area.alt = "Bottle " + i;
     area.setAttribute("data-testimonial-id", i);
     area.tabIndex = 10 + i;
-    console.log (area.tabIndex);
 
-    // Add the click event listener 
+    // Add the click event listener
     area.onclick = function () {
       openTestimonialModal(i);
     };
 
-
     // Select the <h2> element that we will modify when hover on
     const introText = document.querySelector("#hoverMessage");
- 
+
     // Add the mouseover event listener to apply the hover effect
     area.addEventListener("mouseover", function () {
-        // Get the testimonial object by its ID
-        const testimonial = testimonials.find((item) => item.id === i);
-        // Check if the testimonial exists
-        if (testimonial) {
-            // Update the text with the wine name from the testimonial
-            introText.textContent = `Ask ${testimonial.name} for its experience`;   
-        }
+      // Get the testimonial object by its ID
+      const testimonial = testimonials.find((item) => item.id === i);
+      // Check if the testimonial exists
+      if (testimonial) {
+        // Update the text with the wine name from the testimonial
+        introText.textContent = `Ask ${testimonial.name} for its experience`;
+      }
     });
 
     // Add the mouseout event listener to remove the hover effect
     area.addEventListener("mouseout", function () {
-         // Restore the original text
-        introText.textContent = "Choose a wine to inquire about its experience";
-
+      // Restore the original text
+      introText.textContent = "Choose a wine to inquire about its experience";
     });
-                                    
+
     // Append the area to the wineMap
     wineMap.appendChild(area);
   }
