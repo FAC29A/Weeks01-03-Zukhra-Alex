@@ -41,12 +41,12 @@ body{
 
 .team-member-card {
     max-width: 300px;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
+    background-color: var(--lightest-color);
+    border: 1px solid var(--dark-white);
     padding: 1.25rem;
     border-radius: 3%;
     text-align: center;
-    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.58);
+    box-shadow: var(--box-shadow-light);
 }
 
 .team-img-container {
@@ -70,7 +70,7 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(146, 146, 146, 0.45);
+    background-color: var(--light-grey);
     border-radius: 5%;
     color: var(--white);
     padding-top: 1rem;
@@ -85,8 +85,8 @@ body{
 
 /* Style the "Contact Me" button - width of button overridden from expert.css*/
 .team-member-card button {
-    background-color: rgba(37, 37, 37, 0.51);
-    color: #fff;
+    background-color: var(--medium-dark-grey);
+    color: var(--white);
     border: none;
     padding: 0.625rem 1.25rem;
     font-size: 1rem;
@@ -197,7 +197,7 @@ body{
     padding-bottom: 3rem;
     font-size: calc(1vw + 20px);
 }
-
+/* css for about section */
 .about {
     max-width: 1000px;
     margin: auto;
@@ -229,6 +229,7 @@ h2 {
     text-align: center;
     margin: 0;
 }
+
 .text-style {
     line-height: 1.5;
     text-align: justify;
@@ -294,10 +295,6 @@ p {
     background-image: url('../images/serviceDate.png');
 }
 
-/*.tall-row {*/
-/*    grid-row: span 4;*/
-/*    !* This row spans 2 rows *!*/
-/*}*/
 
 /* Align text vertically in the center of the cell*/
 .self-center {
@@ -306,6 +303,7 @@ p {
     flex-wrap: wrap; /* This enables wrapping */
 }
 
+/* css (footer)*/
 footer {
     display: flex;
     flex-direction: row;
@@ -316,8 +314,8 @@ footer {
     min-height: 200px;
     flex-wrap: wrap;
     background-image: url("../images/MainLabel/paper05.jpg");
-    color: rgb(87,10,10,0.85);
-    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.58);
+    color: var(--burgundy);
+    box-shadow: var(--box-shadow-light);
 }
 /* Footer name and year */
 .name-footer {
@@ -417,150 +415,6 @@ article p {
     margin-top: 0rem;
     font-size: calc(0.2vw + 16px) ;
 }
-
-
-
-/* Media query for .... Change later */
-@media (max-width: 1024px) {
-    .grid-container-services {
-        grid-template-columns: 49% calc(2% - 1.25rem) 49%;
-        max-width: 90%;
-        row-gap: 3rem;
-    }
-
-    .img-cell1 {
-        background-image: url('../images/serviceWeddingSQ.png');
-
-    }
-
-    .img-cell2 {
-        background-image: url('../images/serviceBusinessSQ.png');
-    }
-
-    .img-cell3 {
-        background-image: url('../images/serviceFamilySQ.png');
-    }
-
-    .img-cell4 {
-        background-image: url('../images/serviceDateSQ.png');
-
-    }
-
-    footer {
-        padding: 0 3.125rem 0 3.125rem;
-    }
-
-    .team-member-card {
-        max-width: 250px;
-    }
-}
-
-
-@media (max-width: 767px) {
-    .grid-container-services {
-        grid-template-columns: 1fr;
-        /* 1 column for phones */
-        grid-template-rows: repeat(8, 1fr);
-        /* Adjust the number of rows */
-        row-gap: 0;
-        width: 95%;
-    }
-
-    .grid-item-service {
-        padding: 0 1.25rem;
-    }
-
-    .img-cell1,
-    .img-cell2,
-    .img-cell3,
-    .img-cell4 {
-        grid-column: auto;
-        /* Reset column placement for smaller screens */
-        grid-row: auto;
-        /* Reset row placement for smaller screens */
-    }
-
-    .img-cell1 {
-        background-image: url('../images/serviceWedding.png');
-
-    }
-
-    .img-cell2 {
-        background-image: url('../images/serviceBusiness.png');
-    }
-
-    .img-cell3 {
-        background-image: url('../images/serviceFamily.png');
-    }
-
-    .img-cell4 {
-        background-image: url('../images/serviceDate.png');
-
-    }
-
-    .order3 {
-        order: 3;
-    }
-
-    .order4 {
-        order: 4;
-    }
-
-    .order5 {
-        order: 5;
-    }
-
-    .order6 {
-        order: 6;
-    }
-
-    .order7 {
-        order: 7;
-    }
-
-    .order8 {
-        order: 8;
-    }
-
-    footer {
-        padding: 0 0.625rem 0 0.625rem;
-    }
-
-    .name-footer {
-        font-size: 1.25rem;
-    }
-
-    .team-member-card {
-        max-width: 300px;
-        margin: 0 0.625rem;
-    }
-
-    .column {
-        width: 100%;
-    }
-
-}
-
-@media (max-width: 500px) {
-    .img-cell1 {
-        background-image: url('../images/serviceWeddingSQ.png');
-
-    }
-
-    .img-cell2 {
-        background-image: url('../images/serviceBusinessSQ.png');
-    }
-
-    .img-cell3 {
-        background-image: url('../images/serviceFamilySQ.png');
-    }
-
-    .img-cell4 {
-        background-image: url('../images/serviceDateSQ.png');
-
-    }
-}
-/* CSS services section(end) */
 
 /*Style for Experts page*/
 
@@ -843,4 +697,145 @@ area {
     margin-left: auto !important;
     margin-right: auto !important;
     width: 100%;
+}
+
+/* Media query */
+@media (max-width: 1024px) {
+    .grid-container-services {
+        grid-template-columns: 49% calc(2% - 1.25rem) 49%;
+        max-width: 90%;
+        row-gap: 3rem;
+    }
+
+    .img-cell1 {
+        background-image: url('../images/serviceWeddingSQ.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusinessSQ.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamilySQ.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDateSQ.png');
+
+    }
+
+    footer {
+        padding: 0 3.125rem 0 3.125rem;
+    }
+
+    .team-member-card {
+        max-width: 250px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .grid-container-services {
+        grid-template-columns: 1fr;
+        /* 1 column for phones */
+        grid-template-rows: repeat(8, 1fr);
+        /* Adjust the number of rows */
+        row-gap: 0;
+        width: 95%;
+    }
+
+    .grid-item-service {
+        padding: 0 1.25rem;
+    }
+
+    .img-cell1,
+    .img-cell2,
+    .img-cell3,
+    .img-cell4 {
+        grid-column: auto;
+        /* Reset column placement for smaller screens */
+        grid-row: auto;
+        /* Reset row placement for smaller screens */
+    }
+
+    .img-cell1 {
+        background-image: url('../images/serviceWedding.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusiness.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamily.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDate.png');
+
+    }
+
+    .order3 {
+        order: 3;
+    }
+
+    .order4 {
+        order: 4;
+    }
+
+    .order5 {
+        order: 5;
+    }
+
+    .order6 {
+        order: 6;
+    }
+
+    .order7 {
+        order: 7;
+    }
+
+    .order8 {
+        order: 8;
+    }
+
+    footer {
+        padding: 0 0.625rem 0 0.625rem;
+    }
+
+    .name-footer {
+        font-size: 1.25rem;
+    }
+
+    .team-member-card {
+        max-width: 300px;
+        margin: 0 0.625rem;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .img-cell1 {
+        background-image: url('../images/serviceWeddingSQ.png');
+
+    }
+
+    .img-cell2 {
+        background-image: url('../images/serviceBusinessSQ.png');
+    }
+
+    .img-cell3 {
+        background-image: url('../images/serviceFamilySQ.png');
+    }
+
+    .img-cell4 {
+        background-image: url('../images/serviceDateSQ.png');
+
+    }
 }
