@@ -138,3 +138,96 @@ const testimonials = [
         bottleImg: "./images/Bottles/bottle05.png"
     }
 ];
+
+const captchaItems = [
+    {
+        id: 1,
+        isWine: 1,
+        captchaImg: "./images/CaptchaImages/captcha01.png"
+    },
+    {
+        id: 2,
+        isWine: 1,
+        captchaImg: "./images/CaptchaImages/captcha02.png"
+    },
+    {
+        id: 3,
+        isWine: 1,
+        captchaImg: "./images/CaptchaImages/captcha03.png"
+    },
+    {
+        id: 4,
+        isWine: 1,
+        captchaImg: "./images/CaptchaImages/captcha04.png"
+    },
+    {
+        id:5,
+        isWine: 1,
+        captchaImg: "./images/CaptchaImages/captcha05.png"
+    },
+    {
+        id: 6,
+        isWine: 1,
+        captchaImg: "./images/CaptchaImages/captcha06.png"
+    },
+    {
+        id: 7,
+        isWine: 1,
+        captchaImg: "./images/CaptchaImages/captcha07.png"
+    },
+    {
+        id: 8,
+        isWine: 1,
+        captchaImg: "./images/CaptchaImages/captcha08.png"
+    },
+    {
+        id: 9,
+        isWine: 1,
+        captchaImg: "./images/CaptchaImages/captcha09.png"
+    },
+    {
+        id: 10,
+        isWine: 0,
+        captchaImg: "./images/CaptchaImages/captcha101.png"
+    },
+    {
+        id: 11,
+        isWine: 0,
+        captchaImg: "./images/CaptchaImages/captcha102.png"
+    },
+    {
+        id: 13,
+        isWine: 0,
+        captchaImg: "./images/CaptchaImages/captcha103.png"
+    },
+    {
+        id: 14,
+        isWine: 0,
+        captchaImg: "./images/CaptchaImages/captcha104.png"
+    },
+    {
+        id: 15,
+        isWine: 0,
+        captchaImg: "./images/CaptchaImages/captcha105.png"
+    },
+    {
+        id: 16,
+        isWine: 0,
+        captchaImg: "./images/CaptchaImages/captcha106.png"
+    },
+    {
+        id: 17,
+        isWine: 0,
+        captchaImg: "./images/CaptchaImages/captcha107.png"
+    },
+    {
+        id: 18,
+        isWine: 0,
+        captchaImg: "./images/CaptchaImages/captcha108.png"
+    },
+    {
+        id: 19,
+        isWine: 0,
+        captchaImg: "./images/CaptchaImages/captcha109.png"
+    }
+]

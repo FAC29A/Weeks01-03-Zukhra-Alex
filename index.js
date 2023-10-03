@@ -160,6 +160,7 @@ function updateWineMap() {
 
     // Calculate the new scaleFactor based on the screen width
     scaleFactor = screenWidth / originalImageWidth;
+    
 
     // Get the wineMap container
     const wineMapContainer = document.getElementById("wineMapContainer");
