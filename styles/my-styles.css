@@ -624,16 +624,25 @@ button:hover {
     opacity: 0.5; /* Change opacity on hover */
 }
 
+/* Remove the default focus outline */
+.navbar a:focus {
+    outline: none;
+}
+
+/* Add custom styles for the focused element */
+.navbar a:focus::before {
+    opacity: 0.7; /* Change opacity to indicate focus */
+}
 
 /*Cursor for testimonial bottles */
 area {
     cursor: pointer;
 }
-/* Add a border to the map area on hover */
-.hovered-image {
-    background-size: cover;
-    z-index:100;
+
+area:focus {
+    outline: solid var(--burgundy);
 }
+
 
 /* CSS for the 3x3 grid */
 .modalWindowCaptcha {

@@ -126,11 +126,11 @@ let scaleFactor = 1;
 
 // Original coordinates for each bottle
 const originalCoordinates = [
-  [250, 65, 340, 390], // Bottle 1
-  [500, 65, 580, 390], // Bottle 2
-  [750, 65, 835, 390], // Bottle 3
-  [993, 65, 1080, 390], // Bottle 4
-  [1235, 65, 1325, 390], // Bottle 5
+  [245, 60, 345, 395], // Bottle 1
+  [495, 60, 585, 395], // Bottle 2
+  [745, 60, 840, 395], // Bottle 3
+  [988, 60, 1085, 395], // Bottle 4
+  [1230, 60, 1330, 395], // Bottle 5
 ];
 
 // Function to scale and update the wine map
