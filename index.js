@@ -10,11 +10,13 @@ function createTeamMemberCard(member) {
         <img src="${member.imgBig}" alt="${member.name}">
         </div>  
         <p>${member.tags}</p>
-        <button  tabindex="${member.id +4}"> Contact ${member.name.split(' ')[0]} </button>
+        <button  tabindex="${member.id + 4}"> Contact ${
+    member.name.split(" ")[0]
+  } </button>
     `;
 
-    // Add click event listener to the card
-    card.addEventListener("click", () => navigateToExpertPage(member.id));
+  // Add click event listener to the card
+  card.addEventListener("click", () => navigateToExpertPage(member.id));
 
   return card;
 }
@@ -73,7 +75,7 @@ function openTestimonialModal(testimonialId) {
     // Create an element for the image
     const image = document.createElement("img");
     image.src = testimonial.bottleImg;
-    image.alt = "Bottle Image";
+    image.alt = testimonial.name + " wine bottle";
     image.classList.add("modal-image");
 
     // Create a vertical flex container for the right side
@@ -124,11 +126,11 @@ let scaleFactor = 1;
 
 // Original coordinates for each bottle
 const originalCoordinates = [
-  [250, 65, 340, 390], // Bottle 1
-  [500, 65, 580, 390], // Bottle 2
-  [750, 65, 835, 390], // Bottle 3
-  [993, 65, 1080, 390], // Bottle 4 
-  [1235, 65, 1325, 390], // Bottle 5
+  [245, 60, 345, 395], // Bottle 1
+  [495, 60, 585, 395], // Bottle 2
+  [745, 60, 840, 395], // Bottle 3
+  [988, 60, 1085, 395], // Bottle 4
+  [1230, 60, 1330, 395], // Bottle 5
 ];
 
 // Function to scale and update the wine map
@@ -170,41 +172,51 @@ function updateWineMap() {
     area.alt = "Bottle " + i;
     area.setAttribute("data-testimonial-id", i);
     area.tabIndex = 10 + i;
-    console.log (area.tabIndex);
 
-    // Add the click event listener 
+    // Add the click event listener
     area.onclick = function () {
       openTestimonialModal(i);
     };
 
+    // Add key press event listeners to the bottle areas
+    area.addEventListener('keydown', (event) => handleBottleKeyPress(event, i));
+
 
     // Select the <h2> element that we will modify when hover on
     const introText = document.querySelector("#hoverMessage");
- 
+
     // Add the mouseover event listener to apply the hover effect
     area.addEventListener("mouseover", function () {
-        // Get the testimonial object by its ID
-        const testimonial = testimonials.find((item) => item.id === i);
-        // Check if the testimonial exists
-        if (testimonial) {
-            // Update the text with the wine name from the testimonial
-            introText.textContent = `Ask ${testimonial.name} for its experience`;   
-        }
+      // Get the testimonial object by its ID
+      const testimonial = testimonials.find((item) => item.id === i);
+      // Check if the testimonial exists
+      if (testimonial) {
+        // Update the text with the wine name from the testimonial
+        introText.textContent = `Click "${testimonial.name}" to explore its story`;
+      }
+      // Set focus on the area
+      area.focus();
     });
 
     // Add the mouseout event listener to remove the hover effect
     area.addEventListener("mouseout", function () {
-         // Restore the original text
-        introText.textContent = "Choose a wine to inquire about its experience";
-
+      // Restore the original text
+      introText.textContent = "Click on a wine bottle to explore its story";
     });
-                                    
+
     // Append the area to the wineMap
     wineMap.appendChild(area);
   }
 
   // Append the wineMap to the wineMapContainer
   wineMapContainer.appendChild(wineMap);
+}
+
+// Function to handle key presses for bottles
+function handleBottleKeyPress(event, bottleId) {
+  if (event.key === ' ' || event.key === 'Enter') {
+    openTestimonialModal(bottleId);
+  }
 }
 
 // Call the initial updateWineMap function and whenever the window is resized
@@ -220,3 +232,24 @@ document.addEventListener("DOMContentLoaded", function () {
 function vwToPixels(vw) {
   return (vw * window.innerWidth) / 100;
 }
+
+// Function to handle key presses for navigation
+function handleKeyPress(event) {
+  if (event.key === " " || event.key === "Enter") {
+    // Get the target section based on the href attribute of the focused link
+    const targetId = event.target.getAttribute("href").slice(1); // Remove the '#' character
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      // Scroll to the target section
+      targetSection.scrollIntoView({ behavior: "smooth" });
+      event.preventDefault(); // Prevent default behavior for Space/Enter key
+    }
+  }
+}
+
+// Add key press event listeners to the navbar links
+const navbarLinks = document.querySelectorAll(".navbar a");
+navbarLinks.forEach((link) => {
+  link.addEventListener("keydown", handleKeyPress);
+});

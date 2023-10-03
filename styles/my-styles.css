@@ -5,6 +5,7 @@
 :root {
     --white: #fff;
     --lightest-color: #f4f4f4;
+    --lightest-transparent:rgba(233, 233, 233, 0.767);
     --dark-white: #ddd;
     --light-grey: rgba(146,146,146,0.45);
     --medium-grey: rgba(209,209,209,0.45);
@@ -18,7 +19,7 @@
 
     --box-shadow-light: 0 0 1.25rem rgba(0,0,0,0.58);
     --box-shadow-dark: 0 0 1.25rem rgba(0,0,0,0.8);
-    --box-shadow-small: 0 0 10px rgba(0,0,0,0.4);
+    --box-shadow-small: 0 0 0.75rem rgba(0,0,0,0.4);
 
 } 
 
@@ -125,7 +126,7 @@ body{
     left: 50%;
     transform: translate(-50%, -10%);
     text-align: center;
-    color:rgb(87,10,10,0.75);
+    color:var(--burgundy);
     font-family: "WindSong", cursive;
     margin: 0;
 }
@@ -154,24 +155,7 @@ body{
     background-repeat: no-repeat;
 }
 
-
-/* Parametrice these
 .bi-2 {
-    background-image: url('../images/MainLabel/');
-    background-position: top;
-}
-
-.bi-3 {
-    background-image: url('../images/tableCloth.png');
-    background-position: bottom;
-}
-
-.bi-4 {
-    background-image: url('../images/tableCloth.png');
-}
-*/
-
-.bi-5 {
     background-image: url('../images/cellar.png'); 
     z-index: 0;
     background-size: cover;
@@ -183,10 +167,10 @@ body{
 .headline {  
     text-align: center;
     width: 100%;
-    color: rgb(87,10,10,0.85);
+    color: var(--burgundy);
     font-size: 7vw;
     background-image: linear-gradient(to right, rgba(6, 6, 6, 0.35), rgba(255, 255, 255, 0.0), rgba(6,6,6,0.35)), url('../images/MainLabel/paper05.jpg'); /* Horizontal gradient background */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: var(--box-shadow-dark);
 }
 
 .banner {
@@ -238,7 +222,7 @@ h2 {
 .text-style {
     line-height: 1.5;
     text-align: justify;
-    font-size: calc(0.4vw + 16px)!important;
+    font-size: calc(0.4vw + 16px)!;
 }
 
 p {
@@ -359,7 +343,7 @@ footer {
 }
 
 .expertPhoto{
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: var(--box-shadow-dark);
     width: 100%;
     max-width: 100%; /* Responsive image sizing */
     object-fit: cover; /* Maintain aspect ratio */
@@ -367,14 +351,14 @@ footer {
 }
 
 .bioName {
-    font-family: 'WindSong', sans-serif;
+    font-family: var(--font-titles);
     font-size: calc(2vw + 1rem);
-    color: rgba(0, 0, 0, 0.85);
+    color: var(--darker-grey);
     margin: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgba(146, 146, 146, 0.45);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    background-color: var(--light-grey);
+    box-shadow: var(--box-shadow-dark);
     position: absolute;
     width: 100%;
     height: calc(2vw + 2rem);
@@ -393,8 +377,8 @@ footer {
 /* Style the expert bio */
 .flex-expert-bio {
     flex:1;
-    background-color: rgba(209, 209, 209, 0.45);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    background-color: var(--medium-grey);
+    box-shadow: var(--box-shadow-dark);
     padding: 2rem;
     line-height: 1.5;
     text-align: justify;
@@ -419,7 +403,7 @@ article p {
     background-repeat: no-repeat;
     background-position: center;
     max-width: 100%; 
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: var(--box-shadow-dark);
     padding: 2rem;
 }
 
@@ -427,7 +411,7 @@ label,
 input,
 button,
 textarea {
-  color:rgb(87,10,10,0.75);
+  color:var(--burgundy);
   font-size: calc(0.6vw + 16px);
   display: inline-block;
   width: 100%;
@@ -436,7 +420,7 @@ textarea {
 label{
    padding-left: 1.5rem;
    padding-right: 1rem;
-   background-color: rgba(236, 235, 235, 0.795);
+   background-color: var(--lightest-transparent);
    display: block;
    margin-top: 0.2rem;
    width:fit-content;
@@ -454,16 +438,12 @@ textarea
 {
   resize: vertical;
 }
- /*
-form > * + * {
- 
-} */
 
 button {
   padding: .3rem 1.5rem;
-  background-color: hsl(220, 20%, 96%);
+  background-color: var(--white);
   transition: background-color 0.2s;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-shadow-small);
   border: none;
   display: block;
   margin-top: 1rem;
@@ -485,8 +465,8 @@ button:hover {
     transform: translate(-50%, -50%); /* Center horizontally */
     max-width: 85vw;
     min-width: 12rem;
-    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent overlay */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+    background-color: var(--darker-grey); /* Semi-transparent overlay */
+    box-shadow: var(--box-shadow-dark);
     z-index: 10; /* Ensure the modal appears on top of other content */
     justify-content: center;
     align-items: center;       
@@ -496,7 +476,6 @@ button:hover {
 .modal-flex-container {
     display: flex;
     align-items: flex-start; /* Vertical alignment */
-    
     max-width: 60vw;
     min-width: 12rem;
     flex-wrap: wrap;
@@ -527,16 +506,16 @@ button:hover {
     min-width: 10rem;  
     font-size: calc(1.5vw + 18px); /* Adjust the font size as needed */
     font-weight: bold; /* Make the name text bold */
-    font-family: "WindSong", cursive;
+    font-family: var(--font-titles);
     font-weight: 500;
-    color: #fff; /* Text color for the right-side content */
+    color: var(--white); /* Text color for the right-side content */
     margin: 0.8vw; /* Add margin for spacing between name and text */
 }
 
 /* CSS styles for the modal text */
 .modal-text {
     flex: 1; /* Fill available space */
-    color: #fff;
+    color: var(--white);
     align-self: flex-start;
     /*margin: 2vw;*/
     margin-top: 0;
@@ -546,7 +525,7 @@ button:hover {
 
 /* Close button */
 .close-modal-button {
-    color: #fff;
+    color: var(--white);
     position: absolute;
     top: 0vw;
     left: 1vw;
@@ -596,12 +575,12 @@ button:hover {
 /* Change link color on hover */
 .navbar a {
     display: block;
-    color: rgb(87, 10, 10, 0.85);
+    color: var(--burgundy);
     font-size: 2vw;
     font-weight: 600;
     bottom: 1%;
     text-align: center;
-    font-family: "WindSong", cursive;
+    font-family: var(--font-titles);
     text-decoration: none;
     position: relative; /* Add relative positioning */
 }
@@ -628,23 +607,25 @@ button:hover {
     opacity: 0.5; /* Change opacity on hover */
 }
 
-/* Styling of the areas*/
+/* Remove the default focus outline */
+.navbar a:focus {
+    outline: none;
+}
 
-/*Style of the map*/
-.imagemap {position: relative;}
-.imagemap img {display: block;}
-.imagemap .area {display: block; position: absolute; transition: box-shadow 0.15s ease-in-out;}
-.imagemap .area:hover {box-shadow: 0px 0px 1vw rgba(0,0,0,0.5);}
+/* Add custom styles for the focused element */
+.navbar a:focus::before {
+    opacity: 0.7; /* Change opacity to indicate focus */
+}
 
 /*Cursor for testimonial bottles */
 area {
     cursor: pointer;
 }
-/* Add a border to the map area on hover */
-.hovered {
-    border: 2px solid var(--burgundy) !important;
-    color:rgba(0, 0, 0, 0.85);
+
+area:focus {
+    outline: solid var(--burgundy);
 }
+
 
 /* CSS for the 3x3 grid */
 .modalWindowCaptcha {
@@ -656,8 +637,8 @@ area {
     min-width: 12rem;
     width: 85%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent overlay */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85);
+    background-color: var(--darker-grey); /* Semi-transparent overlay */
+    box-shadow: var(--box-shadow-dark);
     z-index: 100; /* Ensure the modal appears on top of other content */
     justify-content: center;
     align-items: center;  

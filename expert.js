@@ -21,9 +21,8 @@ if (expert) {
   expertImage.src = expert.imgBig;
   expertImage.alt = expert.altText;
   expertName.textContent = expert.name;
-  expertBio.innerHTML = expert.bio;
+  expertBio.innerHTML = reformatbio(expert.bio);
   contactFormExpertName.textContent = "Message " + expert.name;
-
   contactForm.style.backgroundImage = 'url("' + expert.Label + '")';
 
   // Apply the background image to html. I need to do it this way to dont affect the html for the main
@@ -36,8 +35,21 @@ if (expert) {
   console.log("Expert not found");
 }
 
+function reformatbio(biotext) {
+  // Initialize an empty string to store the reformatted bio
+  let formattedBio = "<article>"; // Start with the opening <article> tag
+
+  // Loop through each paragraph in the bio array and wrap it in <p> tags
+  for (const paragraph of biotext) {
+    formattedBio += `<p>${paragraph}</p>`;
+  }
+
+  formattedBio += "</article>"; // Add the closing </article> tag
+
+  return formattedBio;
+}
+
 document.getElementById("backbutton").addEventListener("click", function () {
-  console.log("pressed back");
   window.location.href = "index.html#experts-section";
 });
 
