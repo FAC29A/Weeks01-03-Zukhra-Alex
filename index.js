@@ -221,3 +221,24 @@ document.addEventListener("DOMContentLoaded", function () {
 function vwToPixels(vw) {
   return (vw * window.innerWidth) / 100;
 }
+
+// Function to handle key presses for navigation
+function handleKeyPress(event) {
+  if (event.key === " " || event.key === "Enter") {
+    // Get the target section based on the href attribute of the focused link
+    const targetId = event.target.getAttribute("href").slice(1); // Remove the '#' character
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      // Scroll to the target section
+      targetSection.scrollIntoView({ behavior: "smooth" });
+      event.preventDefault(); // Prevent default behavior for Space/Enter key
+    }
+  }
+}
+
+// Add key press event listeners to the navbar links
+const navbarLinks = document.querySelectorAll(".navbar a");
+navbarLinks.forEach((link) => {
+  link.addEventListener("keydown", handleKeyPress);
+});
