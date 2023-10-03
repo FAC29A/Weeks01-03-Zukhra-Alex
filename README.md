@@ -54,6 +54,16 @@ online platform to showcase our agency's services and expertise in wine selectio
 7. **Footer:** Displays agency contact information, including email and phone number, as well as links to social media
    profiles.
 
+## Things to improve
+
+- **Load Time Optimization:** Reduce image file sizes and minimize unnecessary code to enhance page loading speed.
+  Faster
+  load times improve user satisfaction.
+- **Browser Compatibility Enhancement:** While some features of the testimonial section currently function correctly on
+  Chrome, they encounter issues on Mozilla Firefox.
+- **Enhance Social Media Connectivity:** Activate the existing social media icons on our website to link directly to
+  our agency's profiles on platforms like Facebook, Twitter and Instagram.
+
 ## How to Use
 
 1. Clone this repository to your local machine.
