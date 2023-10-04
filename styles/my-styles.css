@@ -187,11 +187,13 @@ body{
     padding-top: 2rem;
     padding-bottom: 2rem!important;
 }
+
 .about {
     max-width: 1000px;
     margin: auto;
     padding: 0 1.75rem;
 }
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -247,19 +249,18 @@ p {
     text-align: justify;
     font-size: calc(0.4vw + 14px);
 }
-
-/* Define the grid cell areas */
-.img-cell {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.picture-container img {
+    max-width: 100%;
+    height: auto; /* This ensures that the image maintains its aspect ratio */
+    object-fit: contain;
 }
+/* Define the grid cell areas */
 .img-cell1 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-image: url('../images/serviceWedding.png');
+
 }
 
 .img-cell2 {
@@ -267,7 +268,7 @@ p {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
-    background-image: url('../images/serviceBusiness.png');
+
 }
 
 .img-cell3 {
@@ -275,13 +276,11 @@ p {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
-    background-image: url('../images/serviceFamily.png');
 }
 
 .img-cell4 {
     grid-column-start: 2;
     grid-column-end: 4;
-    background-image: url('../images/serviceDate.png');
 }
 
 
@@ -648,24 +647,24 @@ area:focus {
     left: 50%; /* Set left to 50% */
     transform: translate(-50%, -50%); /* Center horizontally */
     min-width: 12rem;
-    max-height: 90vh;
     padding: 2vw;
     background-color: var(--darker-grey); /* Semi-transparent overlay */
     box-shadow: var(--box-shadow-dark);
     z-index: 100; /* Ensure the modal appears on top of other content */
     justify-content: center;
-    align-items: center;
-  }
+    align-items: center;  
+    
+}
 
 /* Create a 3x3 grid using flexbox */
 .captcha-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Create 3 columns */
-    gap: 1vw;
+    gap: 1vw; /* Adjust the gap between images as needed */
     width: auto;
-    max-height: 80vh;
-    overflow: auto; 
+    height: 100%;
+    max-height: 100vh;
 }
 
 .captcha-cell {
@@ -682,7 +681,8 @@ area:focus {
 .captcha-text {
     color: #f4f4f4;
     font-size: calc(1.6vw + 16px);
-    margin-bottom: 1vw;   
+    margin-bottom: 1vw;
+    
     width: 100%;
 }
 
@@ -695,29 +695,11 @@ area:focus {
   }
 
 /* Media query */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .grid-container-services {
         grid-template-columns: 49% calc(2% - 1.25rem) 49%;
         max-width: 90%;
         row-gap: 3rem;
-    }
-
-    .img-cell1 {
-        background-image: url('../images/serviceWeddingSQ.png');
-
-    }
-
-    .img-cell2 {
-        background-image: url('../images/serviceBusinessSQ.png');
-    }
-
-    .img-cell3 {
-        background-image: url('../images/serviceFamilySQ.png');
-    }
-
-    .img-cell4 {
-        background-image: url('../images/serviceDateSQ.png');
-
     }
 
     footer {
@@ -730,11 +712,11 @@ area:focus {
 }
 
 
-@media (min-width: 501px) and (max-width: 767px) {
+@media (max-width: 767px) {
     .grid-container-services {
         grid-template-columns: 1fr;
         /* 1 column for phones */
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: repeat(8, auto);
         /* Adjust the number of rows */
         row-gap: 0;
         width: 95%;
@@ -752,24 +734,6 @@ area:focus {
         /* Reset column placement for smaller screens */
         grid-row: auto;
         /* Reset row placement for smaller screens */
-    }
-
-    .img-cell1 {
-        background-image: url('../images/serviceWedding.png');
-
-    }
-
-    .img-cell2 {
-        background-image: url('../images/serviceBusiness.png');
-    }
-
-    .img-cell3 {
-        background-image: url('../images/serviceFamily.png');
-    }
-
-    .img-cell4 {
-        background-image: url('../images/serviceDate.png');
-
     }
 
     .order3 {
@@ -813,24 +777,4 @@ area:focus {
         width: 100%;
     }
 
-}
-
-@media (max-width: 500px) {
-    .img-cell1 {
-        background-image: url('../images/serviceWeddingSQ.png');
-      
-    }
-
-    .img-cell2 {
-        background-image: url('../images/serviceBusinessSQ.png');
-    }
-
-    .img-cell3 {
-        background-image: url('../images/serviceFamilySQ.png');
-    }
-
-    .img-cell4 {
-        background-image: url('../images/serviceDateSQ.png');
-
-    }
 }
