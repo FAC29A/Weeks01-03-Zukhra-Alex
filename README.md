@@ -13,13 +13,21 @@ online platform to showcase our agency's services and expertise in wine selectio
 ## User Story
 
 We were given these requirements by our client:
+
 * See information about each member of your team so that I can know who you are.
-  * We created the "our Experts" section, were you can select each member of the team, learn more about them and even contact them directly
-* Browse your website on mobile, tablet, and desktop devices* Click to navigate to different sections of your webpage
-* Contact you to enquire about working with you
-* Visit your website at a publicly accessible domain name
-* Navigate your website using keyboard controls
-* Hear my screen reader describe the content on your website
+  * We created the "our Experts" section, where you can select each member of the team, learn more about them, and even contact them directly.
+* Browse your website on mobile, tablet, and desktop devices.
+  * The design will adapt to the screen size. We used Media Query and screen size-dependent units to make all the content adaptable for better readability and aesthetics.
+* Click to navigate to different sections of your webpage.
+  * There is a Navigation Bar integrated into our banner and buttons to navigate to the expert's pages and to return to the main page.
+* Contact you to inquire about working with you.
+  * There is a contact form on the Expert's page.
+* Visit your website at a publicly accessible domain name.
+  * The website is accessible on Github Pages and is reachable via the following link: https://fac29a.github.io/Weeks01-03-Zukhra-Alex/
+* Navigate your website using keyboard controls.
+  * We added Tabindex to every element that has some kind of interaction, making them focusable and setting a logical navigation order.
+* Hear my screen reader describe the content on your website.
+  * All the images have proper Alt Text.
 
 ## Project Structure
 
@@ -60,8 +68,3 @@ We were given these requirements by our client:
 1. Clone this repository to your local machine.
 2. Open the index.html file in a web browser to view the website.
 3. Test the website thoroughly on different devices and browsers to ensure compatibility and responsiveness.
-
-## Website Deployment
-
-The website has been successfully deployed to GitHub Pages and is accessible via the following
-link: https://fac29a.github.io/Weeks01-03-Zukhra-Alex/
