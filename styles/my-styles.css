@@ -643,7 +643,7 @@ area:focus {
 /* CSS for the 3x3 grid */
 .modalWindowCaptcha {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%; /* Set left to 50% */
     transform: translate(-50%, -50%); /* Center horizontally */
