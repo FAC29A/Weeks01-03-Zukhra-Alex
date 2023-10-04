@@ -35,6 +35,11 @@ if (expert) {
   console.log("Expert not found");
 }
 
+// Initialize a flag to track the captcha status
+let captchaResolved = false;
+// A flag to track if the form has been submitted
+let formSubmitted = false;
+
 function reformatbio(biotext) {
   // Initialize an empty string to store the reformatted bio
   let formattedBio = "<article>"; // Start with the opening <article> tag
@@ -53,32 +58,36 @@ document.getElementById("backbutton").addEventListener("click", function () {
   window.location.href = "index.html#experts-section";
 });
 
-//Retrieves 9 items for the captcha Array
-// Function to get random captcha items
+// Retrieves 9 items for the captcha Array
 function getRandomCaptchaItems() {
-  // Get all captcha items with isWine = 1
-  const wineCaptchaItems = captchaItems.filter((item) => item.isWine === 1);
+  // Get all captcha items
+  const allCaptchaItems = [...captchaItems];
 
-  // Get all captcha items with isWine = 0
-  const nonWineCaptchaItems = captchaItems.filter((item) => item.isWine === 0);
+  // Shuffle all captcha items to randomize them
+  shuffleArray(allCaptchaItems);
 
-  // Shuffle the arrays to randomize the items
-  shuffleArray(wineCaptchaItems);
-  shuffleArray(nonWineCaptchaItems);
+  // Initialize arrays for wine and water items
+  const wineCaptchaItems = [];
+  const waterCaptchaItems = [];
 
-  // Select three random wine captcha items
-  const randomWineItems = wineCaptchaItems.slice(0, 3);
+  // Separate wine and water items
+  for (const item of allCaptchaItems) {
+    if (item.isWine === 1 && wineCaptchaItems.length < 5) {
+      wineCaptchaItems.push(item);
+    } else if (item.isWine === 0 && waterCaptchaItems.length < 4) {
+      waterCaptchaItems.push(item);
+    }
+  }
 
-  // Select three random non-wine captcha items
-  const randomNonWineItems = nonWineCaptchaItems.slice(0, 3);
+  // Combine the wine and water items
+  const randomCaptchaItems = [...wineCaptchaItems, ...waterCaptchaItems];
 
-  // Combine the wine and non-wine items
-  const randomCaptchaItems = [...randomWineItems, ...randomNonWineItems];
+  shuffleArray(randomCaptchaItems);
 
   return randomCaptchaItems;
 }
 
-// Function to shuffle an array using the Fisher-Yates algorithm
+// Function to shuffle an array
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -86,30 +95,161 @@ function shuffleArray(array) {
   }
 }
 
-
 // Add an event listener to the form submit button
 const submitButton = document.getElementById("submit-button");
 submitButton.addEventListener("click", function (event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
-  // Get a reference to the modal content container
-  const modalContent = document.querySelector("#captchaModal .captcha-grid");
+  // Check if the form has already been submitted and the captcha is resolved
+  if (formSubmitted) {
+    console.log("Email already sent.");
+    return;
+  }
+
+  // Get a reference to the modal and the modal content element
+  const modal = document.getElementById("captchaModal");
+  const modalContent = document.querySelector("#captchaModal div");
 
   // Generate random captcha items
   const randomCaptchaItems = getRandomCaptchaItems();
 
   // Create a 3x3 grid for the modal content (grid of images)
-  const modalContentHTML = randomCaptchaItems
-    .map(
-      (item) =>
-        `<div class="captcha-cell"><img src="${item.captchaImg}" alt="Captcha Image ${item.id}" class="captchaImage" /></div>`
-    )
-    .join("");
+  const modalContentHTML =
+    `<div class="captcha-text">Select only the wine bottles</div>
+   <div class="captcha-grid">` +
+    randomCaptchaItems
+      .map(
+        (item) =>
+          `<div class="captcha-cell">
+           <img src="${item.captchaImg}" alt="Captcha Image ${item.id}" class="captchaImage" data-selected="false" data-id="${item.id}" />
+         </div>`
+      )
+      .join("") +
+    `</div>`;
 
-  // Set the modal content HTML, without overwriting the text
+  // Set the modal content HTML
   modalContent.innerHTML = modalContentHTML;
 
-  // Display the modal
-  const modal = document.getElementById("captchaModal");
-  modal.style.display = "block";
+  // Close the modal when the "Esc" key is pressed
+  window.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      modal.style.display = "none";
+    }
+  });
+
+  // Add click event listeners to the captcha images
+  const captchaImages = modalContent.querySelectorAll(".captchaImage");
+  captchaImages.forEach((image) => {
+    image.addEventListener("click", function () {
+      // Toggle the "data-selected" attribute between "true" and "false"
+      const isSelected = image.getAttribute("data-selected") === "true";
+      image.setAttribute("data-selected", isSelected ? "false" : "true");
+
+      // Toggle the "grayed-out" class
+      image.classList.toggle("grayed-out");
+
+      // Check the count of selected items
+      const selectedItemsCount = countSelectedItems();
+
+      // Update the "captcha-text" content based on the selected item count
+      let captchaText = document.getElementById("submit-button");
+
+      if (selectedItemsCount === 5) {
+        const wineBottlesSelected = countSelectedWineItems();
+        captchaText.innerText =
+          wineBottlesSelected === 5 ? "Send" : "Incorrect";
+        // Set the captchaResolved flag to true
+        captchaResolved = true;
+        modal.style.display = "none";
+      } else {
+        // Reset the "captcha-text" content
+        captchaText.innerText = "Submit";
+        // Set the captchaResolved flag to false
+        captchaResolved = false;
+
+        // Disable the submit button if captcha is incorrect
+        submitButton.disabled = true;
+      }
+    });
+  });
+
+  // Check if the form should be submitted
+  if (captchaResolved) {
+    // Proceed to submit the form
+    // Prevent the modal from reopening
+    formSubmitted = true;
+  }
+
+  if (!formSubmitted) {
+    modal.style.display = "block";
+  }
 });
+
+function countSelectedItems() {
+  const selectedItems = Array.from(
+    document.querySelectorAll(".grayed-out[data-selected='true']")
+  );
+  return selectedItems.length;
+}
+
+function countSelectedWineItems() {
+  const selectedWineItems = Array.from(
+    document.querySelectorAll(".grayed-out[data-selected='true']")
+  ).filter((image) => {
+    const id = parseInt(image.getAttribute("data-id"));
+    const item = captchaItems.find((item) => item.id === id);
+    return item && item.isWine === 1;
+  });
+
+  return selectedWineItems.length;
+}
+
+// Add an event listener to the form for submission
+contactForm.addEventListener("submit", function (event) {
+  // Check if the captcha is resolved
+  if (!captchaResolved) {
+    event.preventDefault(); // Prevent the form submission if captcha is not resolved
+    console.log("Please complete the captcha.");
+    return;
+  }
+
+  // For testing purposes, let's simulate a successful email submission
+  console.log("Email sent successfully!");
+  submitFormAndComposeEmail();
+
+  // Optionally, you can reset the form here
+  contactForm.reset();
+});
+
+// Function to handle form submission and email composition
+function submitFormAndComposeEmail() {
+  // Check if all three fields have text
+  const nameInput = document.querySelector('input[name="name"]');
+  const emailInput = document.querySelector('input[name="email"]');
+  const messageTextarea = document.querySelector('textarea[name="message"]');
+
+  const nameValue = nameInput.value.trim();
+  const emailValue = emailInput.value.trim();
+  const messageValue = messageTextarea.value.trim();
+
+  if (!nameValue || !emailValue || !messageValue) {
+    // If any field is empty, show an alert
+    alert("Please fill in all the required fields.");
+    return;
+  }
+
+  // All fields have data, proceed to compose and send the email
+  const subject = `Message from ${nameValue}`;
+  const body = `From: ${nameValue}\nEmail: ${emailValue}\n\n${messageValue}`;
+
+  // You can use a suitable method or library here to send the email, as it depends on your backend or email service
+  // For this example, we'll log the email content
+  console.log("Email subject:", subject);
+  console.log("Email body:", body);
+
+  // Optionally, you can reset the form here
+  contactForm.reset();
+
+  // Prevent the modal from reopening
+  formSubmitted = true;
+}

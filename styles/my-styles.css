@@ -674,6 +674,14 @@ area:focus {
     width: 100%;
 }
 
+/* Grayed-out effect for the Captcha*/
+.grayed-out {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease; /
+   
+  }
+
 /* Media query */
 @media (max-width: 1024px) {
     .grid-container-services {
