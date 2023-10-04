@@ -78,8 +78,20 @@
     <!--Container (Services section)-->
     <section>
         <div class="grid-container-services">
-            <div class="grid-item-service img-cell img-cell1"
-                 aria-label="Background image of wedding party at wedding, having champagne and toasting the bride and groom"></div>
+            <div class="grid-item-service img-cell1 self-center">
+                <div class="picture-container">
+                    <picture>
+                        <!-- Specify the image source for screens with a minimum width of 1025px -->
+                        <source srcset="images/serviceWedding.png" media="(min-width: 1025px)">
+                        <!-- Specify the image source for screens with a maximum width of 1024px -->
+                        <source srcset="images/serviceWeddingSQ.png" media="(max-width: 1024px)">
+                        <!-- Specify the image source for screens with a maximum width of 767px -->
+
+                        <img src="images/serviceWedding.png"
+                             alt="Image of wedding party at wedding, having champagne and toasting the bride and groom">
+                    </picture>
+                </div>
+            </div>
             <div class="grid-item-service self-center">
                 <div>
                     <p><b>Discover the Perfect Match for life's most celebrated moments.</b>
@@ -107,8 +119,19 @@
                     <p>Raise a toast to successful collaborations with wines tailored to your specific occasions.</p>
                 </div>
             </div>
-            <div class="grid-item-service img-cell img-cell2 order3"
-                 aria-label="Image of a group of businessmen chugging red wine at a table"></div>
+            <div class="grid-item-service img-cell2 order3 self-center">
+                <div class="picture-container">
+                    <picture>
+                        <!-- Specify the image source for screens with a minimum width of 1025px -->
+                        <source srcset="images/serviceBusiness.png" media="(min-width: 1025px)">
+                        <!-- Specify the image source for screens with a maximum width of 1024px -->
+                        <source srcset="images/serviceBusinessSQ.png" media="(max-width: 1024px)">
+                        <!-- Specify the default image source for unsupported browsers or other cases -->
+                        <img src="images/serviceBusiness.png"
+                             alt="Image of a group of businessmen chugging red wine at a table">
+                    </picture>
+                </div>
+            </div>
             <div class="grid-item-service order6 self-center">
                 <div>
                     <p>
@@ -121,8 +144,20 @@
                     <p>Cheers to creating unforgettable moments through the magic of wine!</p>
                 </div>
             </div>
-            <div class="grid-item-service img-cell img-cell3 order5"
-                 aria-label="Image of happy friends in sunny summer afternoon enjoying a lunch and wine in the garden"></div>
+            <div class="grid-item-service self-center img-cell3 order5">
+                <div class="picture-container">
+                    <picture>
+                        <!-- Specify the image source for screens with a minimum width of 1025px -->
+                        <source srcset="images/serviceFamily.png" media="(min-width: 1025px)">
+                        <!-- Specify the image source for screens with a maximum width of 1024px -->
+                        <source srcset="images/serviceFamilySQ.png" media="(max-width: 1024px)">
+                        <!-- Specify the image source for screens with a maximum width of 767px -->
+
+                        <img src="images/serviceFamily.png"
+                             alt="Image of happy friends in sunny summer afternoon enjoying a lunch and wine in the garden.">
+                    </picture>
+                </div>
+            </div>
             <div class="grid-item-service  order8 self-center">
                 <div>
                     <p>
@@ -137,8 +172,21 @@
                     <p>Cheers to making a memorable and romantic impression!</p>
                 </div>
             </div>
-            <div class="grid-item-service img-cell img-cell4 order7"
-                 aria-label="Image of two young, black men sharing an intimate and romantic dinner and wine"></div>
+            <div class="grid-item-service self-center img-cell4 order7"
+                 aria-label="">
+                <div class="picture-container">
+                    <picture>
+                        <!-- Specify the image source for screens with a minimum width of 1025px -->
+                        <source srcset="images/serviceDate.png" media="(min-width: 1025px)">
+                        <!-- Specify the image source for screens with a maximum width of 1024px -->
+                        <source srcset="images/serviceDateSQ.png" media="(max-width: 1024px)">
+                        <!-- Specify the image source for screens with a maximum width of 767px -->
+
+                        <img src="images/serviceDate.png"
+                             alt="Image of two young, black men sharing an intimate and romantic dinner and wine">
+                    </picture>
+                </div>
+            </div>
         </div>
     </section>
 
