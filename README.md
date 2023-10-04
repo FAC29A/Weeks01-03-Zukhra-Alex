@@ -31,15 +31,19 @@ online platform to showcase our agency's services and expertise in wine selectio
 ## Project Structure
 
 - **index.html:** This is the main HTML file for the website, containing the structure and content of the site's pages.
+- **expert.html:** This is the main HTML file for the expert page, containing the structure and content of the page.
 - **styles/my-styles.css:** The CSS file responsible for styling the website's layout and design.
 - **images/:** This directory contains the images used throughout the website, including background images, wine-related
   visuals, and the agency's logo.
 - **data.js:** JavaScript file responsible for loading dynamic data, such as team member information and testimonials.
 - **index.js:** JavaScript file for handling interactivity, such as displaying team cards and testimonials, and creating
   wine-related interactions.
+- **expert.js:** JavaScript file for handling interactivity on the expert page, including form submission and captcha verification.
 - **images/favicon.ico:** The website's favicon, the small icon displayed in the browser tab.
 
 ## Website Sections
+
+### Main Page:
 
 1. **Header:** Contains the agency's name, establishment year, and a navigation menu with links to different sections of
    the website.
@@ -53,6 +57,12 @@ online platform to showcase our agency's services and expertise in wine selectio
 6. **Testimonials:** Allows users to click on a wine image to see testimonials related to specific wine experiences.
 7. **Footer:** Displays agency contact information, including email and phone number, as well as links to social media
    profiles.
+
+### Expert Page Sections:
+
+1. **Expert Information:** This section displays the expert's name, photo, biography, and a back button to return to the list of experts.
+2. **Contact Form:** The contact form allows users to send messages to the expert. It includes fields for name, email, message, and a submit button.
+3. **Captcha Modal:** In case of form submission, a captcha modal is displayed for additional verification.
 
 ## Things to improve
 
