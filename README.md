@@ -10,6 +10,16 @@ online platform to showcase our agency's services and expertise in wine selectio
 - Alexander
 - Zukhra
 
+## User Story
+
+We were given these requirements by our client:
+* See information about each member of your team so that I can know who you are
+* Browse your website on mobile, tablet, and desktop devices* Click to navigate to different sections of your webpage
+* Contact you to enquire about working with you
+* Visit your website at a publicly accessible domain name
+* Navigate your website using keyboard controls
+* Hear my screen reader describe the content on your website
+
 ## Project Structure
 
 - **index.html:** This is the main HTML file for the website, containing the structure and content of the site's pages.
@@ -40,8 +50,7 @@ online platform to showcase our agency's services and expertise in wine selectio
 
 ## Things to improve
 
-- **Load Time Optimization:** Reduce image file sizes and minimize unnecessary code to enhance page loading speed. Faster
-  load times improve user satisfaction.
+- **Load Time Optimization:** Reduce image file sizes to enhance page loading speed. Faster load times improve user satisfaction.
 - **Browser Compatibility Enhancement:** While some features of the testimonial section currently function correctly on Chrome, they encounter issues on Mozilla Firefox.
 - **Enhance Social Media Connectivity:** Activate the existing social media icons on our website to link directly to our agency's profiles on platforms like Facebook, Twitter and Instagram.
 
