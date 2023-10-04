@@ -96,15 +96,9 @@ function shuffleArray(array) {
 }
 
 // Add an event listener to the form submit button
-const submitButton = document.getElementById("submit-button");
+const submitButton = document.getElementById("submit-btn");
 submitButton.addEventListener("click", function (event) {
   event.preventDefault(); // Prevent the form from submitting normally
-
-  // Check if the form has already been submitted and the captcha is resolved
-  if (formSubmitted) {
-    console.log("Email already sent.");
-    return;
-  }
 
   // Get a reference to the modal and the modal content element
   const modal = document.getElementById("captchaModal");
@@ -152,23 +146,37 @@ submitButton.addEventListener("click", function (event) {
       const selectedItemsCount = countSelectedItems();
 
       // Update the "captcha-text" content based on the selected item count
-      let captchaText = document.getElementById("submit-button");
+      let captchaText = document.getElementById("submit-btn");
 
       if (selectedItemsCount === 5) {
         const wineBottlesSelected = countSelectedWineItems();
-        captchaText.innerText =
-          wineBottlesSelected === 5 ? "Send" : "Incorrect";
-        // Set the captchaResolved flag to true
-        captchaResolved = true;
-        modal.style.display = "none";
+        if (wineBottlesSelected === 5) {
+          captchaText.innerText = "Send";
+          // Set the captchaResolved flag to true
+          captchaResolved = true;
+          modal.style.display = "none";
+          // Submit the form programmatically
+          submitFormAndComposeEmail();
+        } else {
+          captchaText.innerText = "Incorrect";
+          // Set the captchaResolved flag to false
+          captchaResolved = false;
+          modal.style.display = "none";
+          // Greyed input fields
+          nameInput.classList.add("fieldGreyed");
+          emailInput.classList.add("fieldGreyed");
+          messageTextarea.classList.add("fieldGreyed");
+          // Lock the input on the textboxes
+          nameInput.disabled = true;
+          emailInput.disabled = true;
+          messageTextarea.disabled = true;
+
+          //Disable button
+          submitButton.disabled = true;
+        }
       } else {
-        // Reset the "captcha-text" content
-        captchaText.innerText = "Submit";
         // Set the captchaResolved flag to false
         captchaResolved = false;
-
-        // Disable the submit button if captcha is incorrect
-        submitButton.disabled = true;
       }
     });
   });
@@ -213,12 +221,7 @@ contactForm.addEventListener("submit", function (event) {
     return;
   }
 
-  // For testing purposes, let's simulate a successful email submission
-  console.log("Email sent successfully!");
   submitFormAndComposeEmail();
-
-  // Optionally, you can reset the form here
-  contactForm.reset();
 });
 
 // Function to handle form submission and email composition
@@ -239,17 +242,64 @@ function submitFormAndComposeEmail() {
   }
 
   // All fields have data, proceed to compose and send the email
-  const subject = `Message from ${nameValue}`;
-  const body = `From: ${nameValue}\nEmail: ${emailValue}\n\n${messageValue}`;
+  const email = `From: ${nameValue}\nEmail: ${emailValue}\n\n${messageValue}`;
+  console.log(email);
 
-  // You can use a suitable method or library here to send the email, as it depends on your backend or email service
-  // For this example, we'll log the email content
-  console.log("Email subject:", subject);
-  console.log("Email body:", body);
-
-  // Optionally, you can reset the form here
-  contactForm.reset();
+  // Check if the captcha is correctly resolved
+  if (!captchaResolved) {
+    // If the captcha is not correctly resolved, show an alert
+    alert("Please resolve the captcha correctly.");
+    submitButton.innerText = "Wrong Captcha";
+    return;
+  }
 
   // Prevent the modal from reopening
   formSubmitted = true;
+
+  // Clear the content of the fields
+  nameInput.value = "";
+  emailInput.value = "";
+  messageTextarea.value = "";
+
+  // Lock the input on the textboxes
+  nameInput.disabled = true;
+  emailInput.disabled = true;
+  messageTextarea.disabled = true;
+
+  // Add a CSS class to the input elements
+  nameInput.classList.add("fieldGreyed");
+  emailInput.classList.add("fieldGreyed");
+  messageTextarea.classList.add("fieldGreyed");
+
+  // Change the button text to "Email Sent and disable"
+  submitButton.innerText = "Email Sent";
+  submitButton.disabled = true;
 }
+
+//Added here functionality to check all the fields:
+// Get the form elements
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageTextarea = document.getElementById("message");
+
+// Function to check if all fields are filled and validate email format
+function checkFields() {
+  const nameValue = nameInput.value.trim();
+  const emailValue = emailInput.value.trim();
+  const messageValue = messageTextarea.value.trim();
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const isValidEmail = emailPattern.test(emailValue);
+
+  const isAllFieldsFilled = nameValue && emailValue && messageValue;
+
+  submitButton.disabled = !(isValidEmail && isAllFieldsFilled);
+  submitButton.innerText =
+    isValidEmail && isAllFieldsFilled ? "Verify" : "Fill up all the fields";
+}
+
+// Add event listeners to the form elements
+nameInput.addEventListener("input", checkFields);
+emailInput.addEventListener("input", checkFields);
+messageTextarea.addEventListener("input", checkFields);

@@ -453,8 +453,21 @@ button {
 }
 
 button:hover {
-  background-color: #ddd;
+  background-color: var(--dark-white);
 }
+
+button:disabled{
+    background-color: var(--dark-grey);
+  }
+
+button:disabled:hover {
+    background-color: var(--dark-grey);
+  }
+
+.fieldGreyed {
+    background-color: var(--medium-dark-grey);
+}
+
 
 /* Modal container */
 .modalWindow {
