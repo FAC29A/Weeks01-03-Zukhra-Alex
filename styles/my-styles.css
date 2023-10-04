@@ -695,7 +695,7 @@ area:focus {
   }
 
 /* Media query */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .grid-container-services {
         grid-template-columns: 49% calc(2% - 1.25rem) 49%;
         max-width: 90%;
@@ -730,7 +730,7 @@ area:focus {
 }
 
 
-@media (max-width: 767px) {
+@media (min-width: 501px) and (max-width: 767px) {
     .grid-container-services {
         grid-template-columns: 1fr;
         /* 1 column for phones */
@@ -818,7 +818,7 @@ area:focus {
 @media (max-width: 500px) {
     .img-cell1 {
         background-image: url('../images/serviceWeddingSQ.png');
-
+      
     }
 
     .img-cell2 {
