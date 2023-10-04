@@ -224,7 +224,7 @@ h2 {
 .text-style {
     line-height: 1.5;
     text-align: justify;
-    font-size: calc(0.4vw + 16px)!important;
+    font-size: calc(0.4vw + 16px);
 }
 
 p {
@@ -452,8 +452,21 @@ button {
 }
 
 button:hover {
-  background-color: #ddd;
+  background-color: var(--dark-white);
 }
+
+button:disabled{
+    background-color: var(--dark-grey);
+  }
+
+button:disabled:hover {
+    background-color: var(--dark-grey);
+  }
+
+.fieldGreyed {
+    background-color: var(--medium-dark-grey);
+}
+
 
 /* Modal container */
 .modalWindow {
@@ -629,19 +642,18 @@ area:focus {
 /* CSS for the 3x3 grid */
 .modalWindowCaptcha {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%; /* Set left to 50% */
     transform: translate(-50%, -50%); /* Center horizontally */
     min-width: 12rem;
-    width: 85%;
-    height: auto;
+    padding: 2vw;
     background-color: var(--darker-grey); /* Semi-transparent overlay */
     box-shadow: var(--box-shadow-dark);
     z-index: 100; /* Ensure the modal appears on top of other content */
     justify-content: center;
     align-items: center;  
-    max-height: 100vh;     
+    
 }
 
 /* Create a 3x3 grid using flexbox */
@@ -650,11 +662,9 @@ area:focus {
     flex-wrap: wrap;
     justify-content: space-between; /* Create 3 columns */
     gap: 1vw; /* Adjust the gap between images as needed */
-    width: 85%;
+    width: auto;
     height: 100%;
-    margin: 2vw;
     max-height: 100vh;
-    
 }
 
 .captcha-cell {
@@ -670,11 +680,19 @@ area:focus {
 
 .captcha-text {
     color: #f4f4f4;
-    font-size: calc(3.6vw + 16px);
-    margin-left: auto !important;
-    margin-right: auto !important;
+    font-size: calc(1.6vw + 16px);
+    margin-bottom: 1vw;
+    
     width: 100%;
 }
+
+/* Grayed-out effect for the Captcha*/
+.grayed-out {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease; /
+   
+  }
 
 /* Media query */
 @media (max-width: 1024px) {

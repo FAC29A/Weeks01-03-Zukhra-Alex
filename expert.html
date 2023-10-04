@@ -12,10 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron&family=WindSong&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Palatino+Linotype:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
@@ -50,8 +46,8 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" tabindex="5"></textarea>
 
-                <button type="submit" id="submit-button" tabindex="6">
-                  Submit
+                <button type="submit" id="submit-btn" tabindex="6" disabled="true">
+                  Fill up all the fields
                 </button>
               </form>
             </section>
@@ -61,9 +57,8 @@
 
       <!-- Captcha Modal -->
       <div id="captchaModal" class="modalWindowCaptcha" style="display: none">
-        <div>
-          <!-- Captcha text will be inserted here -->
-        </div>
+        <div class="captcha-text">Select only the wine bottles</div>
+        <div class="captcha-grid">
       </div>
     </main>
 
