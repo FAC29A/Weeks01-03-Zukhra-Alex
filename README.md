@@ -7,37 +7,36 @@ online platform to showcase our agency's services and expertise in wine selectio
 
 #### Creators:
 
-- Alex
+- Alexander
 - Zukhra
 
-## FAC Requirements
+## User Story
 
-- [x] Staff info (About US)
-- [x] Adapt to devices
-- [x] Navigation
-- [x] Contact form (Mandatory fields. Send Button)
-- [x] Deployed on GitHub Pages?
-- [x] Full Navigation using keyboard ()
-- [ ] Adapted to Screen Reader
-- [ ] Use built-in automations
+We were given these requirements by our client:
 
-## Our Requirements
-
-- [ ] All images needs Alt (Including Captcha)
-- [x] Different pages
-- [ ] Stack and variables on CSS
-- [ ] Custom Captcha.
+* See information about each member of your team so that I can know who you are.
+  * We created the "our Experts" section, where you can select each member of the team, learn more about them, and even contact them directly.
+* Browse your website on mobile, tablet, and desktop devices.
+  * The design will adapt to the screen size. We used Media Query and screen size-dependent units to make all the content adaptable for better readability and aesthetics.
+* Click to navigate to different sections of your webpage.
+  * There is a Navigation Bar integrated into our banner and buttons to navigate to the expert's pages and to return to the main page.
+* Contact you to inquire about working with you.
+  * There is a contact form on the Expert's page.
+* Visit your website at a publicly accessible domain name.
+  * The website is accessible on Github Pages and is reachable via the following link: https://fac29a.github.io/Weeks01-03-Zukhra-Alex/
+* Navigate your website using keyboard controls.
+  * We added Tabindex to every element that has some kind of interaction, making them focusable and setting a logical navigation order.
+* Hear my screen reader describe the content on your website.
+  * All the images have proper Alt Text.
 
 ## Project Structure
 
 - **index.html:** This is the main HTML file for the website, containing the structure and content of the site's pages.
 - **expert.html:** This is the main HTML file for the expert page, containing the structure and content of the page.
 - **styles/my-styles.css:** The CSS file responsible for styling the website's layout and design.
-- **images/:** This directory contains the images used throughout the website, including background images, wine-related
-  visuals, and the agency's logo.
+- **images/:** This directory contains the images used throughout the website, including background images, wine-related visuals, and the agency's logo.
 - **data.js:** JavaScript file responsible for loading dynamic data, such as team member information and testimonials.
-- **index.js:** JavaScript file for handling interactivity, such as displaying team cards and testimonials, and creating
-  wine-related interactions.
+- **index.js:** JavaScript file for handling interactivity, such as displaying team cards and testimonials, and creating wine-related interactions.
 - **expert.js:** JavaScript file for handling interactivity on the expert page, including form submission and captcha verification.
 - **images/favicon.ico:** The website's favicon, the small icon displayed in the browser tab.
 
@@ -45,18 +44,12 @@ online platform to showcase our agency's services and expertise in wine selectio
 
 ### Main Page:
 
-1. **Header:** Contains the agency's name, establishment year, and a navigation menu with links to different sections of
-   the website.
-2. **About Us:** Provides information about the agency's history, mission, and team. It also includes images relevant to
-   the agency's work.
-3. **Your Needs:** This section briefly outlines the agency's services, highlighting its ability to match wine with
-   specific events and occasions.
-4. **Services:** Describes the agency's services in more detail, including wine pairings for celebrations, business
-   partnerships, family and friends gatherings, and romantic dinners.
+1. **Header:** Contains the agency's name, establishment year, and a navigation menu with links to different sections of the website.
+2. **About Us:** Provides information about the agency's history, mission, and team. It also includes images relevant to the agency's work.
+3. **Your Needs:** This section briefly outlines the agency's services, highlighting its ability to match wine with specific events and occasions. Includes wine pairings for celebrations, business partnerships, family and friends gatherings, and romantic dinners.
 5. **Our Experts:** Showcases the agency's team members who bring their expertise to serve clients.
 6. **Testimonials:** Allows users to click on a wine image to see testimonials related to specific wine experiences.
-7. **Footer:** Displays agency contact information, including email and phone number, as well as links to social media
-   profiles.
+7. **Footer:** Displays agency contact information, including email and phone number, as well as links to social media profiles.
 
 ### Expert Page Sections:
 
@@ -66,21 +59,12 @@ online platform to showcase our agency's services and expertise in wine selectio
 
 ## Things to improve
 
-- **Load Time Optimization:** Reduce image file sizes and minimize unnecessary code to enhance page loading speed.
-  Faster
-  load times improve user satisfaction.
-- **Browser Compatibility Enhancement:** While some features of the testimonial section currently function correctly on
-  Chrome, they encounter issues on Mozilla Firefox.
-- **Enhance Social Media Connectivity:** Activate the existing social media icons on our website to link directly to
-  our agency's profiles on platforms like Facebook, Twitter and Instagram.
+- **Load Time Optimization:** Reduce image file sizes to enhance page loading speed. Faster load times improve user satisfaction.
+- **Browser Compatibility Enhancement:** While some features of the testimonial section currently function correctly on Chrome, they encounter issues on Mozilla Firefox.
+- **Enhance Social Media Connectivity:** Activate the existing social media icons on our website to link directly to our agency's profiles on platforms like Facebook, Twitter and Instagram.
 
 ## How to Use
 
 1. Clone this repository to your local machine.
 2. Open the index.html file in a web browser to view the website.
 3. Test the website thoroughly on different devices and browsers to ensure compatibility and responsiveness.
-
-## Website Deployment
-
-The website has been successfully deployed to GitHub Pages and is accessible via the following
-link: https://fac29a.github.io/Weeks01-03-Zukhra-Alex/
