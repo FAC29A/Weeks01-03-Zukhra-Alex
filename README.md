@@ -13,7 +13,8 @@ online platform to showcase our agency's services and expertise in wine selectio
 ## User Story
 
 We were given these requirements by our client:
-* See information about each member of your team so that I can know who you are
+* See information about each member of your team so that I can know who you are.
+  * We created the "our Experts" section, were you can select each member of the team, learn more about them and even contact them directly
 * Browse your website on mobile, tablet, and desktop devices* Click to navigate to different sections of your webpage
 * Contact you to enquire about working with you
 * Visit your website at a publicly accessible domain name
